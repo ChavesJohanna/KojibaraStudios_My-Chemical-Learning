@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IMove
 {
-    void Execute();
+    void Move();
 }
