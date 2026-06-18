@@ -3,7 +3,7 @@ using UnityEngine;
 public class MoveUp : IMove
 {
     private Rigidbody2D rb;
-    private float force = 5f;
+    private float force = 8.5f;
 
     private LayerMask groundLayer; 
 
@@ -17,7 +17,7 @@ public class MoveUp : IMove
     {
         bool isGrounded = Physics2D.Raycast( rb.position, Vector2.down, 1.5f, groundLayer ); // raycast que detecta si toca el piso
 
-        Debug.DrawRay(rb.position,Vector2.down * 30f,Color.red );
+        Debug.DrawRay(rb.position,Vector2.down * 10f,Color.red );
 
         if (!isGrounded)
             return;
