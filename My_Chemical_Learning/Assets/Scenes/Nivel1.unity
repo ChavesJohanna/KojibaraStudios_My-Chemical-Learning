@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 3830010}
   - component: {fileID: 3830009}
   - component: {fileID: 3830008}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 19741492}
   - component: {fileID: 19741491}
   - component: {fileID: 19741490}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 196674475}
   - component: {fileID: 196674474}
   - component: {fileID: 196674473}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 210817683}
   - component: {fileID: 210817682}
   - component: {fileID: 210817681}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1155,7 +1155,7 @@ GameObject:
   - component: {fileID: 215245488}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 308968844}
   - component: {fileID: 308968843}
   - component: {fileID: 308968842}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1837,6 +1837,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1918,6 +1919,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b70942a87917146898960814428a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowPlayer
 --- !u!1 &558880395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,7 +2117,7 @@ GameObject:
   - component: {fileID: 686237643}
   - component: {fileID: 686237642}
   - component: {fileID: 686237641}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2489,7 +2502,7 @@ GameObject:
   - component: {fileID: 1043419365}
   - component: {fileID: 1043419364}
   - component: {fileID: 1043419363}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2668,7 @@ GameObject:
   - component: {fileID: 1074719264}
   - component: {fileID: 1074719263}
   - component: {fileID: 1074719262}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3335,7 +3348,7 @@ GameObject:
   - component: {fileID: 1173867967}
   - component: {fileID: 1173867966}
   - component: {fileID: 1173867965}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4302,7 +4315,7 @@ GameObject:
   - component: {fileID: 1479280922}
   - component: {fileID: 1479280921}
   - component: {fileID: 1479280920}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4919,7 +4932,7 @@ GameObject:
   - component: {fileID: 1693652755}
   - component: {fileID: 1693652754}
   - component: {fileID: 1693652753}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5128,7 +5141,7 @@ MonoBehaviour:
   playerRb: {fileID: 215245487}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 320
 --- !u!114 &1708409284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5223,7 +5236,7 @@ GameObject:
   - component: {fileID: 1758976042}
   - component: {fileID: 1758976044}
   - component: {fileID: 1758976045}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}

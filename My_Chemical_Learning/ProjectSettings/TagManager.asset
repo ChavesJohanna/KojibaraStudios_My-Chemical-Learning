@@ -8,13 +8,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Obj Interactuable
+  - Enemy
+  - Player
   - 
   - 
   - 
@@ -43,6 +43,15 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 589495037
+    locked: 0
+  - name: Obj Interactuable
+    uniqueID: 2666119435
+    locked: 0
+  - name: Enemy
+    uniqueID: 656185111
+    locked: 0
+  - name: Player
+    uniqueID: 318921259
     locked: 0
   m_RenderingLayers:
   - Default
