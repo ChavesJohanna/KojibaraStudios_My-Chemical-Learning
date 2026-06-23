@@ -12,7 +12,7 @@ public class MenuPausa : MonoBehaviour
     void Update()
     {
         // Al presionar tal tecla
-        if (Input.GetKeyDown(KeyCode.Escape))
+       /* if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (juegoPausado)
             {
@@ -22,7 +22,7 @@ public class MenuPausa : MonoBehaviour
             {
                 Pausar();
             }
-        }
+        }*/
     }
 
 
