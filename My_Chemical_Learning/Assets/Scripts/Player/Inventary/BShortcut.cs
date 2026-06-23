@@ -6,7 +6,7 @@ public class BShortcut : MonoBehaviour, IPointerClickHandler
 {
     private Image imgItem;
 
-    private GameObject imgSelect;
+    private GameObject imgSelect;//en recuadrito rojo
 
     void Start()
     {
@@ -23,5 +23,14 @@ public class BShortcut : MonoBehaviour, IPointerClickHandler
         Debug.Log("boton shortcut PRESIONADO");
 
         imgSelect.SetActive(!imgSelect.activeSelf);
-    }
+
+        if (imgSelect.activeSelf)
+        {
+            SelectItem.Instance.NameImage(imgItem);
+        }
+        else
+        {
+            SelectItem.Instance.RestartName();
+        }
+}
 }
