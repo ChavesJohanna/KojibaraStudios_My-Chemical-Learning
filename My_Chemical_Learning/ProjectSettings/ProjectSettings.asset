@@ -810,13 +810,13 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 9150872e-bd95-4f0f-8ee7-57a560a1cfb3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: My_Chemical_Learning
-  organizationId: 
+  organizationId: johanna_vj
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
