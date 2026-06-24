@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IMove
 {
-    void Move();
+    void Move(Rigidbody2D rigid);
 }

@@ -1,23 +1,26 @@
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class BMLeft : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class BMove : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private Rigidbody2D playerRb;
+    private Rigidbody2D player;
 
     private IMove moveType;
 
     private bool isPressed;
 
-    private void Start()
+    private void Awake()
     {
-        moveType = new MoveLeft(playerRb);
+        player = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+
+        moveType = GetComponent<IMove>();
     }
 
     private void FixedUpdate()
     {
-        if (isPressed) moveType.Move();
+        if (isPressed) moveType.Move(player);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -33,4 +36,6 @@ public class BMLeft : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         Debug.Log("boton " + "IZQUIERDA" + " soltado");
     }
+
+
 }

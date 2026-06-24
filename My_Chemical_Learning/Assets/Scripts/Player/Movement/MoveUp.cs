@@ -1,27 +1,20 @@
 using UnityEngine;
 
-public class MoveUp : IMove
+public class MoveUp : MonoBehaviour, IMove
 {
-    private Rigidbody2D rb;
     private float force = 8.5f;
 
-    private LayerMask groundLayer; 
-
-    public MoveUp(Rigidbody2D rb, LayerMask groundLayer)
+    public void Move(Rigidbody2D rigid)
     {
-        this.rb = rb;
-        this.groundLayer = groundLayer;
+        LayerMask piso = LayerMask.GetMask("Ground", "Plataforma");
+
+        bool isGrounded = Physics2D.Raycast(rigid.position, Vector2.down, 1.5f, piso); // raycast que detecta si toca el piso
+
+        Debug.DrawRay(rigid.position, Vector2.down * 10f, Color.red);
+
+        if (!isGrounded) return;
+
+        rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, force);
     }
 
-    public void Move()
-    {
-        bool isGrounded = Physics2D.Raycast( rb.position, Vector2.down, 1.5f, groundLayer ); // raycast que detecta si toca el piso
-
-        Debug.DrawRay(rb.position,Vector2.down * 10f,Color.red );
-
-        if (!isGrounded)
-            return;
-
-        rb.linearVelocity = new Vector2( rb.linearVelocity.x, force );
-    }
 }
