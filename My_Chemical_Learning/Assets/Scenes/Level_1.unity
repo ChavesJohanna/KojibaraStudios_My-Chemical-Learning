@@ -458,6 +458,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602157409}
   m_CullTransparentMesh: 1
+--- !u!1 &703459774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 703459776}
+  - component: {fileID: 703459775}
+  m_Layer: 0
+  m_Name: ItemPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &703459775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703459774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9c077bc4de8ef49b73504549db83b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPool
+--- !u!4 &703459776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703459774}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797433459
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +514,7 @@ GameObject:
   - component: {fileID: 797433460}
   - component: {fileID: 797433462}
   - component: {fileID: 797433463}
+  - component: {fileID: 797433464}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -624,6 +669,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!114 &797433464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797433459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6eb086fc62ac74badb2969fabed5ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PAbility
 --- !u!1 &948054377
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &963350277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1331,6 +1388,7 @@ GameObject:
   - component: {fileID: 1351081965}
   - component: {fileID: 1351081964}
   - component: {fileID: 1351081963}
+  - component: {fileID: 1351081966}
   m_Layer: 5
   m_Name: BOpen
   m_TagString: Untagged
@@ -1439,6 +1497,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351081961}
   m_CullTransparentMesh: 1
+--- !u!114 &1351081966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351081961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3389b1322628247b5c397910c39f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BOpen
 --- !u!1 &1872793721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1933,7 @@ GameObject:
   - component: {fileID: 2035689558}
   - component: {fileID: 2035689557}
   - component: {fileID: 2035689556}
+  - component: {fileID: 2035689559}
   m_Layer: 5
   m_Name: BUse
   m_TagString: Untagged
@@ -1971,6 +2042,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035689554}
   m_CullTransparentMesh: 1
+--- !u!114 &2035689559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035689554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e262a4fa8ec0894288030d1abd9b983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BUse
 --- !u!1 &2094944536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,3 +2209,4 @@ SceneRoots:
   - {fileID: 375120827}
   - {fileID: 1277240529}
   - {fileID: 797433461}
+  - {fileID: 703459776}

@@ -27,14 +27,14 @@ public class BMove : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         isPressed = true;
 
-        Debug.Log("boton " + "IZQUIERDA" + "  presionado");
+        Debug.Log($"boton de movimiento presionado");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         isPressed = false;
 
-        Debug.Log("boton " + "IZQUIERDA" + " soltado");
+        Debug.Log("boton de movimiento soltado");
     }
 
 
