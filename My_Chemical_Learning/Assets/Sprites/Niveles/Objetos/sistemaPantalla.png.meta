@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c4efac088a986f4d9426507fe4be600
+guid: 2bc7453ed66055744a3859b6c1db751d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4114267810504186461
-    second: vega_Run01_0
+      213: 2585678253258334364
+    second: sistemaPantalla_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vega_Run01_0
+      name: sistemaPantalla_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 0
-        width: 227
-        height: 240
+        width: 700
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5a1deb76c0d81930800000000000000
-      internalID: 4114267810504186461
+      spriteID: c906aecfbac22e320800000000000000
+      internalID: 2585678253258334364
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vega_Run01_0: 4114267810504186461
+      sistemaPantalla_0: 2585678253258334364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
