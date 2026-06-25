@@ -10,7 +10,8 @@ public class PAbility : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    // Update is called once per frame
+
+
     void Update()
     {
         if (rb.linearVelocity.x > 0.1f)

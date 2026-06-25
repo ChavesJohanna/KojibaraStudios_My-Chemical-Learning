@@ -4,28 +4,29 @@ using UnityEngine.EventSystems;
 
 public class BUse : MonoBehaviour, IPointerClickHandler
 {
-    private PAbility player;
+    private PAbility pAbil;
+    private PAnimation pAnim; 
 
     private BShortcut shortcut;
 
-
     void Start()
     {
-       // ItemPool.Instance.Key("Water");
 
-        player = GameObject.FindWithTag("Player").GetComponent<PAbility>();
+        pAbil = GameObject.FindWithTag("Player").GetComponent<PAbility>();
+        pAnim = GameObject.FindWithTag("Player").GetComponent<PAnimation>();
 
         shortcut = GameObject.FindWithTag("Shortcut").GetComponent<BShortcut>();
+
     }
 
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // ItemPool.Instance.Key("Water");
 
         if (shortcut.ShortcutActive())
         {
-            player.UseAbility();
+            pAbil.UseAbility();
+            pAnim.ShootAnim();
         }
         
     }

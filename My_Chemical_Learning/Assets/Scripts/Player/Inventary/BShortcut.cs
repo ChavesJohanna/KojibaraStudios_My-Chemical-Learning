@@ -17,7 +17,6 @@ public class BShortcut : MonoBehaviour, IPointerClickHandler
 
         imgItem = transform.Find("ImgItem").GetComponent<Image>();
 
-        //UpdateType();
         RefreshShortcut();
     }
 

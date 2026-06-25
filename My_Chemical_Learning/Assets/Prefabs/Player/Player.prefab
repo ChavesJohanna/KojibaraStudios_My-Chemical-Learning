@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4690631596269714058}
   - component: {fileID: 1924997229348905176}
   - component: {fileID: 8227498739949024038}
+  - component: {fileID: 6056378544942534801}
+  - component: {fileID: 6977434519790849983}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -179,3 +181,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6eb086fc62ac74badb2969fabed5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PAbility
+--- !u!95 &6056378544942534801
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579398276682741024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5df82f9758aa18d42b7b00ef61fa33b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6977434519790849983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579398276682741024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7703bbbc682eba649bf2a9da6fc64be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PAnimation
