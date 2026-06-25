@@ -88,6 +88,7 @@ public class ItemPool : MonoBehaviour
         {
             Debug.LogWarning($"No hay objetos disponibles en el pool para la key: {currentKey}");
         }
+
         Debug.Log("el pool recibio la pos y dir correctamente");
     }
 

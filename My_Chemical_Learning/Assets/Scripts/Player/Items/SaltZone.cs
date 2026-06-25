@@ -14,6 +14,6 @@ public class SaltZone : MonoBehaviour
     {
         IsOccupied = state;
 
-        col.isTrigger = !state; // markamos la zona para que se puedacaminar sobre ella
+        col.isTrigger = !state; // markamos la zona para que se pueda caminar sobre ella
     }
 }

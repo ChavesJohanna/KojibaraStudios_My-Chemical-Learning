@@ -9,10 +9,11 @@ public class Salt : MonoBehaviour, IItem
 
     private float d;
 
-    private bool inZone;
-
     private float lifeTime = 3f;
     private Coroutine restartCor;
+
+    private bool inZone;
+
 
     private void Awake()
     {
