@@ -6,19 +6,28 @@ public class BUse : MonoBehaviour, IPointerClickHandler
 {
     private PAbility player;
 
+    private BShortcut shortcut;
+
+
     void Start()
     {
-        ItemPool.Instance.Key("Water");
+       // ItemPool.Instance.Key("Water");
 
         player = GameObject.FindWithTag("Player").GetComponent<PAbility>();
+
+        shortcut = GameObject.FindWithTag("Shortcut").GetComponent<BShortcut>();
     }
 
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        ItemPool.Instance.Key("Water");
+        // ItemPool.Instance.Key("Water");
 
-        player.UseAbility();
+        if (shortcut.ShortcutActive())
+        {
+            player.UseAbility();
+        }
+        
     }
 
 }

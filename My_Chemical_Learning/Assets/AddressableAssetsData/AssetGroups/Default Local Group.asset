@@ -15,12 +15,6 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 2ffc29d741365a74aaf413d7cdd7772f
   m_SerializeEntries:
-  - m_GUID: 1e4cf4b8cdde08343b8d2ee0729aff58
-    m_Address: Assets/Sprites/Inventario/item_Agua.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Water
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3c607316ef64aac41a7b97d3a89a8c2c
     m_Address: Assets/prefabs/Water.prefab
     m_ReadOnly: 0

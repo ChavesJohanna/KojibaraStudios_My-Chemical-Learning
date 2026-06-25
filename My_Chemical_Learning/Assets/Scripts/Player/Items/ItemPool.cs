@@ -61,6 +61,11 @@ public class ItemPool : MonoBehaviour
 
     public void Position(Transform pos, float dir)
     {
+        if (currentKey == null || !pool.ContainsKey(currentKey))
+        {
+            Debug.LogWarning("la key no ha sido correctamente seteada o no se encuentra");
+            return;
+        }
 
         if (pool.ContainsKey(currentKey) && pool[currentKey].Count > 0)
         {

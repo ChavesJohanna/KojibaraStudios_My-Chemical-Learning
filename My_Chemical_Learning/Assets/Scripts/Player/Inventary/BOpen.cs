@@ -21,4 +21,8 @@ public class BOpen : MonoBehaviour, IPointerClickHandler
         Debug.Log("boton ABRIR INVENTARIO presionado");
     }
 
+    public bool PanelActive()
+    {
+        return iPanel.activeSelf;
+    }
 }
