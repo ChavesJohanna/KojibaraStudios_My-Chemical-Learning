@@ -4,33 +4,88 @@ using UnityEngine.UI;
 
 public class BShortcut : MonoBehaviour, IPointerClickHandler
 {
+    private GameObject imgSelect;
     private Image imgItem;
 
-    private GameObject imgSelect;//en recuadrito rojo
+    private string type; // el tipo de item que esta en el su componente imagen
 
-    void Start()
+    private Sprite lastSprite;
+
+    private void Start()
     {
-        imgItem = transform.GetChild(0).GetComponent<Image>();
+        imgSelect = transform.Find("ImgSelect").gameObject;
 
-        imgSelect = transform.GetChild(1).gameObject;
+        imgItem = transform.Find("ImgItem").GetComponent<Image>();
+
+        //UpdateType();
+        RefreshShortcut();
     }
 
-   
-    public void OnPointerClick(PointerEventData eventData)
+    public void UpdateType()
     {
-        SwapItem.Instance.SelectImage(imgItem);
-
-        Debug.Log("boton shortcut PRESIONADO");
-
-        imgSelect.SetActive(!imgSelect.activeSelf);
-
-        if (imgSelect.activeSelf)
+        if (imgItem.sprite == null)
         {
-            SelectItem.Instance.NameImage(imgItem);
+            type = "none";
+            Debug.LogWarning("El shortcut no tiene sprite asignado");
+            return;
+        }
+
+        string current = imgItem.sprite.name;
+
+        if (current.Contains("item_Agua"))
+        {
+            type = "Water";
+        }
+        else if (current.Contains("item_Sal"))
+        {
+            type = "Salt";
         }
         else
         {
-            SelectItem.Instance.RestartName();
+            type = "none";
+            Debug.LogWarning("Tipo no reconocido: " + current);
         }
-}
+
+        Debug.Log("Tipo detectado en shortcut: " + type);
+    }
+
+    public void RefreshShortcut()
+    {
+        if (imgItem.sprite != lastSprite)
+        {
+            lastSprite = imgItem.sprite;
+            UpdateType();
+
+            if (imgSelect.activeSelf)
+            {
+                ItemPool.Instance.Key(type);
+                Debug.Log("Key actualizada tras swap: " + type);
+            }
+        }
+    }
+
+
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        imgSelect.SetActive(!imgSelect.activeSelf);
+
+        lastSprite = imgItem.sprite;
+
+        UpdateType();
+
+        ItemPool.Instance.Key(type);
+
+    }
+
+    public bool ShortcutActive() // sirve par q el boton de usar solo dispare al estar el rojo 
+    {
+        return imgSelect.activeSelf;
+    }
+
+    public Image GetImgItem() // para el intercambio con los del inventario
+    {
+        return imgItem;
+    }
+
 }

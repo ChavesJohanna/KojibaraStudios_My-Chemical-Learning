@@ -1,17 +1,12 @@
 using UnityEngine;
 
-public class MoveRight : IMove
+public class MoveRight : MonoBehaviour, IMove
 {
-    private Rigidbody2D rb;
     private float speed = 3f;
 
-    public MoveRight(Rigidbody2D rb)
+    public void Move(Rigidbody2D rigid)
     {
-        this.rb = rb;
+        rigid.linearVelocity = new Vector2(speed, rigid.linearVelocity.y);
     }
 
-    public void Move()
-    {
-        rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
-    }
 }
