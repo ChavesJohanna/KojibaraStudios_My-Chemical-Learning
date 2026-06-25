@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 2ffc29d741365a74aaf413d7cdd7772f
   m_currentHash:
     serializedVersion: 2
-    Hash: 6a922c0109c9784dcba5fd263bab8cac
+    Hash: d6d603fd3e327e528132e4e1494cec45
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Water
+    - Salt
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 1a603647d2b51034f86b497422132999, type: 2}

@@ -29,7 +29,8 @@ public class BSlot : MonoBehaviour, IPointerClickHandler
                 shortcutImage.sprite = temp;
 
                 // Actualizamos los tipos después del intercambio
-                shortcut.UpdateType();
+                //shortcut.UpdateType();
+                shortcut.RefreshShortcut();
 
                 Debug.Log("se cambio el sprite en BSlot");
             }

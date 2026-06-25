@@ -1,5 +1,5 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class Water : MonoBehaviour, IItem
 {
@@ -9,7 +9,7 @@ public class Water : MonoBehaviour, IItem
 
     private float d;
 
-    private float lifeTime = 3;
+    private float lifeTime = 3f;
     private Coroutine restartCor;
 
     public void Item(float direction)
@@ -22,11 +22,6 @@ public class Water : MonoBehaviour, IItem
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    public void Execute(float dir)
-    {
-        d = dir;
     }
 
     void FixedUpdate()
