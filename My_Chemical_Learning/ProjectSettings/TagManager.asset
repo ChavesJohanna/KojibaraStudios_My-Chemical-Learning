@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shortcut
   - SaltZone
+  - LifeBar
+  - Enemy
   layers:
   - Default
   - TransparentFX
