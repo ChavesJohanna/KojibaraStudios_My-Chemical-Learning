@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c4efac088a986f4d9426507fe4be600
+guid: d4a5c3664a9b38d4fa5587721c7fce2f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4114267810504186461
-    second: vega_Run01_0
+      213: -1209688420506317801
+    second: boton_Jugar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vega_Run01_0
+      name: boton_Jugar_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 0
-        width: 227
-        height: 240
+        width: 649
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5a1deb76c0d81930800000000000000
-      internalID: 4114267810504186461
+      spriteID: 71c41de6ac2563fe0800000000000000
+      internalID: -1209688420506317801
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vega_Run01_0: 4114267810504186461
+      boton_Jugar_0: -1209688420506317801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
