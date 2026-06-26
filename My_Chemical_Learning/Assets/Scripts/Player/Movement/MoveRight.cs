@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveRight : MonoBehaviour, IMove
 {
-    private float speed = 3f;
+    private float speed = 4f;
 
     public void Move(Rigidbody2D rigid)
     {
