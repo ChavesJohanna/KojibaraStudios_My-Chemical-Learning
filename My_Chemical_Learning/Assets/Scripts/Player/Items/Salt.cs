@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Salt : MonoBehaviour, IItem
 {
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip saltSound;
+
     private Rigidbody2D rb;
 
     private float speed = 5f;
@@ -30,6 +33,9 @@ public class Salt : MonoBehaviour, IItem
 
         // Movimiento en una sola dirección al activarse
         rb.linearVelocity = new Vector2(d * speed, 0f);
+        // Audio
+        if (audioSource != null && saltSound != null)
+            audioSource.PlayOneShot(saltSound);
 
         restartCor = StartCoroutine(ReturnPool());
     }
