@@ -1,39 +1,45 @@
 using UnityEngine;
 using System.Collections;
 
-public class Water : MonoBehaviour, IItem
+public class Helium : MonoBehaviour, IItem
 {
     private Rigidbody2D rb;
-
-    private float speed = 10f;
+    private float speed = 3f;
 
     private float d;
 
+    private float force = 10f;
+
     private float lifeTime = 3f;
     private Coroutine restartCor;
-
     public void Item(float direction)
     {
-        Debug.Log("Awa recibio la direccion");
-
         this.d = direction;
-    }
 
-    private void Start()
+        Rigidbody2D rbPlayer = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+
+        float forceUp = Mathf.Abs(direction * force);
+
+        if (direction != 0)
+        {
+            rbPlayer.linearVelocity = new Vector2(rbPlayer.linearVelocity.x, forceUp);
+        }
+
+    }
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(speed * d, 0f);
+        rb.linearVelocity = new Vector2(0f, speed * Mathf.Abs(d));
     }
-
     private IEnumerator ReturnPool()
     {
         yield return new WaitForSeconds(lifeTime);
         Debug.Log("volviendo al pool");
-        ItemPool.Instance.ReturnToPool("Water", this.gameObject);
+        ItemPool.Instance.ReturnToPool("Helium", this.gameObject);
     }
 
     void OnEnable()
@@ -41,7 +47,7 @@ public class Water : MonoBehaviour, IItem
         // Iniciamos la cuenta regresiva cada vez que sale
         restartCor = StartCoroutine(ReturnPool());
 
-        Debug.Log("awa activada");
+        Debug.Log("helio activado");
     }
 
     void OnDisable()

@@ -39,6 +39,10 @@ public class BShortcut : MonoBehaviour, IPointerClickHandler
         {
             type = "Salt";
         }
+        else if (current.Contains("item_Helio"))
+        {
+            type = "Helium";
+        }
         else
         {
             type = "none";
