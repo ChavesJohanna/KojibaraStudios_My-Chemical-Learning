@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Water : MonoBehaviour, IItem
 {
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip waterSound;
     private Rigidbody2D rb;
 
     private float speed = 10f;
@@ -40,6 +42,9 @@ public class Water : MonoBehaviour, IItem
     {
         // Iniciamos la cuenta regresiva cada vez que sale
         restartCor = StartCoroutine(ReturnPool());
+
+        if (audioSource != null && waterSound != null)
+            audioSource.PlayOneShot(waterSound);
 
         Debug.Log("awa activada");
     }
