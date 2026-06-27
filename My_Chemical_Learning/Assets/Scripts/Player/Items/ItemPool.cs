@@ -13,7 +13,8 @@ public class ItemPool : MonoBehaviour
     private string[] tags = new string[]
     {
         "Water",
-        "Salt"
+        "Salt",
+        "Helium"
     };
 
     private string currentKey;

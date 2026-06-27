@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Water
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f39500293926c4947b20d7fdefe7041d
+    m_Address: Assets/Prefabs/Items/Helium.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Helium
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2f0aff87623cc154f920674dcada356e, type: 2}
   m_SchemaSet:
