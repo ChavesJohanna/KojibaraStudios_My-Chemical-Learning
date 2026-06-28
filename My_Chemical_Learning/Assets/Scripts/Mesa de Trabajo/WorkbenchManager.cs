@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,82 +7,112 @@ public class WorkbenchManager : MonoBehaviour
 {
     public List<Recipe> recetas;
 
-    // Elementos actualmente sobre la mesa (se registran/desregistran solos)
-    private List<ChemElement> _elementosEnMesa = new List<ChemElement>();
+    [Tooltip("Margen extra de separación al rechazar una combinación")]
+    public float margenSeparacion = 0.2f;
 
-    public void RegistrarElemento(ChemElement elemento)
+    [Tooltip("Segundos de espera antes de confirmar una combinación correcta")]
+    public float tiempoEsperaCombinacion = 2f;
+
+    // Se llama una sola vez, cuando el jugador suelta un elemento
+    public void EvaluarSoltado(ChemElement soltado, List<ChemElement> superpuestos)
     {
-        if (!_elementosEnMesa.Contains(elemento))
-        {
-            _elementosEnMesa.Add(elemento);
-        }
+        if (superpuestos.Count == 0) return; // no quedó sobre nada, no hay nada que evaluar
 
-        IntentarCombinar();
-    }
+        List<ChemElement> involucrados = new List<ChemElement>(superpuestos) { soltado };
+        List<ChemElementType> tipos = involucrados.Select(e => e.type).ToList();
 
-    public void DesregistrarElemento(ChemElement elemento)
-    {
-        _elementosEnMesa.Remove(elemento);
-    }
-
-    private void IntentarCombinar()
-    {
-        // Solo intenta combinar si hay 2 o más elementos juntos
-        if (_elementosEnMesa.Count < 2) return;
-
-        List<ChemElementType> tipos = _elementosEnMesa.Select(e => e.type).ToList();
-
+        // 1) ¿Coincide exacto con alguna receta? -> cuenta regresiva y combina
         foreach (Recipe receta in recetas)
         {
             if (receta.Coincide(tipos))
             {
-                CombinacionCorrecta(receta);
+                StartCoroutine(EsperarYCombinar(receta, involucrados));
                 return;
             }
         }
 
-        // Si llegamos hasta acá y ya hay tantos elementos juntos como la receta más grande,
-        // probablemente sea una combinación incorrecta
-        int maxIngredientes = recetas.Count > 0 ? recetas.Max(r => r.ingredientes.Count) : 0;
-        if (_elementosEnMesa.Count >= maxIngredientes && maxIngredientes > 0)
+        // 2) ¿Todavía podría completarse con más elementos? -> dejarlo superpuesto, no hacer nada
+        if (ExisteRecetaCompatible(tipos))
         {
-            CombinacionIncorrecta();
+            return;
+        }
+
+        // 3) Combinación imposible -> expulsar al que se soltó, fuera de los colliders de los demás
+        Debug.LogWarning($"No se puede combinar: [{string.Join(" + ", tipos)}]");
+
+        Draggable draggableSoltado = soltado.GetComponent<Draggable>();
+        if (draggableSoltado == null) return;
+
+        foreach (var otro in superpuestos)
+        {
+            float distancia = ObtenerRadio(soltado) + ObtenerRadio(otro) + margenSeparacion;
+            draggableSoltado.EmpujarFuera(otro.transform.position, distancia);
         }
     }
 
-    private void CombinacionCorrecta(Recipe receta)
+    private IEnumerator EsperarYCombinar(Recipe receta, List<ChemElement> involucrados)
     {
+        Debug.Log($"Se va a combinar en {tiempoEsperaCombinacion} segundos...");
+        yield return new WaitForSeconds(tiempoEsperaCombinacion);
+
+        // Si alguno de los elementos fue destruido o movido/arrastrado de nuevo en el medio tiempo, cancelar
+        if (involucrados.Any(e => e == null)) yield break;
+
         Debug.Log($"Combinación correcta: {receta.nombreResultado}");
 
-        Vector3 posicion = _elementosEnMesa[0].transform.position;
+        Vector3 posicion = involucrados[0].transform.position;
 
-        foreach (var elemento in _elementosEnMesa.ToList())
+        foreach (var elemento in involucrados)
         {
             Destroy(elemento.gameObject);
         }
-        _elementosEnMesa.Clear();
 
         if (receta.prefabResultado != null)
         {
             Instantiate(receta.prefabResultado, posicion, Quaternion.identity);
         }
 
-        InventoryManager.Instance.AgregarElementoConseguido(receta.nombreResultado);
+        if (InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.AgregarElementoConseguido(receta.nombreResultado);
+        }
+        else
+        {
+            Debug.LogWarning("No hay InventoryManager en la escena, no se guardó el resultado.");
+        }
     }
 
-    private void CombinacionIncorrecta()
+    // True si "tipos" es subconjunto (con cantidades) de alguna receta
+    private bool ExisteRecetaCompatible(List<ChemElementType> tipos)
     {
-        Debug.LogWarning("Combinación incorrecta, separando elementos.");
-
-        foreach (var elemento in _elementosEnMesa)
+        foreach (Recipe receta in recetas)
         {
-            Draggable draggable = elemento.GetComponent<Draggable>();
-            if (draggable != null)
+            List<ChemElementType> copia = new List<ChemElementType>(receta.ingredientes);
+            bool esSubconjunto = true;
+
+            foreach (var tipo in tipos)
             {
-                draggable.VolverAPosicionOriginal();
+                if (!copia.Remove(tipo))
+                {
+                    esSubconjunto = false;
+                    break;
+                }
             }
+
+            if (esSubconjunto) return true;
         }
 
-        _elementosEnMesa.Clear();
+        return false;
+    }
+
+    private float ObtenerRadio(ChemElement elemento)
+    {
+        CircleCollider2D circulo = elemento.GetComponent<CircleCollider2D>();
+        if (circulo != null)
+        {
+            return circulo.radius * Mathf.Max(elemento.transform.lossyScale.x, elemento.transform.lossyScale.y);
+        }
+
+        return 1f; // valor por defecto si no es CircleCollider2D
     }
 }

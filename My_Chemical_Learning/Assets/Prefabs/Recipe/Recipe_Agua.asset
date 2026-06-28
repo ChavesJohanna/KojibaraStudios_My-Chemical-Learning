@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25c0cb6cf8bf3047b0c5690ef321a4c, type: 3}
   m_Name: Recipe_Agua
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
-  ingredientes: 
-  nombreResultado: 
-  prefabResultado: {fileID: 0}
+  ingredientes: 000000000000000001000000
+  nombreResultado: Agua (H2O)
+  prefabResultado: {fileID: 6762078026056740965, guid: 0432bbd760ea59d48b1fe0cd4db53f8e, type: 3}
