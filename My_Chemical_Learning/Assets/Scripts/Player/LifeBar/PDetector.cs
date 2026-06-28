@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PDetector : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class PDetector : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             lifeBar.LowDamage();
+        }
+        else if (collision.gameObject.CompareTag("DieZone"))
+        {
+            //SceneManager.LoadScene("");
+            Debug.Log("Jugador morido llendo a pantalla de GameOver");
         }
     }
 }
