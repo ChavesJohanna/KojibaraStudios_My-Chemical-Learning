@@ -12,13 +12,14 @@ public class PDetector : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
             lifeBar.LowDamage();
         }
         else if (collision.gameObject.CompareTag("DieZone"))
         {
-            //SceneManager.LoadScene("");
+            SceneManager.LoadScene("Menu"); //prueba
             Debug.Log("Jugador morido llendo a pantalla de GameOver");
         }
     }

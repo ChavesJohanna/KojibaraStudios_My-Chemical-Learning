@@ -7,6 +7,8 @@ public class BUseTable : MonoBehaviour, IPointerClickHandler
 {
     private WorkTable[] tables;
 
+    private Transform player;
+
     private void Start()
     {
         GameObject[] workTables = GameObject.FindGameObjectsWithTag("WorkTable");
@@ -16,6 +18,13 @@ public class BUseTable : MonoBehaviour, IPointerClickHandler
         for (int i = 0; i < workTables.Length; i++)
         {
             tables[i] = workTables[i].GetComponent<WorkTable>();
+        }
+
+        player = GameObject.FindWithTag("Player").transform;
+
+        if (CheckPoint.TryGetPosition(out Vector3 position))
+        {
+            player.position = position;
         }
     }
 
@@ -28,7 +37,8 @@ public class BUseTable : MonoBehaviour, IPointerClickHandler
 
             Debug.Log($"Entrando a la mesa: {table.name}");
 
-            // SceneManager.LoadScene(...);
+            SceneManager.LoadScene("Menu"); //prueba
+            CheckPoint.Save(player.position);
 
             return;
         }

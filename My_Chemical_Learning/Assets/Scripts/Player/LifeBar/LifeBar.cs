@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifeBar : MonoBehaviour
 {
@@ -24,6 +25,13 @@ public class LifeBar : MonoBehaviour
         fullBar.fillAmount = current / maxhealth;
 
         Debug.Log("Vida actual: " + current);
+
+        if (current == minhealth)
+        {
+            SceneManager.LoadScene("Menu"); //prueba
+
+            Debug.Log("jugador sin vida");
+        }
     }
 
 }
