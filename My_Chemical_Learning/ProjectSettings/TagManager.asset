@@ -8,6 +8,8 @@ TagManager:
   - SaltZone
   - LifeBar
   - Enemy
+  - WorkTable
+  - DieZone
   layers:
   - Default
   - TransparentFX
