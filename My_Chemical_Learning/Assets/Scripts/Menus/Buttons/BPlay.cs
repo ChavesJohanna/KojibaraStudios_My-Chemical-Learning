@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class BPlay : MonoBehaviour
 {
@@ -12,10 +13,16 @@ public class BPlay : MonoBehaviour
 
         button.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("Level_1");
-
-            Debug.Log("Entrando al nivel 1");
+            StartCoroutine(LoadLevel());
         });
     }
 
+    IEnumerator LoadLevel()
+    {
+        Debug.Log("Entrando al nivel 1");
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene("Level_1");
+    }
 }

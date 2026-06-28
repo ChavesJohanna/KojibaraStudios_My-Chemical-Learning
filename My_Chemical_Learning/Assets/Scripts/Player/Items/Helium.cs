@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Helium : MonoBehaviour, IItem
 {
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip heliumSound;
+
     private Rigidbody2D rb;
     private float speed = 3f;
 
@@ -46,6 +49,9 @@ public class Helium : MonoBehaviour, IItem
     {
         // Iniciamos la cuenta regresiva cada vez que sale
         restartCor = StartCoroutine(ReturnPool());
+
+        if (audioSource != null && heliumSound != null)
+            audioSource.PlayOneShot(heliumSound);
 
         Debug.Log("helio activado");
     }
