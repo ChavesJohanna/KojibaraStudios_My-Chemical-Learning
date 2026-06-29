@@ -7,7 +7,7 @@ using System.Linq;
 public class ElementModifier
 {
     public ElementType element;
-    [Tooltip("1 = daño normal, 2 = doble daño (debilidad), 0 = inmune")]
+    [Tooltip("1 = daï¿½o normal, 2 = doble daï¿½o (debilidad), 0 = inmune")]
     public float multiplicador = 1f;
 }
 
@@ -15,7 +15,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHealth = 50f;
     [SerializeField] private List<ElementModifier> resistencias = new List<ElementModifier>();
-    [SerializeField] private float multiplicadorPorDefecto = 1f; // si el elemento no está en la lista
+    [SerializeField] private float multiplicadorPorDefecto = 1f; // si el elemento no estï¿½ en la lista
 
     private float currentHealth;
 
@@ -31,10 +31,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         ElementModifier modificador = resistencias.FirstOrDefault(r => r.element == info.element);
         float multiplicador = modificador != null ? modificador.multiplicador : multiplicadorPorDefecto;
 
-        float dañoFinal = info.amount * multiplicador;
-        currentHealth -= dañoFinal;
+        float danioFinal = info.amount * multiplicador;
+        currentHealth -= danioFinal;
 
-        Debug.Log($"{gameObject.name} recibió {dañoFinal} de daño ({info.element}). Vida restante: {currentHealth}");
+        Debug.Log($"{gameObject.name} recibiï¿½ {danioFinal} de daï¿½o ({info.element}). Vida restante: {currentHealth}");
 
         if (currentHealth <= 0)
         {
