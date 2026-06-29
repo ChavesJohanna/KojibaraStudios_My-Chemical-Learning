@@ -12,6 +12,8 @@ public class BMenu : MonoBehaviour
 
         button.onClick.AddListener(() =>
         {
+            Time.timeScale = 1f; //Linea para descongelar el juego al volver del menu de pausa al principal
+
             SceneManager.LoadScene("Menu");
 
             Debug.Log("Volviendo al menu principal");
