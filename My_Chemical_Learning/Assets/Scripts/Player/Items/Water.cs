@@ -54,4 +54,15 @@ public class Water : MonoBehaviour, IItem
         if (restartCor != null)
             StopCoroutine(restartCor);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        piritoHealth pirito = other.GetComponent<piritoHealth>();
+
+        if (pirito != null)
+        {
+            pirito.TakeHit();
+            ItemPool.Instance.ReturnToPool("Water", gameObject);
+        }
+    }
 }
