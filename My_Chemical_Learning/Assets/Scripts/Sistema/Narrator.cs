@@ -65,10 +65,6 @@ public class Narrator : MonoBehaviour
         }
     }
 
-    // -------------------------
-    // PUBLIC API
-    // -------------------------
-
     public void QueueClip(int index)
     {
         if (index < 0 || index >= clips.Length)
@@ -119,10 +115,6 @@ public class Narrator : MonoBehaviour
         isPlayingQueue = false;
     }
 
-    // -------------------------
-    // QUEUE SYSTEM
-    // -------------------------
-
     private IEnumerator PlayQueue()
     {
         isPlayingQueue = true;
@@ -143,10 +135,6 @@ public class Narrator : MonoBehaviour
 
         isPlayingQueue = false;
     }
-
-    // -------------------------
-    // AUDIO DUCKING
-    // -------------------------
 
     private IEnumerator FadeMusic(float targetVolume)
     {
