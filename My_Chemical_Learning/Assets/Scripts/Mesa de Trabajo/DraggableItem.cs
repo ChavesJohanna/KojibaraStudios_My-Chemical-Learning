@@ -14,8 +14,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Esta es la parte que el tutorial no mostraba:
-        // convertir la posición de pantalla (mouse/touch) a una posición en el mundo del juego
+        
+        // convertir la posición de pantalla (mouse/touch) a una posicion en el mundo del juego
         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(eventData.position);
         worldPoint.z = _zDepth;
         transform.position = worldPoint;
