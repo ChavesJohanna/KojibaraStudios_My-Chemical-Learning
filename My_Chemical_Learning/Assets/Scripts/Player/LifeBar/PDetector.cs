@@ -19,8 +19,17 @@ public class PDetector : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("DieZone"))
         {
-            SceneManager.LoadScene("Menu"); //prueba
+            SceneManager.LoadScene("GameOver");
             Debug.Log("Jugador morido llendo a pantalla de GameOver");
         }
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene("Victory");
+            Debug.Log("Nivel 1 completado");
+        }       
     }
 }

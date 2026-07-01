@@ -5,21 +5,12 @@ using UnityEngine.UI;
 
 public class BUseTable : MonoBehaviour, IPointerClickHandler
 {
-    private WorkTable[] tables;
 
     private Transform player;
 
+
     private void Start()
     {
-        GameObject[] workTables = GameObject.FindGameObjectsWithTag("WorkTable");
-
-        tables = new WorkTable[workTables.Length];
-
-        for (int i = 0; i < workTables.Length; i++)
-        {
-            tables[i] = workTables[i].GetComponent<WorkTable>();
-        }
-
         player = GameObject.FindWithTag("Player").transform;
 
         if (CheckPoint.TryGetPosition(out Vector3 position))
@@ -30,22 +21,19 @@ public class BUseTable : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        foreach (WorkTable table in tables)
+        // Verificamos si hay una mesa activa y no es null
+        if (WorkTable.tableInUse != null && WorkTable.tableInUse.IsUsed())
         {
-            if (!table.IsUsed())
-                continue;
+            Debug.Log($"Entrando a la mesa: {WorkTable.tableInUse.name}");
 
-            Debug.Log($"Entrando a la mesa: {table.name}");
-
-            SceneManager.LoadScene("Menu"); //prueba
             CheckPoint.Save(player.position);
-
-            return;
+            SceneManager.LoadScene("Mesa de trabajo");
         }
-
-        Debug.Log("No hay ninguna mesa en uso.");
+        else
+        {
+            Debug.Log("No estás cerca de ninguna mesa para usarla.");
+        }
     }
-
 
 }
 

@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - WorkTable
   - DieZone
+  - HUD
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -27,6 +28,9 @@ public class Narrator : MonoBehaviour
     private Queue<AudioClip> clipQueue = new Queue<AudioClip>();
     private bool isPlayingQueue = false;
 
+    // Guarda qué escenas ya reprodujeron su introducción
+    private static HashSet<string> playedSceneIntros = new HashSet<string>();
+
     private void Awake()
     {
         if (Instance == null)
@@ -41,9 +45,17 @@ public class Narrator : MonoBehaviour
 
     private IEnumerator Start()
     {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        // Si la introducción de esta escena ya sonó, no hacer nada.
+        if (playedSceneIntros.Contains(sceneName))
+            yield break;
+
+        // Marcar la escena como reproducida.
+        playedSceneIntros.Add(sceneName);
+
         yield return new WaitForSeconds(startDelay);
 
-        // Si hay intro configurada, la encolamos
         if (introSequence != null && introSequence.Length > 0)
         {
             foreach (int index in introSequence)
@@ -52,10 +64,6 @@ public class Narrator : MonoBehaviour
             }
         }
     }
-
-    // -------------------------
-    // PUBLIC API
-    // -------------------------
 
     public void QueueClip(int index)
     {
@@ -107,10 +115,6 @@ public class Narrator : MonoBehaviour
         isPlayingQueue = false;
     }
 
-    // -------------------------
-    // QUEUE SYSTEM
-    // -------------------------
-
     private IEnumerator PlayQueue()
     {
         isPlayingQueue = true;
@@ -131,10 +135,6 @@ public class Narrator : MonoBehaviour
 
         isPlayingQueue = false;
     }
-
-    // -------------------------
-    // AUDIO DUCKING
-    // -------------------------
 
     private IEnumerator FadeMusic(float targetVolume)
     {
