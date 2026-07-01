@@ -37,7 +37,7 @@ public class BUseTable : MonoBehaviour, IPointerClickHandler
 
             Debug.Log($"Entrando a la mesa: {table.name}");
 
-            SceneManager.LoadScene("Menu"); //prueba
+            SceneManager.LoadScene("Mesa de trabajo"); //prueba
             CheckPoint.Save(player.position);
 
             return;
