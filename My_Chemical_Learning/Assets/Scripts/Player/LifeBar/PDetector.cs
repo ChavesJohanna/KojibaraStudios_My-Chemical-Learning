@@ -22,5 +22,14 @@ public class PDetector : MonoBehaviour
             SceneManager.LoadScene("Menu"); //prueba
             Debug.Log("Jugador morido llendo a pantalla de GameOver");
         }
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene("Victory");
+            Debug.Log("Nivel 1 completado");
+        }       
     }
 }
