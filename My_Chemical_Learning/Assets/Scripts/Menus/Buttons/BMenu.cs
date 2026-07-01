@@ -17,6 +17,8 @@ public class BMenu : MonoBehaviour
             SceneManager.LoadScene("Menu");
 
             Debug.Log("Volviendo al menu principal");
+
+            CheckPoint.Clear(); //reinicia el checkpoint
         });
     }
 }

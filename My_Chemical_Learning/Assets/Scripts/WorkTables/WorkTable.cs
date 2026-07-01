@@ -6,7 +6,9 @@ public class WorkTable : MonoBehaviour
     private bool isUsed;
 
     private GameObject sign;
- 
+
+    public static WorkTable tableInUse; // Referencia a la mesa donde está el player
+
     private void Start()
     {
         sign = transform.Find("Sign").gameObject;
@@ -19,6 +21,7 @@ public class WorkTable : MonoBehaviour
         {
             sign.SetActive(true);
             isUsed = true;
+            tableInUse = this;
         }
     }
 
@@ -33,6 +36,7 @@ public class WorkTable : MonoBehaviour
         {
             sign.SetActive(false);
             isUsed = false;
+            tableInUse = null;
         }
     }
 

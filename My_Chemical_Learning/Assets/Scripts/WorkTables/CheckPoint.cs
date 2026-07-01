@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public static class CheckPoint
 {
@@ -19,5 +20,11 @@ public static class CheckPoint
 
         position = Vector3.zero;
         return false;
+    }
+
+    //método para borrar la posición guardada
+    public static void Clear()
+    {
+        lastPosition = null;
     }
 }
