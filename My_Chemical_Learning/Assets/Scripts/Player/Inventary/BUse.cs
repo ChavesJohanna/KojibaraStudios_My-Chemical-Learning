@@ -9,6 +9,11 @@ public class BUse : MonoBehaviour, IPointerClickHandler
 
     private BShortcut shortcut;
 
+    // Tiempo necesario entre clics
+    private float cooldownTime = 1f;
+    // Momento en el que se permitirá el próximo clic
+    private float nextClickTime = 0f;
+
     void Start()
     {
 
@@ -23,12 +28,22 @@ public class BUse : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
 
-        if (shortcut.ShortcutActive())
+        /* if (shortcut.ShortcutActive())
+         {
+             pAbil.UseAbility();
+             pAnim.ShootAnim();
+         }
+         */
+
+        // Verificamos si el shortcut está activo Y si ha pasado el tiempo necesario
+        if (shortcut.ShortcutActive() && Time.time >= nextClickTime)
         {
             pAbil.UseAbility();
             pAnim.ShootAnim();
+
+            // Actualizamos el tiempo para el próximo clic permitido
+            nextClickTime = Time.time + cooldownTime;
         }
-        
     }
 
 }

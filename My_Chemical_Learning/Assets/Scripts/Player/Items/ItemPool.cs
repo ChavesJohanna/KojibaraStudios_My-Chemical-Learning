@@ -36,7 +36,7 @@ public class ItemPool : MonoBehaviour
         {
             pool[tag] = new Queue<GameObject>();
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 // Instanciamos el Addressable usando el tag como Address
                 Addressables.InstantiateAsync(tag).Completed += (op) =>
