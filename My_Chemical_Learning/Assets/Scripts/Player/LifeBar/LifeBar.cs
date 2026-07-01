@@ -18,7 +18,7 @@ public class LifeBar : MonoBehaviour
 
     public void LowDamage()
     {
-        float low = 5f;
+        float low = 10f;
 
         current = Mathf.Clamp(current - low, minhealth, maxhealth);
 
@@ -28,7 +28,7 @@ public class LifeBar : MonoBehaviour
 
         if (current == minhealth)
         {
-            SceneManager.LoadScene("Menu"); //prueba
+            SceneManager.LoadScene("GameOver");
 
             Debug.Log("jugador sin vida");
         }
