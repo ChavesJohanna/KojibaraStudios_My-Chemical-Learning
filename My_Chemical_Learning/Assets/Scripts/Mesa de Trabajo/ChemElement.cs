@@ -1,7 +1,15 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-// Se pone junto con Draggable en cada frasco de elemento
-public class ChemElement : MonoBehaviour
+public class ChemElement : MonoBehaviour, IPointerDownHandler
 {
     public ChemElementType type;
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (ElementInfoDisplay.Instance != null)
+        {
+            ElementInfoDisplay.Instance.MostrarInfo(type);
+        }
+    }
 }
