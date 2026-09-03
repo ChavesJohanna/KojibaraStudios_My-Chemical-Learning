@@ -11,6 +11,8 @@ TagManager:
   - WorkTable
   - DieZone
   - HUD
+  - vacio
+  - Jugador
   layers:
   - Default
   - TransparentFX
