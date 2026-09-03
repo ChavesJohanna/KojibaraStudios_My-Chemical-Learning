@@ -18,6 +18,8 @@ public class MusicaFondo : MonoBehaviour
 
         musica.playOnAwake = true; //evita ejecutar el sonido al iniciar la escena
 
+        musica.loop = true; //se reproduce la musica en loop
+
         musica?.Play();
     }
 
