@@ -61,6 +61,10 @@ public class PoolElementos : MonoBehaviour
 
     public void ActivarElemento(string nombre)
     {
+        if (nombre == "") //si el nombre es vacio que retorne
+            return; 
+
+
         this.key = nombre;
     }
 

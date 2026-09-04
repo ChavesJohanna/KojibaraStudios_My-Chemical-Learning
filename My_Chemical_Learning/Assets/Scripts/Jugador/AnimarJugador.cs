@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimarJugador : MonoBehaviour
+public class AnimarJugador : MonoBehaviour //el script se encuentra en el gameobject "Jugador"
 {
     private Animator animator; //componente que contiene el controlador de las animaciones
     private SpriteRenderer sprite; //sirve para voltear el sprite en modo espejo cuando vaya en otra direccion
@@ -28,6 +28,7 @@ public class AnimarJugador : MonoBehaviour
             Physics2D.Raycast(rb.position, Vector2.down, 1.5f, piso); //raycast que detecta si esta tocando el piso
 
         animator.SetBool("Saltando", !enPiso); //nada un ! no arregle
+
 
         if (moverX > dif) //voltea el sprite segun la direccion del movimiento
         {

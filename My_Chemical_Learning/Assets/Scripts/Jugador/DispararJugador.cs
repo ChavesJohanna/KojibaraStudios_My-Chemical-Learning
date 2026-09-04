@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.U2D;
 
-public class DispararJugador : MonoBehaviour
+public class DispararJugador : MonoBehaviour //el script se encuentra en el gameobject "Jugador"
 {
     private Rigidbody2D rb;
     private float dif = 1f; //direrencia de posicion
@@ -30,11 +30,12 @@ public class DispararJugador : MonoBehaviour
     {
         GameObject poolElemento = PoolElementos.Instance.AsignarPosicionElemento(transform); //le asigna la posicion al elemento
 
-        if (poolElemento == null) return;
+        if (poolElemento == null) 
+            return;
            
 
         IElemento elemento = poolElemento.GetComponent<IElemento>();
 
-        elemento.MovimientoElemento(ultimadir);
+        elemento.MovimientoElemento(ultimadir); //le envia la direccion a la cual moverse
     }
 }

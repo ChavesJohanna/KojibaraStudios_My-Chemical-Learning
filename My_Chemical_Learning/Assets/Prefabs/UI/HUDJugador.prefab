@@ -3001,8 +3001,9 @@ GameObject:
   - component: {fileID: 5968102587268411098}
   - component: {fileID: 849034939774977512}
   - component: {fileID: 5085742270408005200}
+  - component: {fileID: 6833607049795697415}
   m_Layer: 5
-  m_Name: Uno
+  m_Name: Atajo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3112,6 +3113,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6833607049795697415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546588037428337039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcfdacbb7974a4a4abd49162e950852b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Atajo
 --- !u!1 &6672119827412480627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3572,8 +3585,9 @@ GameObject:
   - component: {fileID: 42086558656360336}
   - component: {fileID: 8395856364885836984}
   - component: {fileID: 6497628261871434176}
+  - component: {fileID: 1520567782954307760}
   m_Layer: 5
-  m_Name: Tres
+  m_Name: Atajo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3683,6 +3697,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1520567782954307760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559726891269059312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcfdacbb7974a4a4abd49162e950852b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Atajo
 --- !u!1 &7673505904652257103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,8 +3721,9 @@ GameObject:
   - component: {fileID: 1079587111733857069}
   - component: {fileID: 4227252749712471250}
   - component: {fileID: 5728451432599048987}
+  - component: {fileID: 8371140642044901191}
   m_Layer: 5
-  m_Name: Atajos
+  m_Name: ControladorAtajos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3739,7 +3766,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7673505904652257103}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3788,6 +3815,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8371140642044901191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673505904652257103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115906d7e8d4b574c9826d0658cf860d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorAtajos
 --- !u!1 &7675596777302850970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4313,8 +4352,9 @@ GameObject:
   - component: {fileID: 6837719093650661490}
   - component: {fileID: 4016164914773253775}
   - component: {fileID: 6719698252576679327}
+  - component: {fileID: 8626459274760214399}
   m_Layer: 5
-  m_Name: Dos
+  m_Name: Atajo_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4424,6 +4464,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8626459274760214399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166966352690448965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcfdacbb7974a4a4abd49162e950852b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Atajo
 --- !u!1 &8219840861418575726
 GameObject:
   m_ObjectHideFlags: 0

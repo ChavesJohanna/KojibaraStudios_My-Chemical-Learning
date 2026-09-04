@@ -6,7 +6,7 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private GameObject panelMenuPausa;
 
 
-    private bool juegoPausado = false;
+   // private bool juegoPausado = false;
 
 
     void Update()
@@ -30,7 +30,7 @@ public class MenuPausa : MonoBehaviour
     {
         panelMenuPausa.SetActive(false); //Desactivamos el panel de pausa
         Time.timeScale = 1f;             //Reanudamos el tiempo d ejuego
-        juegoPausado = false;
+       // juegoPausado = false;
     }
 
 
@@ -38,6 +38,6 @@ public class MenuPausa : MonoBehaviour
     {
         panelMenuPausa.SetActive(true);  //Activamos el panel de pausa
         Time.timeScale = 0f;             //Detenemos el tiempo de juego
-        juegoPausado = true;
+       // juegoPausado = true;
     }
 }
