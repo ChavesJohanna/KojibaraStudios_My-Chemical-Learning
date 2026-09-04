@@ -13,7 +13,7 @@ public class ControlSalto : MonoBehaviour, IPointerDownHandler
         tipoMovimiento = gameObject?.GetComponent<IMover>(); //el boton tiene de componente el movimiento correspondiente
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
     {
         if (jugador != null)
         { 

@@ -297,6 +297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8050537173267929760}
+  - component: {fileID: 5501982470078707346}
   m_Layer: 5
   m_Name: Pausa
   m_TagString: Untagged
@@ -325,6 +326,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5501982470078707346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507517107772796718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1420ab74c0e3d6740a244e1a6565fcb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pausa
 --- !u!1 &1034992375579643314
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,8 +425,9 @@ GameObject:
   - component: {fileID: 1150299516823419664}
   - component: {fileID: 6623915976282817685}
   - component: {fileID: 9145103718692492055}
+  - component: {fileID: 259626370196431616}
   m_Layer: 5
-  m_Name: IrMenu
+  m_Name: IrAlMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +450,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 300, y: -678.375}
-  m_SizeDelta: {x: 400, y: 80}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1150299516823419664
 CanvasRenderer:
@@ -520,6 +534,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &259626370196431616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041312403981414711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d7534cce9ecc14b82600f03d9bf306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IrAlMenu
 --- !u!1 &1180550756880033749
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +558,7 @@ GameObject:
   - component: {fileID: 5657799002325976509}
   - component: {fileID: 3839085134567189369}
   - component: {fileID: 460442449979187819}
+  - component: {fileID: 831858770613903309}
   m_Layer: 5
   m_Name: Abrir
   m_TagString: Untagged
@@ -640,6 +667,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &831858770613903309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180550756880033749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a09906049b48c4ba1e883b9641cf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbrirPausa
 --- !u!1 &1434166969266016314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1713,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 300, y: -535.125}
-  m_SizeDelta: {x: 400, y: 80}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5612762049530162501
 CanvasRenderer:
@@ -1794,7 +1833,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 300, y: -391.875}
-  m_SizeDelta: {x: 400, y: 80}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8884731754455760982
 CanvasRenderer:
@@ -3129,8 +3168,9 @@ GameObject:
   - component: {fileID: 7438717146816530778}
   - component: {fileID: 7369455578916601004}
   - component: {fileID: 7734679865074143218}
+  - component: {fileID: 5343112365186423965}
   m_Layer: 5
-  m_Name: Reanudar
+  m_Name: Continuar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3153,7 +3193,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 300, y: -248.625}
-  m_SizeDelta: {x: 400, y: 80}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7438717146816530778
 CanvasRenderer:
@@ -3237,6 +3277,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5343112365186423965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952729580991622043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb6ecc53ab4234c901f4985e9320a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Continuar
 --- !u!1 &7543785540266315252
 GameObject:
   m_ObjectHideFlags: 0
