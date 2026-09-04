@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Agua : MonoBehaviour, IElemento
+public class Agua : MonoBehaviour, IElemento //el script se encuentra en el prefab del mismo nombre y es el que dispara el jugador
 {
     private Rigidbody2D rb;
     private float velocidad = 5f;
@@ -10,7 +10,7 @@ public class Agua : MonoBehaviour, IElemento
     private float tiempoVida = 3f; //una vez se termine y no haya colicionado se regrese al pool
     private bool fueraPool = false; //una vez salga del pool se pondra en true y iniciara su regreso
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }

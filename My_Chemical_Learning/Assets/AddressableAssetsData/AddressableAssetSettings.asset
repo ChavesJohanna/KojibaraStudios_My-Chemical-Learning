@@ -105,7 +105,10 @@ MonoBehaviour:
     - Water
     - Salt
     - Helium
+    - vacio
     - Agua
+    - Sal
+    - Helio
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 1a603647d2b51034f86b497422132999, type: 2}

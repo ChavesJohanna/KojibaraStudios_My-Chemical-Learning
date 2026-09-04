@@ -33,6 +33,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Water
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 515e2c705fef32147b015d93809c980e
+    m_Address: Assets/Prefabs/Helio.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Helio
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7cf388bc2fc8304dbc0354bfb5ee72d
+    m_Address: Assets/Prefabs/Sal.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sal
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f39500293926c4947b20d7fdefe7041d
     m_Address: Assets/Prefabs/Items/Helium.prefab
     m_ReadOnly: 0

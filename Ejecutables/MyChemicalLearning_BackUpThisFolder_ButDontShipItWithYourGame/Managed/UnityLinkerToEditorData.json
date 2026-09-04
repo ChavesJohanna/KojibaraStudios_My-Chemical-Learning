@@ -9,14 +9,26 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "AnimationClip",
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Animator",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AnimatorController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
             "dependencyType": 1,
             "icon": null
           },
@@ -24,6 +36,12 @@
             "name": "AnimatorOverrideController",
             "scenes": [],
             "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Motion",
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -66,7 +84,8 @@
           {
             "name": "AudioClip",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -101,7 +120,8 @@
           {
             "name": "AudioResource",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -109,7 +129,8 @@
           {
             "name": "AudioSource",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -266,7 +287,8 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -292,7 +314,8 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -306,7 +329,8 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -347,7 +371,8 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -375,8 +400,10 @@
           },
           {
             "name": "Renderer",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -394,7 +421,8 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -414,7 +442,8 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -427,7 +456,9 @@
           },
           {
             "name": "SpriteRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -514,6 +545,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.graphicsstatecollectionserializer"
+          },
+          {
+            "name": "Required by Grid Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.grid"
           },
           {
             "name": "Required by HierarchyCore Module",
@@ -624,6 +661,12 @@
             "icon": "package/com.unity.modules.textrendering"
           },
           {
+            "name": "Required by Tilemap Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.tilemap"
+          },
+          {
             "name": "Required by UI Module",
             "scenes": [],
             "dependencyType": 2,
@@ -692,6 +735,31 @@
             "scenes": [],
             "dependencyType": 3,
             "icon": "class/DefaultAsset"
+          }
+        ]
+      },
+      {
+        "name": "Grid",
+        "dependencies": [
+          {
+            "name": "Grid",
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "GridLayout",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "Required by Tilemap Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.tilemap"
           }
         ]
       },
@@ -893,7 +961,9 @@
         "dependencies": [
           {
             "name": "BoxCollider2D",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -906,6 +976,14 @@
           {
             "name": "Collider2D",
             "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "CompositeCollider2D",
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -917,15 +995,25 @@
           },
           {
             "name": "PhysicsMaterial2D",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Rigidbody2D",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
+          },
+          {
+            "name": "Required by Tilemap Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.tilemap"
           }
         ]
       },
@@ -1006,6 +1094,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.graphicsstatecollectionserializer"
+          },
+          {
+            "name": "Required by Grid Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.grid"
           },
           {
             "name": "Required by HierarchyCore Module",
@@ -1114,6 +1208,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.textrendering"
+          },
+          {
+            "name": "Required by Tilemap Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.tilemap"
           },
           {
             "name": "Required by UI Module",
@@ -1272,12 +1372,42 @@
         ]
       },
       {
+        "name": "Tilemap",
+        "dependencies": [
+          {
+            "name": "Tilemap",
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "TilemapCollider2D",
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "TilemapRenderer",
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "UI",
         "dependencies": [
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1291,7 +1421,8 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
             "icon": null

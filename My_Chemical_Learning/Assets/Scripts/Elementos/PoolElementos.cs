@@ -12,7 +12,9 @@ public class PoolElementos : MonoBehaviour
 
     private string[] nombres =  //el prefab adresable debe tener el "label" con el mismo nombre que esta aqui
     {
-        "Agua"
+        "Agua",
+        "Sal",
+        "Helio"
     };
 
     private int cantidad = 5;
