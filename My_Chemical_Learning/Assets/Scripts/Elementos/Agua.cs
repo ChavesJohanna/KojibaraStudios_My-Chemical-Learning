@@ -38,6 +38,10 @@ public class Agua : MonoBehaviour, IElemento //el script se encuentra en el pref
         { 
             VolverAlPool();
         }
+        else if (otro.gameObject.CompareTag("Pirito") || otro.gameObject.CompareTag("Fuego")) //si choca con pirito vuelve al pool
+        {
+            VolverAlPool();
+        }
     }
 
     private IEnumerator InicioTiempoVida() //sera llamado al momento de reactivarse y si no colisiona con nada

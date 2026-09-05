@@ -28,6 +28,9 @@ public class DispararJugador : MonoBehaviour //el script se encuentra en el game
 
     public void Disparar()
     {
+        if (PoolElementos.Instance.ElementoNoElegido()) //si no se asigno el tipo de elemto entonce retorna 
+            return;
+
         GameObject poolElemento = PoolElementos.Instance.AsignarPosicionElemento(transform); //le asigna la posicion al elemento
 
         if (poolElemento == null) 

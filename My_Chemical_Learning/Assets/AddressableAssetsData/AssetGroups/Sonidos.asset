@@ -10,32 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Sonidos
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Default Local Group
-  m_GUID: 2ffc29d741365a74aaf413d7cdd7772f
+  m_GroupName: Sonidos
+  m_GUID: 24de8bf9cf6f85745bf505e532d06f95
   m_SerializeEntries:
-  - m_GUID: 09954c3ca04a8754d8dd8fc0d6984f99
-    m_Address: Assets/Prefabs/Items/Salt.prefab
+  - m_GUID: 638a55adc10862a43a56fc42b038ae8b
+    m_Address: Assets/Audio/SFX/Elementos/WaterGunTest3.wav
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Salt
+    - SonidoAgua
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3c607316ef64aac41a7b97d3a89a8c2c
-    m_Address: Assets/prefabs/Water.prefab
+  - m_GUID: c8b3ffa5f44661b45b36e437a62c79c3
+    m_Address: Assets/Audio/SFX/Elementos/SaltBlockTest.wav
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Water
+    - SonidoSal
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f39500293926c4947b20d7fdefe7041d
-    m_Address: Assets/Prefabs/Items/Helium.prefab
+  - m_GUID: cf3fc95eab68cbc45aa378f887ffa887
+    m_Address: Assets/Audio/SFX/Elementos/HeliumJumpTest.wav
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Helium
+    - SonidoHelio
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2f0aff87623cc154f920674dcada356e, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 91d2b2b2ed123ba4483d032807336c8f, type: 2}
-    - {fileID: 11400000, guid: b917c95c39a53aa4daa2f9ff78c5870e, type: 2}
+    - {fileID: 11400000, guid: f8ff645b8912bf748a1989d8d4d342c6, type: 2}
+    - {fileID: 11400000, guid: f0972116245d1fe4491144812bb6e2c9, type: 2}

@@ -22,6 +22,9 @@ public class ControladorAtajos : MonoBehaviour
         if (nombreElemento == null) 
             return;
 
+        if (nombreElemento == "") 
+            return;
+
         PoolElementos.Instance.ActivarElemento(nombreElemento); //se lo envia al pool para q el jugador lo dispare
     }
 }

@@ -13,6 +13,9 @@ TagManager:
   - HUD
   - vacio
   - Jugador
+  - Pirito
+  - Agua
+  - Fuego
   layers:
   - Default
   - TransparentFX
@@ -42,7 +45,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Enemigo
   - Jugador
   - Abismo
   - Piso

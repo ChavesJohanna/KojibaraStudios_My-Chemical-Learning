@@ -64,10 +64,14 @@ public class PoolElementos : MonoBehaviour
     public void ActivarElemento(string nombre)
     {
         if (nombre == "") //si el nombre es vacio que retorne
-            return; 
+            return;
 
+        if (nombre == null)
+            return;
 
         this.key = nombre;
+
+ 
     }
 
     public GameObject AsignarPosicionElemento(Transform posicion)
@@ -93,5 +97,10 @@ public class PoolElementos : MonoBehaviour
         elemento.SetActive(false);
 
         pool[nombre].Enqueue(elemento);
+    }
+
+    public bool ElementoNoElegido() //si no se eligio elemento tira true
+    {
+        return key == null || key == "";
     }
 }
