@@ -327,6 +327,7 @@ extern void PoolElementos_CrearElemento_m869EF192E05A3E70C18DEC831C9398C9549D263
 extern void PoolElementos_ActivarElemento_mC35CB8F28222ADA6168465E4660DB57E0F94AC0D (void);
 extern void PoolElementos_AsignarPosicionElemento_m17C0160646C8E92785B4C266BCA0DED0AF420B09 (void);
 extern void PoolElementos_DevolverElemento_m698E861F86F89F108A66EDF6161E6307254F0E21 (void);
+extern void PoolElementos_ElementoNoElegido_mC3D4272B8DEBC2D5D9D9D92BE401D5C1175D99F7 (void);
 extern void PoolElementos__ctor_m459D72C19F7C1AAF0A7CF9EF40B0DA8F15F7AC35 (void);
 extern void U3CU3Ec__DisplayClass10_0__ctor_m6DBF3A10632D0411D9AB4606BC3D69D314B9F1B3 (void);
 extern void U3CU3Ec__DisplayClass10_0_U3CCrearElementoU3Eb__0_m216C04933471BA86BA765480D66FC06CDC5D69FF (void);
@@ -342,6 +343,15 @@ extern void U3CInicioTiempoVidaU3Ed__7_MoveNext_m29B1990D44864B583A95E19B7FE403B
 extern void U3CInicioTiempoVidaU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC8D930A719E204A96B3C26B9DA8B45BA47EDAEA9 (void);
 extern void U3CInicioTiempoVidaU3Ed__7_System_Collections_IEnumerator_Reset_m1B7AC82C50EFA5F44434E21C704D2D5175980A07 (void);
 extern void U3CInicioTiempoVidaU3Ed__7_System_Collections_IEnumerator_get_Current_mD1CCECC3B2BCE020BF85B8BF1C1D4052AB9FD065 (void);
+extern void Fuego_OnTriggerEnter2D_m63E47B25D373EBAB6B7DDE735354AC6546B04DF6 (void);
+extern void Fuego__ctor_mB94811CFFC3B46C39D02104973EC109EB65F2B5D (void);
+extern void Pirito_Start_mCA3C638F5C52F1B17C2F254D515C6CA270BBE9D6 (void);
+extern void Pirito_FixedUpdate_mF219883DF6FCD7CCCA547B04E8C1AA5140EE2C7E (void);
+extern void Pirito_OnTriggerEnter2D_mB66E01817AFBAF5B3157DC7E62B67F6DAEB0D7A2 (void);
+extern void Pirito__ctor_m5D210668D0922E1B410B2472A206B8753E11C4B5 (void);
+extern void BarraVida_Start_mC5CE98F8743379CC3965A848BFC0E3F1E201118C (void);
+extern void BarraVida_Disminuir_m677EB73727E185BE561D7B564C9FC0C32C89C15A (void);
+extern void BarraVida__ctor_m0703104A50700504D883E884A3E01F6134C4779B (void);
 extern void ControlDisparo_Start_mB7B52F11DA5ADC2686A28D696573DBDB83DDE9D9 (void);
 extern void ControlDisparo_OnPointerDown_m291283964C40EE82B19FAD1564337E5E18A9E7B9 (void);
 extern void ControlDisparo_EsperarDisparo_m56D4BAFDA0A5CE91D163F257D5CE4DFB212DA0EE (void);
@@ -390,6 +400,10 @@ extern void AnimarJugador_Start_m81134F16EF2F3CD3E0DF1AA04E7AC0C84D2E4512 (void)
 extern void AnimarJugador_FixedUpdate_mC9EC3A402B702FE1CB81A24F132FC7CB7FEEDCBB (void);
 extern void AnimarJugador_AnimarDisparo_mEB0179383F6C97AE2A1A8411B076FD7C05232A35 (void);
 extern void AnimarJugador__ctor_m1BA2E609C2575FE46474E29E5B51FC6DF7BA9ED7 (void);
+extern void DaUF1arJugador_Start_mAABEFBD0F91803C91074A15AB9E16A7A9F1EDA58 (void);
+extern void DaUF1arJugador_OnTriggerEnter2D_mBED8CC6B33E76848FEB5890A46769DB344ECA909 (void);
+extern void DaUF1arJugador_OnCollisionEnter2D_m89490F21065BD4D44A8291C86577261E69A3ADC6 (void);
+extern void DaUF1arJugador__ctor_mD43EC96BC00707E2991BFD582E8475E8B57FAF11 (void);
 extern void DispararJugador_Start_mB38D93F9361F3CAF2D0304D1436E3A76188FB47F (void);
 extern void DispararJugador_FixedUpdate_m5CFD3A734E5C790E3FD8C7B5100DA0794228628F (void);
 extern void DispararJugador_Disparar_m4927538FD49EAEA818C329243527F4F55F09BB31 (void);
@@ -416,7 +430,7 @@ extern void U3CCerrarJuegoU3Ed__4_System_Collections_IEnumerator_Reset_mA83689EE
 extern void U3CCerrarJuegoU3Ed__4_System_Collections_IEnumerator_get_Current_m53D7F593E6F962AC0D5A592539DED6C425AC723E (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[414] = 
+static Il2CppMethodPointer s_methodPointers[428] = 
 {
 	UIButtonSound_PlayClick_m64EB1384346050696C6CAA174FEA86058601FB57,
 	UIButtonSound__ctor_m36BD96AE51A66D84733546C2E8C0AB7925823858,
@@ -742,6 +756,7 @@ static Il2CppMethodPointer s_methodPointers[414] =
 	PoolElementos_ActivarElemento_mC35CB8F28222ADA6168465E4660DB57E0F94AC0D,
 	PoolElementos_AsignarPosicionElemento_m17C0160646C8E92785B4C266BCA0DED0AF420B09,
 	PoolElementos_DevolverElemento_m698E861F86F89F108A66EDF6161E6307254F0E21,
+	PoolElementos_ElementoNoElegido_mC3D4272B8DEBC2D5D9D9D92BE401D5C1175D99F7,
 	PoolElementos__ctor_m459D72C19F7C1AAF0A7CF9EF40B0DA8F15F7AC35,
 	U3CU3Ec__DisplayClass10_0__ctor_m6DBF3A10632D0411D9AB4606BC3D69D314B9F1B3,
 	U3CU3Ec__DisplayClass10_0_U3CCrearElementoU3Eb__0_m216C04933471BA86BA765480D66FC06CDC5D69FF,
@@ -757,6 +772,15 @@ static Il2CppMethodPointer s_methodPointers[414] =
 	U3CInicioTiempoVidaU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC8D930A719E204A96B3C26B9DA8B45BA47EDAEA9,
 	U3CInicioTiempoVidaU3Ed__7_System_Collections_IEnumerator_Reset_m1B7AC82C50EFA5F44434E21C704D2D5175980A07,
 	U3CInicioTiempoVidaU3Ed__7_System_Collections_IEnumerator_get_Current_mD1CCECC3B2BCE020BF85B8BF1C1D4052AB9FD065,
+	Fuego_OnTriggerEnter2D_m63E47B25D373EBAB6B7DDE735354AC6546B04DF6,
+	Fuego__ctor_mB94811CFFC3B46C39D02104973EC109EB65F2B5D,
+	Pirito_Start_mCA3C638F5C52F1B17C2F254D515C6CA270BBE9D6,
+	Pirito_FixedUpdate_mF219883DF6FCD7CCCA547B04E8C1AA5140EE2C7E,
+	Pirito_OnTriggerEnter2D_mB66E01817AFBAF5B3157DC7E62B67F6DAEB0D7A2,
+	Pirito__ctor_m5D210668D0922E1B410B2472A206B8753E11C4B5,
+	BarraVida_Start_mC5CE98F8743379CC3965A848BFC0E3F1E201118C,
+	BarraVida_Disminuir_m677EB73727E185BE561D7B564C9FC0C32C89C15A,
+	BarraVida__ctor_m0703104A50700504D883E884A3E01F6134C4779B,
 	ControlDisparo_Start_mB7B52F11DA5ADC2686A28D696573DBDB83DDE9D9,
 	ControlDisparo_OnPointerDown_m291283964C40EE82B19FAD1564337E5E18A9E7B9,
 	ControlDisparo_EsperarDisparo_m56D4BAFDA0A5CE91D163F257D5CE4DFB212DA0EE,
@@ -806,6 +830,10 @@ static Il2CppMethodPointer s_methodPointers[414] =
 	AnimarJugador_FixedUpdate_mC9EC3A402B702FE1CB81A24F132FC7CB7FEEDCBB,
 	AnimarJugador_AnimarDisparo_mEB0179383F6C97AE2A1A8411B076FD7C05232A35,
 	AnimarJugador__ctor_m1BA2E609C2575FE46474E29E5B51FC6DF7BA9ED7,
+	DaUF1arJugador_Start_mAABEFBD0F91803C91074A15AB9E16A7A9F1EDA58,
+	DaUF1arJugador_OnTriggerEnter2D_mBED8CC6B33E76848FEB5890A46769DB344ECA909,
+	DaUF1arJugador_OnCollisionEnter2D_m89490F21065BD4D44A8291C86577261E69A3ADC6,
+	DaUF1arJugador__ctor_mD43EC96BC00707E2991BFD582E8475E8B57FAF11,
 	DispararJugador_Start_mB38D93F9361F3CAF2D0304D1436E3A76188FB47F,
 	DispararJugador_FixedUpdate_m5CFD3A734E5C790E3FD8C7B5100DA0794228628F,
 	DispararJugador_Disparar_m4927538FD49EAEA818C329243527F4F55F09BB31,
@@ -838,7 +866,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] =
 {
 	{ 0x060000D2, DamageInfo__ctor_m0D01C276C527E31DABD36A4A7C7BBD48288733DC_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[414] = 
+static const int32_t s_InvokerIndices[428] = 
 {
 	9538,
 	9538,
@@ -1164,6 +1192,7 @@ static const int32_t s_InvokerIndices[414] =
 	7524,
 	6429,
 	3815,
+	9233,
 	9538,
 	9538,
 	6713,
@@ -1179,6 +1208,15 @@ static const int32_t s_InvokerIndices[414] =
 	9378,
 	9538,
 	9378,
+	7524,
+	9538,
+	9538,
+	9538,
+	7524,
+	9538,
+	9538,
+	9538,
+	9538,
 	9538,
 	7524,
 	9378,
@@ -1229,6 +1267,10 @@ static const int32_t s_InvokerIndices[414] =
 	9538,
 	9538,
 	9538,
+	7524,
+	7524,
+	9538,
+	9538,
 	9538,
 	9538,
 	9538,
@@ -1259,7 +1301,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	414,
+	428,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

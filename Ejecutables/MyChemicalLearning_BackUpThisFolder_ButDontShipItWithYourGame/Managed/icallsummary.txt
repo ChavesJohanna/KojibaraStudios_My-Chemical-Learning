@@ -1606,6 +1606,7 @@ UnityEngine.Time::get_realtimeSinceStartupAsDouble
 UnityEngine.Time::get_timeAsDouble
 UnityEngine.Time::get_frameCount
 UnityEngine.Time::get_deltaTime
+UnityEngine.Time::get_fixedDeltaTime
 UnityEngine.Time::get_fixedUnscaledTime
 UnityEngine.Time::get_realtimeSinceStartup
 UnityEngine.Time::get_time
