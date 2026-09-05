@@ -20,6 +20,8 @@ public class BotonJugar : MonoBehaviour
 
     private void Jugar()
     {
+        GuardarPartida.ResetearDatos(); //reinicia los datos 
+
         boton.interactable = false; //desactiva la interacción del botón
         StartCoroutine(CargarNivel()); //inicia la espera
     } 

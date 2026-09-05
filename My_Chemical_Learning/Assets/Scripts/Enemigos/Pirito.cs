@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Pirito : MonoBehaviour //el script se encuentra en el enemigo con el mismo nombre
@@ -13,12 +14,16 @@ public class Pirito : MonoBehaviour //el script se encuentra en el enemigo con e
 
     private float vida = 10f;
 
+    private Animator animator; //hara la explocion de pirito cuando muera
+
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 
         posicionInicial = transform.position;
+
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -48,8 +53,20 @@ public class Pirito : MonoBehaviour //el script se encuentra en el enemigo con e
         {
             vida -= 5f;
 
-            if(vida <= 0) //si la vida es cero se desactiva el objeto
-                gameObject.SetActive(false);
+            if (vida <= 0) //si la vida es cero se activa la animacion y  desactiva el objeto
+            {
+                StartCoroutine(Animacion());
+            }
         }
+    }
+
+    private IEnumerator Animacion()
+    {
+        animator.SetBool("MurioPirito",true);
+
+        yield return new WaitForSeconds(0.2f);
+
+        gameObject.SetActive(false);
+
     }
 }

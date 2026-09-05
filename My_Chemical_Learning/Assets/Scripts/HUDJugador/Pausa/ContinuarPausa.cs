@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Continuar : MonoBehaviour, IPointerDownHandler //se encuantra en el boton con el mismo nombre del panel de pausa
+public class ContinuarPausa : MonoBehaviour, IPointerDownHandler //se encuantra en el boton con el mismo nombre del panel de pausa
 {
     private Pausa pausa; //componente del objeto con el msmo nombre
 

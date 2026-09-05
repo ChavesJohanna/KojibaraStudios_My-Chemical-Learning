@@ -16,6 +16,8 @@ TagManager:
   - Pirito
   - Agua
   - Fuego
+  - Sal
+  - BloqueSal
   layers:
   - Default
   - TransparentFX
@@ -28,6 +30,7 @@ TagManager:
   - Enemy
   - Player
   - Proyectile
+  - vacio
   - 
   - 
   - 
@@ -43,8 +46,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Mapa
   - Enemigo
   - Jugador
   - Abismo

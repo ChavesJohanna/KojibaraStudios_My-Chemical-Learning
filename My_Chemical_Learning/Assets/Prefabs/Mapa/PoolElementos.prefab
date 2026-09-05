@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112705086577521100}
   - component: {fileID: 5554912312101349476}
-  m_Layer: 0
+  m_Layer: 27
   m_Name: PoolElementos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

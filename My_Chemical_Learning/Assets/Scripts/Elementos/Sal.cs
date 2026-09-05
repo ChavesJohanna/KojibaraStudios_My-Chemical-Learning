@@ -32,6 +32,10 @@ public class Sal : MonoBehaviour, IElemento //el script se encuentra en el prefa
         { 
             VolverAlPool();
         }
+        else if (otro.gameObject.CompareTag("BloqueSal")) //si choca en las zonas vuelve al pool
+        {
+            VolverAlPool();
+        }
     }
 
     private IEnumerator InicioTiempoVida() //sera llamado al momento de reactivarse y si no colisiona con nada
