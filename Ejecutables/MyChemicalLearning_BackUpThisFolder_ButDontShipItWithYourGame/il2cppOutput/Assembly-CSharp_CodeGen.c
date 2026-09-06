@@ -443,6 +443,8 @@ extern void BloqueSal__ctor_mE010DD2857946F429463263D04C88A608D86A80D (void);
 extern void FinNivel_Start_mFE5D3509A08024E7CE4EC6293E70947336F5159C (void);
 extern void FinNivel_OnTriggerEnter2D_m1747CD465CD94BDC2A627D87BBF2C07BCD15DCA5 (void);
 extern void FinNivel__ctor_m35537D2B1AF6D2D1E0D02DC953FF6FADEE6F0D99 (void);
+extern void GuardarNivel_GuardarNivelActual_mCA28C8F73FE5C8C83CD75DAFB06EB6AAD2B79E8B (void);
+extern void GuardarNivel_ObtenerNivelAnterior_mF32484DD6EFCA929A42AF2E5DAB9DCD9CABADAC7 (void);
 extern void GuardarPartida_GuardarDatos_mB58DC3BDD3AB7033876BE5F8B9EC49029323B816 (void);
 extern void GuardarPartida_RecuperarDatos_mD0407A29054009CF0EEC00FC730187E00AE75764 (void);
 extern void GuardarPartida_HayDatosGuardados_mB9B7384B2814D4454E72DBD3B285C66387CDC863 (void);
@@ -472,9 +474,11 @@ extern void U3CCerrarJuegoU3Ed__4_MoveNext_mAC096174D9D1EEDD9522649C928B3788021B
 extern void U3CCerrarJuegoU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8EC4168EBD9D82725DF9F6C11C7A7D0F5CEFD0E3 (void);
 extern void U3CCerrarJuegoU3Ed__4_System_Collections_IEnumerator_Reset_mA83689EEB8A4EE1127ECBE71602C7E5BC2C6392B (void);
 extern void U3CCerrarJuegoU3Ed__4_System_Collections_IEnumerator_get_Current_m53D7F593E6F962AC0D5A592539DED6C425AC723E (void);
+extern void BotonRegresar_OnPointerDown_m829A51F8FD0ED060C6AAD4C44EA88682C2B66BDC (void);
+extern void BotonRegresar__ctor_mAC59A9BBC36A018B539A042FD196BBEDB4C7D72E (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[472] = 
+static Il2CppMethodPointer s_methodPointers[476] = 
 {
 	UIButtonSound_PlayClick_m64EB1384346050696C6CAA174FEA86058601FB57,
 	UIButtonSound__ctor_m36BD96AE51A66D84733546C2E8C0AB7925823858,
@@ -917,6 +921,8 @@ static Il2CppMethodPointer s_methodPointers[472] =
 	FinNivel_Start_mFE5D3509A08024E7CE4EC6293E70947336F5159C,
 	FinNivel_OnTriggerEnter2D_m1747CD465CD94BDC2A627D87BBF2C07BCD15DCA5,
 	FinNivel__ctor_m35537D2B1AF6D2D1E0D02DC953FF6FADEE6F0D99,
+	GuardarNivel_GuardarNivelActual_mCA28C8F73FE5C8C83CD75DAFB06EB6AAD2B79E8B,
+	GuardarNivel_ObtenerNivelAnterior_mF32484DD6EFCA929A42AF2E5DAB9DCD9CABADAC7,
 	GuardarPartida_GuardarDatos_mB58DC3BDD3AB7033876BE5F8B9EC49029323B816,
 	GuardarPartida_RecuperarDatos_mD0407A29054009CF0EEC00FC730187E00AE75764,
 	GuardarPartida_HayDatosGuardados_mB9B7384B2814D4454E72DBD3B285C66387CDC863,
@@ -946,6 +952,8 @@ static Il2CppMethodPointer s_methodPointers[472] =
 	U3CCerrarJuegoU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8EC4168EBD9D82725DF9F6C11C7A7D0F5CEFD0E3,
 	U3CCerrarJuegoU3Ed__4_System_Collections_IEnumerator_Reset_mA83689EEB8A4EE1127ECBE71602C7E5BC2C6392B,
 	U3CCerrarJuegoU3Ed__4_System_Collections_IEnumerator_get_Current_m53D7F593E6F962AC0D5A592539DED6C425AC723E,
+	BotonRegresar_OnPointerDown_m829A51F8FD0ED060C6AAD4C44EA88682C2B66BDC,
+	BotonRegresar__ctor_mAC59A9BBC36A018B539A042FD196BBEDB4C7D72E,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
@@ -954,7 +962,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] =
 {
 	{ 0x060000D2, DamageInfo__ctor_m0D01C276C527E31DABD36A4A7C7BBD48288733DC_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[472] = 
+static const int32_t s_InvokerIndices[476] = 
 {
 	9538,
 	9538,
@@ -1397,6 +1405,8 @@ static const int32_t s_InvokerIndices[472] =
 	9538,
 	7524,
 	9538,
+	13773,
+	14112,
 	12670,
 	12562,
 	14066,
@@ -1426,6 +1436,8 @@ static const int32_t s_InvokerIndices[472] =
 	9378,
 	9538,
 	9378,
+	7524,
+	9538,
 	14208,
 	9538,
 };
@@ -1433,7 +1445,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	472,
+	476,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

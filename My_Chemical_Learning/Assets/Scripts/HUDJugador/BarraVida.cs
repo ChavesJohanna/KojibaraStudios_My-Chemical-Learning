@@ -18,6 +18,17 @@ public class BarraVida : MonoBehaviour //se ecuentra en el objeto con el mismo n
         barraLlena = transform.Find("Completa").GetComponent<Image>();
 
         pantalla = GameObject.Find("Pantallas")?.GetComponent<Pantallas>();
+
+        if (GuardarPartida.HayDatosGuardados())
+        {
+            GuardarPartida.RecuperarDatos(out Vector3 posicion, out float vida);
+            CargarVidaGuardada(vida); // refresca la barra inmediatamente
+        }
+        else
+        {
+            // Si no hay datos guardados, inicializa con vidaActual
+            barraLlena.fillAmount = vidaActual / vidaMaxima;
+        }
     }
 
     public void Disminuir()

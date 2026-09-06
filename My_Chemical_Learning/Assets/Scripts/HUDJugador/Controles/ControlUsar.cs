@@ -46,7 +46,9 @@ public class ControlUsar : MonoBehaviour, IPointerDownHandler //se encuentra en 
 
         GuardarPartida.GuardarDatos(posicionJugador, vida); //guardamos los datos
 
-        GuardarNivel.GuardarNivelActual();//guarda el nivel en el que se encuentra el jugador
+        string nivel = SceneManager.GetActiveScene().name;
+
+        GuardarNivel.GuardarNivelActual(nivel);
 
         Debug.Log("usando mesa");
         SceneManager.LoadScene("MesaTrabajo"); //carga la mesa de trabajo

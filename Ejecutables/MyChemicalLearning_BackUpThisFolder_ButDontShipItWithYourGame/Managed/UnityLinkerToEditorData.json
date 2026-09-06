@@ -76,6 +76,7 @@
             "name": "AudioBehaviour",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -94,6 +95,7 @@
             "name": "AudioListener",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -162,6 +164,7 @@
             "name": "Camera",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -183,6 +186,7 @@
             "name": "Cubemap",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -204,6 +208,7 @@
             "name": "EditorExtension",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 1,
@@ -219,6 +224,7 @@
             "name": "GameObject",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -246,6 +252,7 @@
             "name": "LevelGameManager",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 1,
@@ -273,6 +280,7 @@
             "name": "LightmapSettings",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -288,6 +296,7 @@
             "name": "Material",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -315,6 +324,7 @@
             "name": "MonoBehaviour",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -330,6 +340,7 @@
             "name": "MonoScript",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 1,
@@ -339,6 +350,7 @@
             "name": "NamedObject",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 1,
@@ -372,6 +384,7 @@
             "name": "RectTransform",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -387,6 +400,7 @@
             "name": "RenderSettings",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -401,6 +415,7 @@
           {
             "name": "Renderer",
             "scenes": [
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -422,6 +437,7 @@
             "name": "Shader",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -443,6 +459,7 @@
             "name": "Sprite",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -457,6 +474,7 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -969,7 +987,9 @@
           },
           {
             "name": "CircleCollider2D",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/MesaTrabajo.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -1004,6 +1024,7 @@
           {
             "name": "Rigidbody2D",
             "scenes": [
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -1334,7 +1355,8 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Escenas/MenuPrincipal.unity"
+              "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1407,6 +1429,7 @@
             "name": "Canvas",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,
@@ -1422,6 +1445,7 @@
             "name": "CanvasRenderer",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity"
             ],
             "dependencyType": 0,

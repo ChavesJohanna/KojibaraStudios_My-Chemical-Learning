@@ -6,9 +6,14 @@ public static class GuardarNivel
     private static string nivelAnterior;
 
     
-    public static void GuardarNivelActual() //guarda el nivel actual antes de pasar a la mesa
+    public static void GuardarNivelActual(string nivel) //guarda el nivel actual antes de pasar a la mesa
     {
-        nivelAnterior = SceneManager.GetActiveScene().name;
+
+        if (nivelAnterior == nivel) //si ya esta guardado y es el mismo, no lo sobrescribe
+            return;
+        
+
+        nivelAnterior = nivel;
     }
 
  
@@ -17,11 +22,4 @@ public static class GuardarNivel
         return nivelAnterior;
     }
 
-    public static void CargarNivelAnterior() //recarga el nivel en el que estaba el jugador
-    {
-        if (!string.IsNullOrEmpty(nivelAnterior)) //si el nivel ni esta vacio recien lo carga
-        {
-            SceneManager.LoadScene(nivelAnterior);
-        }
-    }
 }
