@@ -11,6 +11,13 @@ TagManager:
   - WorkTable
   - DieZone
   - HUD
+  - vacio
+  - Jugador
+  - Pirito
+  - Agua
+  - Fuego
+  - Sal
+  - BloqueSal
   layers:
   - Default
   - TransparentFX
@@ -23,6 +30,7 @@ TagManager:
   - Enemy
   - Player
   - Proyectile
+  - vacio
   - 
   - 
   - 
@@ -38,12 +46,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Mapa
+  - Enemigo
+  - Jugador
+  - Abismo
+  - Piso
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -59,6 +66,24 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 318921259
+    locked: 0
+  - name: vacio
+    uniqueID: 787609735
+    locked: 0
+  - name: Mapa
+    uniqueID: 4206887309
+    locked: 0
+  - name: Mesa
+    uniqueID: 1913589197
+    locked: 0
+  - name: Enemigo
+    uniqueID: 3869448235
+    locked: 0
+  - name: Elemento
+    uniqueID: 2769366281
+    locked: 0
+  - name: Jugador
+    uniqueID: 1502839317
     locked: 0
   m_RenderingLayers:
   - Default

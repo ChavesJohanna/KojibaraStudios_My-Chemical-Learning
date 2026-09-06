@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sonidos
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Sonidos
+  m_GUID: 24de8bf9cf6f85745bf505e532d06f95
+  m_SerializeEntries:
+  - m_GUID: 638a55adc10862a43a56fc42b038ae8b
+    m_Address: Assets/Audio/SFX/Elementos/WaterGunTest3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SonidoAgua
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8b3ffa5f44661b45b36e437a62c79c3
+    m_Address: Assets/Audio/SFX/Elementos/SaltBlockTest.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SonidoSal
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf3fc95eab68cbc45aa378f887ffa887
+    m_Address: Assets/Audio/SFX/Elementos/HeliumJumpTest.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SonidoHelio
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2f0aff87623cc154f920674dcada356e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f8ff645b8912bf748a1989d8d4d342c6, type: 2}
+    - {fileID: 11400000, guid: f0972116245d1fe4491144812bb6e2c9, type: 2}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Elementos
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Elementos
+  m_GUID: f6b08e42cf1debc4e8ef67476d5be8f8
+  m_SerializeEntries:
+  - m_GUID: 293b30c2ef5ef3949afd8eb569132024
+    m_Address: Assets/Prefabs/Agua.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Agua
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 515e2c705fef32147b015d93809c980e
+    m_Address: Assets/Prefabs/Helio.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Helio
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7cf388bc2fc8304dbc0354bfb5ee72d
+    m_Address: Assets/Prefabs/Sal.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sal
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2f0aff87623cc154f920674dcada356e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7bb0bfe81e0958d4aac7127c6096426f, type: 2}
+    - {fileID: 11400000, guid: 2b08f1be05f85f94ea56c9577b05177a, type: 2}
