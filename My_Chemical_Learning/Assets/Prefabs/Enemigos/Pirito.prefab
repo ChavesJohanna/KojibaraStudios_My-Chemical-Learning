@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 22.17, y: -3.99, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6373532968724997810}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6226575347058393511
@@ -202,3 +203,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e65d087eef3c2945b61aafb68ba8399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pirito
+  vida: 10
+  debilidad: Agua
+  velocidad: 1
+  detectorSuelo: {fileID: 6373532968724997810}
+  distanciaDetector: 0.5
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 2147483648
+  distancia: 10
+--- !u!1 &9103316275370316821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6373532968724997810}
+  m_Layer: 0
+  m_Name: DetectorSuelo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6373532968724997810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9103316275370316821}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.33, y: -0.462, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7686822535955709125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
