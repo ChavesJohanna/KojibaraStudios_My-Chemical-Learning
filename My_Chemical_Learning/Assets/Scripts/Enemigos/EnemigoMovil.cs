@@ -6,7 +6,6 @@ public class EnemigoMovil : Enemigo
 
     [Header("Detector de precipicios")]
     [SerializeField] protected Transform detectorSuelo;
-    [SerializeField] protected float distanciaHorizontal = 0.3f;
     [SerializeField] protected float distanciaDetector = 0.5f;
     [SerializeField] protected LayerMask capaSuelo;
 
@@ -15,12 +14,19 @@ public class EnemigoMovil : Enemigo
 
     protected int direccion = 1;
 
+    private Vector3 posicionDetectorInicial;
+
     protected override void Start()
     {
         base.Start();
 
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+
+        if (detectorSuelo != null)
+        {
+            posicionDetectorInicial = detectorSuelo.localPosition;
+        }
     }
 
     protected virtual void FixedUpdate()
@@ -46,13 +52,11 @@ public class EnemigoMovil : Enemigo
 
     protected bool HaySueloDelante()
     {
-        Vector2 origen = new Vector2(
-            detectorSuelo.position.x + direccion * distanciaHorizontal,
-            detectorSuelo.position.y
-        );
+        if (detectorSuelo == null)
+            return true;
 
         RaycastHit2D hit = Physics2D.Raycast(
-            origen,
+            detectorSuelo.position,
             Vector2.down,
             distanciaDetector,
             capaSuelo
@@ -66,6 +70,15 @@ public class EnemigoMovil : Enemigo
         direccion *= -1;
 
         sprite.flipX = direccion < 0;
+
+        if (detectorSuelo != null)
+        {
+            Vector3 nuevaPosicion = posicionDetectorInicial;
+
+            nuevaPosicion.x *= direccion;
+
+            detectorSuelo.localPosition = nuevaPosicion;
+        }
     }
 
     protected virtual void OnDrawGizmosSelected()
