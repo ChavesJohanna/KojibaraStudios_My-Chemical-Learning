@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5559000101128646093}
   m_Layer: 28
   m_Name: Oxidee
-  m_TagString: Pirito
+  m_TagString: Oxidee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,10 +204,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Oxidee
   vida: 10
-  debilidad: 
+  debilidad: Acido
   velocidad: 1
   detectorSuelo: {fileID: 6373532968724997810}
-  distanciaHorizontal: 0.3
   distanciaDetector: 0.5
   capaSuelo:
     serializedVersion: 2

@@ -18,6 +18,8 @@ TagManager:
   - Fuego
   - Sal
   - BloqueSal
+  - Acido
+  - Oxidee
   layers:
   - Default
   - TransparentFX

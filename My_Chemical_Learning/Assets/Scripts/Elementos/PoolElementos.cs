@@ -14,7 +14,8 @@ public class PoolElementos : MonoBehaviour
     {
         "Agua",
         "Sal",
-        "Helio"
+        "Helio",
+        "Acido"
     };
 
     private int cantidad = 5;

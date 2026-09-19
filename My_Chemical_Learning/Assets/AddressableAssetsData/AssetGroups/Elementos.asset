@@ -16,19 +16,25 @@ MonoBehaviour:
   m_GUID: f6b08e42cf1debc4e8ef67476d5be8f8
   m_SerializeEntries:
   - m_GUID: 293b30c2ef5ef3949afd8eb569132024
-    m_Address: Assets/Prefabs/Agua.prefab
+    m_Address: Assets/Prefabs/Elementos/Agua.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Agua
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 515e2c705fef32147b015d93809c980e
-    m_Address: Assets/Prefabs/Helio.prefab
+    m_Address: Assets/Prefabs/Elementos/Helio.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Helio
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a42a6ca262bc1640b154d246e42556f
+    m_Address: Assets/Prefabs/Elementos/Acido.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Acido
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c7cf388bc2fc8304dbc0354bfb5ee72d
-    m_Address: Assets/Prefabs/Sal.prefab
+    m_Address: Assets/Prefabs/Elementos/Sal.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Sal
