@@ -16,7 +16,8 @@ public class PoolElementos : MonoBehaviour
         "Sal",
         "Helio",
         "Acido",
-        "Nitrogeno"
+        "Nitrogeno",
+        "OxAlum"
     };
 
     private int cantidad = 5;

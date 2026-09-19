@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Helio
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7dc87d76c62e7db4f9ed21b349d68c15
+    m_Address: Assets/Prefabs/Elementos/OxAlum.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OxAlum
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8a42a6ca262bc1640b154d246e42556f
     m_Address: Assets/Prefabs/Elementos/Acido.prefab
     m_ReadOnly: 0
