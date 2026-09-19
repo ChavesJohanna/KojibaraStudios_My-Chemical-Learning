@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ae312d20df3e1a445a61ea4fd6b9a39a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f8e864c83da8844491613e0e45bd011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1898,7 +1898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a6b315d96f2715949bf5e3f8c14363f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f8e864c83da8844491613e0e45bd011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2700,7 +2700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f08cc6daf8a82eb488ac8111063dcd00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f8e864c83da8844491613e0e45bd011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2892,7 +2892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e4cf4b8cdde08343b8d2ee0729aff58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f08cc6daf8a82eb488ac8111063dcd00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4bd39d702b9c8b847bcf6f42971d2d0f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae312d20df3e1a445a61ea4fd6b9a39a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4343,7 +4343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62245ffc36c5f5440b491583beca1006, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6b315d96f2715949bf5e3f8c14363f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4672,6 +4672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6639388998828365088}
+  - component: {fileID: 5589875742640951673}
   m_Layer: 5
   m_Name: Inventario
   m_TagString: Untagged
@@ -4701,6 +4702,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5589875742640951673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675596777302850970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628c4f1ee7c9b4b47a5ff74e88f954b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventario
 --- !u!1 &7754918961406000457
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,14 +4992,13 @@ GameObject:
   - component: {fileID: 2729325020998312070}
   - component: {fileID: 4104098636106451918}
   - component: {fileID: 3575320206006727917}
-  - component: {fileID: 3998476208392101091}
   m_Layer: 5
-  m_Name: ControladorEspacios
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &516742744526087506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5083,18 +5095,6 @@ MonoBehaviour:
   m_Spacing: {x: 21, y: 21}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &3998476208392101091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994039732940429869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7aae4741b12c2b4195c0f0d756b0f36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControladorInventario
 --- !u!1 &8162859081640529255
 GameObject:
   m_ObjectHideFlags: 0

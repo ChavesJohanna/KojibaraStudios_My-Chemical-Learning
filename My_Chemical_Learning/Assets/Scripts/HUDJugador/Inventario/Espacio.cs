@@ -1,25 +1,28 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Espacio : MonoBehaviour, IPointerDownHandler //se encuentra en los botones con el mismo nombre
+public class Espacio : MonoBehaviour, IPointerDownHandler, IBotonInventario //se encuentra en los botones con el mismo nombre
 {
-    private ControladorEspacios controlador;
-    private Image elemento; //el sprite que tiene el espacio del inventario
+    private Inventario inventario;
+    private Image imagenElemento; //el sprite que tiene el espacio del inventario
 
     private void Start()
     {
-        controlador = GetComponentInParent<ControladorEspacios>();
-        elemento = GetComponent<Image>();
+        inventario = transform.parent.GetComponentInParent<Inventario>();
+
+        imagenElemento = GetComponent<Image>();
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
     {
-        if (controlador == null)
-            return;
+        inventario.IntercambiarSprite(this); //le pasa la imagen al inventario para que haga el intercambio
 
-        controlador.Seleccionar(this, elemento.sprite);
+    }
 
-        Debug.Log("Espacio elegido: " + gameObject.name);
+    public Image ObtenerImagenElemento()
+    {
+        return imagenElemento;
     }
 }

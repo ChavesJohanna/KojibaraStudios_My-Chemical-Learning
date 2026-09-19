@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Escenas/Nivel1.unity
     guid: e5d6e9c3624f1ce47a1e76f28719ddaa
   - enabled: 1
+    path: Assets/Escenas/Nivel2.unity
+    guid: f983f88052ac11544a2585266bafe9a4
+  - enabled: 1
     path: Assets/Escenas/MesaTrabajo.unity
     guid: 3d329d7f1e0b58c44a4a4e6e1053f239
   m_configObjects:
