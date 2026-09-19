@@ -14,25 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Sonidos
   m_GUID: 24de8bf9cf6f85745bf505e532d06f95
-  m_SerializeEntries:
-  - m_GUID: 638a55adc10862a43a56fc42b038ae8b
-    m_Address: Assets/Audio/SFX/Elementos/WaterGunTest3.wav
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - SonidoAgua
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c8b3ffa5f44661b45b36e437a62c79c3
-    m_Address: Assets/Audio/SFX/Elementos/SaltBlockTest.wav
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - SonidoSal
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cf3fc95eab68cbc45aa378f887ffa887
-    m_Address: Assets/Audio/SFX/Elementos/HeliumJumpTest.wav
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - SonidoHelio
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2f0aff87623cc154f920674dcada356e, type: 2}
   m_SchemaSet:
