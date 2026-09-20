@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 1249344762745343293}
   - component: {fileID: 1506766830060165789}
   m_Layer: 5
-  m_Name: VolumenEfectos
+  m_Name: TextoVolumenE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 3154784146295316820}
   - component: {fileID: 211415589622791791}
   m_Layer: 5
-  m_Name: VolumenMusica
+  m_Name: TextoVolumenM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -929,12 +929,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 261764367376620931}
-  - {fileID: 6302469686248481536}
   - {fileID: 1345020924918158193}
   - {fileID: 985916943051266048}
   - {fileID: 322860485016323870}
   - {fileID: 4309315825653908409}
+  - {fileID: 261764367376620931}
+  - {fileID: 6302469686248481536}
   m_Father: {fileID: 5280272283921048026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

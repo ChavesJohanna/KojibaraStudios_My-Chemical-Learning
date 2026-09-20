@@ -15,6 +15,6 @@ public class BotonOpciones : MonoBehaviour //se encuentra en el boton opciones d
     }
     private void ActivarPanel()
     {
-        menu.ActivarOpciones(); //activa el panel de opciones
+        menu.AbrirOpciones(); //activa el panel de opciones
     }
 }

@@ -15,6 +15,6 @@ public class BotonAceptar : MonoBehaviour //se encuentra en el boton aceptar del
     }
     private void ActivarPanel()
     {
-        menu.ActivarMenu(); //activa el menu 
+        menu.AbrirMenu(); //activa el menu 
     }
 }

@@ -14,13 +14,13 @@ public class MenuPrincipal : MonoBehaviour //se encuentra en el objeto con el mi
         panelOpciones.SetActive(false);
     }
 
-    public void ActivarMenu()
+    public void AbrirMenu()
     {
         panelOpciones.SetActive(false);
         panelMenu.SetActive(true);
     }
 
-    public void ActivarOpciones()
+    public void AbrirOpciones()
     {
         panelMenu.SetActive(false);
         panelOpciones.SetActive(true);

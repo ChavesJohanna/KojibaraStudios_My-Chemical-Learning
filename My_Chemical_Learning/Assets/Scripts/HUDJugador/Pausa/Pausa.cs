@@ -4,13 +4,16 @@ using UnityEngine;
 public class Pausa : MonoBehaviour //el script se encuentra en el objeto del hud con el mismo nombre y servira de controlador
 {
     private List<GameObject> hud; //los elemtos se ocultaran al estar en pausa
-    private GameObject panel;
-    private bool juegoPausado = false;
+    private GameObject panelPausa;
+    private GameObject panelOpciones;
 
     private void Start()
     {
-        panel = transform.Find("Panel").gameObject;
-        panel.SetActive(false); //desactivar el panel por defecto
+        panelPausa = transform.Find("PanelPausa").gameObject;
+        panelPausa.SetActive(false); //desactivar el panel por defecto
+
+        panelOpciones = transform.Find("PanelOpciones").gameObject;
+        panelOpciones.SetActive(false); //desactivar el panel por defecto
 
         hud = new List<GameObject>();
 
@@ -21,18 +24,43 @@ public class Pausa : MonoBehaviour //el script se encuentra en el objeto del hud
  
     }
 
-    public void AbrirPanel(bool botonApretado)
+    public void AbrirPausa() //activa el panel de pausa y congela el juego
     {
-        juegoPausado = botonApretado;
+        Time.timeScale = 0f;
 
-        panel.SetActive(juegoPausado);
+        panelPausa.SetActive(true);
+        panelOpciones.SetActive(false);
 
-        Time.timeScale = juegoPausado ? 0f : 1f; //pausa y despausa el juego dependiendo si el panel esta activo o no
-
-        for (int i = 0; i < hud.Count; i++) //desactiva los elementos al estar el panel activo
-        {
-            hud[i].SetActive(!juegoPausado);
-        }
+        MostrarHud(false);
     }
 
+    public void ReanudarJuego() //desactiva los paneles y vuelve a activar el juego
+    {
+        Time.timeScale = 1f;
+
+        panelPausa.SetActive(false);
+        panelOpciones.SetActive(false);
+
+        MostrarHud(true);
+    }
+
+    public void AbrirOpciones() //abre el panel de opciones
+    {
+        panelPausa.SetActive(false);
+        panelOpciones.SetActive(true);
+    }
+
+    public void VolverAPausa() //cierra el panel de opciones y reactiva el panel de pausa
+    {
+        panelOpciones.SetActive(false);
+        panelPausa.SetActive(true);
+    }
+
+    private void MostrarHud(bool mostrar) //se encarga de activar y desactivar el hud del jugador
+    {
+        for (int i = 0; i < hud.Count; i++)
+        {
+            hud[i].SetActive(mostrar);
+        }
+    }
 }
