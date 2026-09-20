@@ -9,7 +9,7 @@ public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el pr
     private SpriteRenderer spJugador;//obtendra el spriterendere del jugador para cambiarle el color
 
     private float velocidad = 5f;
-    private float tiempoVida = 3f;//una vez se termine se regrese al pool
+    private float tiempoVida = 1f;//una vez se termine se regrese al pool
 
     private bool fueraPool = false; //una vez salga del pool se pondra en true y iniciara su regreso
 
@@ -27,7 +27,7 @@ public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el pr
 
     public void MovimientoElemento(float direccion)
     {
-        fueraPool = true;
+        this.fueraPool = true;
 
         rb.linearVelocity = new Vector2(direccion * velocidad, 0f); // agrega un pequeño impulso al inicio
 
@@ -40,7 +40,7 @@ public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el pr
 
     private IEnumerator InicioTiempoVida() //sera llamado al momento de reactivarse
     {
-        if (!fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
+        if (!this.fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
             yield break;
 
         yield return new WaitForSeconds(tiempoVida);
@@ -48,22 +48,14 @@ public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el pr
         VolverAlPool();
     }
 
-    private void VolverAlPool() //reestableze el movimiento del objeto y lo gregresa al pool
+    private void VolverAlPool() //reestableze algunas variables y regresa el obj al pool
     {
-        fueraPool = false;
-
-        rb.linearVelocity = Vector2.zero;
+        this.fueraPool = false;
 
         spJugador.color = colorJugador; //recoloreaamo al jugador
         spElemento.enabled = true; //lo activamo
 
-        string nombre = gameObject.name //limpia el nombre quitandole el (clone) y espacios vacios
-            .Replace("(Clone)", "")
-            .Replace(" ", "")
-            .Trim();
-
-
-        PoolElementos.Instance.DevolverElemento(nombre, gameObject); //se envia el nombre limpio del objeto
+        PoolElementos.Instance.DevolverElemento(this.gameObject); //se envia el obj
     }
 
 }

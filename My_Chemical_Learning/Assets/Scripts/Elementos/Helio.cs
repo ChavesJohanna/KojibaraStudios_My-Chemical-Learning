@@ -6,7 +6,7 @@ public class Helio : MonoBehaviour, IElemento //el script se encuentra en el pre
     private Rigidbody2D rb;
     private float velocidad = 5f;
  
-    private float tiempoVida = 3f; //una vez se termine y no haya colicionado se regrese al pool
+    private float tiempoVida = 2f; //una vez se termine y no haya colicionado se regrese al pool
     private bool fueraPool = false; //una vez salga del pool se pondra en true y iniciara su regreso
 
     private Rigidbody2D rbJugador; //obtendra el rigid del jugador para agregarle el doble salto
@@ -21,7 +21,7 @@ public class Helio : MonoBehaviour, IElemento //el script se encuentra en el pre
 
     public void MovimientoElemento(float direccion)
     {
-        fueraPool = true;
+        this.fueraPool = true;
 
         rb.linearVelocity = new Vector2(direccion * velocidad, 0f); // agrega un pequeño impulso al inicio
 
@@ -37,7 +37,7 @@ public class Helio : MonoBehaviour, IElemento //el script se encuentra en el pre
 
     private void OnTriggerEnter2D(Collider2D otro)
     { 
-        if (!fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
+        if (!this.fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
             return;
 
         if (otro.gameObject.layer == LayerMask.NameToLayer("Piso")) //si coliciona con el mapa el objeto regresa al pool
@@ -48,7 +48,7 @@ public class Helio : MonoBehaviour, IElemento //el script se encuentra en el pre
 
     private IEnumerator InicioTiempoVida() //sera llamado al momento de reactivarse y si no colisiona con nada
     {
-        if (!fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
+        if (!this.fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
             yield break;
 
         yield return new WaitForSeconds(tiempoVida);
@@ -56,19 +56,11 @@ public class Helio : MonoBehaviour, IElemento //el script se encuentra en el pre
         VolverAlPool();
     }
 
-    private void VolverAlPool() //reestableze el movimiento del objeto y lo gregresa al pool
+    private void VolverAlPool() //reestableze algunas variables y regresa el obj al pool
     {
-        fueraPool = false;
+        this.fueraPool = false;
 
-        rb.linearVelocity = Vector2.zero;
-
-        string nombre = gameObject.name //limpia el nombre quitandole el (clone) y espacios vacios
-            .Replace("(Clone)", "")
-            .Replace(" ", "")
-            .Trim();
-
-
-        PoolElementos.Instance.DevolverElemento(nombre, gameObject); //se envia el nombre limpio del objeto
+        PoolElementos.Instance.DevolverElemento(this.gameObject); //se envia el obj
     }
 
 }
