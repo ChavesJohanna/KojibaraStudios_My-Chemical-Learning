@@ -1,13 +1,16 @@
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Atajo : MonoBehaviour, IPointerDownHandler //se ecuentra en los botones con el miesmo nombre
+public class Atajo : MonoBehaviour, IPointerDownHandler, IBotonInventario //se ecuentra en los botones con el miesmo nombre
 {
     private ControladorAtajos controlador; //componente del padre de este objeto
-    private GameObject activado; //objeto hijo con la imagen del atajo "Activado"
+    private GameObject imagenActivado; //objeto hijo con la imagen del atajo "Activado"
 
     private Image imagenElemento; //usara el nombre del sprite para asignarlo y que el jugador lo dispare
+
+    private Inventario inventario;
 
     private void Start()
     {
@@ -17,37 +20,35 @@ public class Atajo : MonoBehaviour, IPointerDownHandler //se ecuentra en los bot
             return;
             
 
-        activado = transform.Find("Activado")?.gameObject;
+        imagenActivado = transform.Find("Activado")?.gameObject;
         imagenElemento = transform.Find("Elemento")?.GetComponent<Image>();
+
+        inventario = transform.parent.GetComponentInParent<Inventario>();
     }
 
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
     {
         if (controlador == null) 
             return;
-          
 
         controlador.Seleccionar(this);
 
-        
+        inventario.IntercambiarSprite(this); //le pasa la imagen al inventario para que haga el intercambio
     }
 
     public void Activar()
     {
-        if (activado == null) 
+        if (imagenActivado == null)
             return;
-            
-        activado.SetActive(true);
 
+        imagenActivado.SetActive(true);
     }
-
     public void Desactivar()
     {
-        if (activado == null) 
+        if (imagenActivado == null)
             return;
-            
 
-        activado.SetActive(false);
+        imagenActivado.SetActive(false);
     }
 
     public string ObtenerNombreElemento()
@@ -63,5 +64,10 @@ public class Atajo : MonoBehaviour, IPointerDownHandler //se ecuentra en los bot
         nombreElemento = nombreElemento.Replace("item_", ""); //quita "item_" del nombre del sprite
 
         return nombreElemento;
+    }
+
+    public Image ObtenerImagenElemento()
+    {
+        return imagenElemento;
     }
 }

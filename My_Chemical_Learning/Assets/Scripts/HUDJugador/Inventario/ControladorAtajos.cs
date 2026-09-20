@@ -6,12 +6,12 @@ public class ControladorAtajos : MonoBehaviour
 
     public void Seleccionar(Atajo atajo)
     {
-        if (atajo == null) 
+        if (atajo == null)
             return;
-            
+
 
         if (atajoActivo != null) //desactiva el atajo anterior
-            atajoActivo.Desactivar(); 
+            atajoActivo.Desactivar();
 
         atajoActivo = atajo; //reasigna el nuevo atajo
         atajo.Activar(); //activa la imagen "Activado" que tiene el nuevo atajo selecionado
@@ -19,12 +19,13 @@ public class ControladorAtajos : MonoBehaviour
 
         string nombreElemento = atajo.ObtenerNombreElemento(); //obtiene el nombre de el elemeto selecionado
 
-        if (nombreElemento == null) 
+        if (nombreElemento == null)
             return;
 
-        if (nombreElemento == "") 
+        if (nombreElemento == "")
             return;
 
         PoolElementos.Instance.ActivarElemento(nombreElemento); //se lo envia al pool para q el jugador lo dispare
     }
 }
+

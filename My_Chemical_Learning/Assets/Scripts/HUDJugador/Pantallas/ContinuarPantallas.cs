@@ -19,6 +19,8 @@ public class ContinuarPantallas : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al tocar el boton
     {
+        GuardarPartida.ResetearDatos(); //reinicia los datos para evitar usar los del nivel anterior
+
         int indiceActual = System.Array.IndexOf(niveles, nivelActual); //busca el indice donde se encuentra el nivel actual dentro del array
 
         if (indiceActual >= 0 && indiceActual < niveles.Length - 1) //verifica que exita un siguiente nivel antes de cargarlo

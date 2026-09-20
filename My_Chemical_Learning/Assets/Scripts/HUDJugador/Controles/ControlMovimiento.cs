@@ -20,7 +20,6 @@ public class ControlMovimiento : MonoBehaviour, IPointerDownHandler, IPointerUpH
         {
             tipoMovimiento.Mover(jugador);
         }
-
     }
 
     public void OnPointerDown(PointerEventData eventData)//se ejecuta al precionar el boton
@@ -34,5 +33,6 @@ public class ControlMovimiento : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
         jugador.linearVelocity = new Vector2 (0f, jugador.linearVelocity.y); //detiene el movimiento del jugador
     }
+
 }
 

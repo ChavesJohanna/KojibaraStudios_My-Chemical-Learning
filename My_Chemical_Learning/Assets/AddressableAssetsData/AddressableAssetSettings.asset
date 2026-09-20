@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 2ffc29d741365a74aaf413d7cdd7772f
   m_currentHash:
     serializedVersion: 2
-    Hash: 3d607b4dbe3790de25124e833556efb7
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -110,9 +110,9 @@ MonoBehaviour:
     - Agua
     - Sal
     - Helio
-    - SonidoAgua
-    - SonidoSal
-    - SonidoHelio
+    - Acido
+    - Nitrogeno
+    - OxAlum
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 1a603647d2b51034f86b497422132999, type: 2}

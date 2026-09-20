@@ -14,7 +14,7 @@ public class Pausa : MonoBehaviour //el script se encuentra en el objeto del hud
 
         hud = new List<GameObject>();
 
-        for (int i = 0; i < 2; i++) //añade los hijos del hud excepto el obj "Pausa"
+        for (int i = 1; i < 3; i++) //añade los hijos del hud excepto el obj "Pausa"
         {
             hud.Add(transform.parent.GetChild(i).gameObject);
         }
