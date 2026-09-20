@@ -16,7 +16,7 @@ public class Nitrogeno : MonoBehaviour, IElemento //el script se encuentra en el
 
     public void MovimientoElemento(float direccion)
     {
-        fueraPool = true;
+        this.fueraPool = true;
 
         rb.linearVelocity = new Vector2(direccion * velocidad, 0f); // agrega un pequeño impulso al inicio
 
@@ -25,22 +25,19 @@ public class Nitrogeno : MonoBehaviour, IElemento //el script se encuentra en el
 
     private void OnTriggerEnter2D(Collider2D otro)
     { 
-        if (!fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
+        if (!this.fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
             return;
 
-        if (otro.gameObject.layer == LayerMask.NameToLayer("Piso")) //si coliciona con el mapa el objeto regresa al pool
-        { 
+        bool esPiso = otro.gameObject.layer == LayerMask.NameToLayer("Piso"); //si coliciona con el mapa
+        bool esZona = otro.gameObject.CompareTag("BloqueNitrogeno");//si choca en las zonas 
+
+        if (esPiso || esZona) //regresa al pool
             VolverAlPool();
-        }
-        else if (otro.gameObject.CompareTag("BloqueNitrogeno")) //si choca en las zonas vuelve al pool
-        {
-            VolverAlPool();
-        }
     }
 
     private IEnumerator InicioTiempoVida() //sera llamado al momento de reactivarse y si no colisiona con nada
     {
-        if (!fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
+        if (!this.fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
             yield break;
 
         yield return new WaitForSeconds(tiempoVida);
@@ -48,19 +45,11 @@ public class Nitrogeno : MonoBehaviour, IElemento //el script se encuentra en el
         VolverAlPool();
     }
 
-    private void VolverAlPool() //reestableze el movimiento del objeto y lo gregresa al pool
+    private void VolverAlPool() //reestableze algunas variables y regresa el obj al pool
     {
-        fueraPool = false;
+        this.fueraPool = false;
 
-        rb.linearVelocity = Vector2.zero;
-
-        string nombre = gameObject.name //limpia el nombre quitandole el (clone) y espacios vacios
-            .Replace("(Clone)", "")
-            .Replace(" ", "")
-            .Trim();
-
-
-        PoolElementos.Instance.DevolverElemento(nombre, gameObject); //se envia el nombre limpio del objeto
+        PoolElementos.Instance.DevolverElemento(this.gameObject); //se envia el obj
     }
 
 }

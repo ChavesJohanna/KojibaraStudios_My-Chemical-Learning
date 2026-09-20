@@ -19,7 +19,7 @@ public class Agua : MonoBehaviour, IElemento //el script se encuentra en el pref
     {
         this.dir = direccion;
 
-        fueraPool = true;
+        this.fueraPool = true;
 
         StartCoroutine(InicioTiempoVida()); //una vez inicia su aparicion y no coliciona regresa al pool
     }
@@ -31,22 +31,19 @@ public class Agua : MonoBehaviour, IElemento //el script se encuentra en el pref
 
     private void OnTriggerEnter2D(Collider2D otro)
     { 
-        if (!fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
+        if (!this.fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
             return;
 
-        if (otro.gameObject.layer == LayerMask.NameToLayer("Piso")) //si coliciona con el mapa el objeto regresa al pool
-        { 
+        bool esPiso = otro.gameObject.layer == LayerMask.NameToLayer("Piso"); //si coliciona con el mapa da true
+        bool esEnemigo = otro.CompareTag("Pirito") || otro.CompareTag("Fuego"); //si choca con pirito o el fuego da true
+
+        if (esPiso || esEnemigo) //regresa al pool
             VolverAlPool();
-        }
-        else if (otro.gameObject.CompareTag("Pirito") || otro.gameObject.CompareTag("Fuego")) //si choca con pirito vuelve al pool
-        {
-            VolverAlPool();
-        }
     }
 
     private IEnumerator InicioTiempoVida() //sera llamado al momento de reactivarse y si no colisiona con nada
     {
-        if (!fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
+        if (!this.fueraPool) //si ya esta en el pool no se ejecute la logica de re regresarlo al pool
             yield break;
 
         yield return new WaitForSeconds(tiempoVida);
@@ -54,19 +51,11 @@ public class Agua : MonoBehaviour, IElemento //el script se encuentra en el pref
         VolverAlPool();
     }
 
-    private void VolverAlPool() //reestableze el movimiento del objeto y lo gregresa al pool
+    private void VolverAlPool() //reestableze algunas variables y regresa el obj al pool
     {
-        fueraPool = false;
+        this.fueraPool = false;
 
-        rb.linearVelocity = Vector2.zero;
-
-        string nombre = gameObject.name //limpia el nombre quitandole el (clone) y espacios vacios
-            .Replace("(Clone)", "")
-            .Replace(" ", "")
-            .Trim();
-
-
-        PoolElementos.Instance.DevolverElemento(nombre, gameObject); //se envia el nombre limpio del objeto
+        PoolElementos.Instance.DevolverElemento(this.gameObject); //se envia el obj 
     }
 
 }

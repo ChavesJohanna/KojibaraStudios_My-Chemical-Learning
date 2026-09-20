@@ -66,15 +66,10 @@ public class PoolElementos : MonoBehaviour
 
     public void ActivarElemento(string nombre)
     {
-        if (nombre == "") //si el nombre es vacio que retorne
-            return;
-
-        if (nombre == null)
+        if (string.IsNullOrEmpty(nombre)) //si es null o esta vacio retorna
             return;
 
         this.key = nombre;
-
- 
     }
 
     public GameObject AsignarPosicionElemento(Transform posicion)
@@ -95,8 +90,21 @@ public class PoolElementos : MonoBehaviour
         return elemento;
     }
 
-    public void DevolverElemento(string nombre, GameObject elemento)
+    public void DevolverElemento(GameObject elemento)
     {
+
+        Rigidbody2D rb = elemento.GetComponent<Rigidbody2D>();
+
+        rb.linearVelocity = Vector2.zero;
+
+        string nombre = elemento.name //limpia el nombre quitandole el (clone) y espacios vacios
+                        .Replace("(Clone)", "")
+                        .Replace(" ", "")
+                        .Trim();
+
+        if (!pool.ContainsKey(nombre))
+            return;
+
         elemento.SetActive(false);
 
         pool[nombre].Enqueue(elemento);
