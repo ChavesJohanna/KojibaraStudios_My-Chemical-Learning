@@ -12,7 +12,7 @@ public class ContinuarPausa : MonoBehaviour, IPointerDownHandler //se encuantra 
 
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
     {
-        pausa.AbrirPanel(false); //desactiva el panel
+        pausa.ReanudarJuego(); //rectiva el juego
     }
 
 

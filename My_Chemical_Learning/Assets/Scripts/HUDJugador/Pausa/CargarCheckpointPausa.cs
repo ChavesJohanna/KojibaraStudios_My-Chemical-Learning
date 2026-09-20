@@ -15,7 +15,7 @@ public class CargarCheckpointPausa : MonoBehaviour, IPointerDownHandler //el scr
     }
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al tocar el boton
     {
-        pausa.AbrirPanel(false); //desactiva la pausa y el panel
+        pausa.ReanudarJuego(); //reaciva el juego 
 
         SceneManager.LoadScene(nivelActual); //recarga la escena
     }
