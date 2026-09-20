@@ -11,7 +11,8 @@
           {
             "name": "AnimationClip",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -19,7 +20,8 @@
           {
             "name": "Animator",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -27,7 +29,8 @@
           {
             "name": "AnimatorController",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -77,7 +80,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -86,7 +90,8 @@
             "name": "AudioClip",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -96,7 +101,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -123,7 +129,8 @@
             "name": "AudioResource",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -132,7 +139,8 @@
             "name": "AudioSource",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -165,7 +173,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -187,7 +196,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -209,7 +219,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -225,7 +236,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -253,7 +265,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -281,7 +294,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -297,7 +311,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -325,7 +340,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -341,7 +357,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -351,7 +368,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -385,7 +403,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -401,7 +420,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -416,7 +436,8 @@
             "name": "Renderer",
             "scenes": [
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -438,7 +459,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -460,7 +482,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -475,7 +498,8 @@
             "name": "SpriteRenderer",
             "scenes": [
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -762,7 +786,8 @@
           {
             "name": "Grid",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -980,7 +1005,8 @@
           {
             "name": "BoxCollider2D",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1002,7 +1028,8 @@
           {
             "name": "CompositeCollider2D",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1016,7 +1043,8 @@
           {
             "name": "PhysicsMaterial2D",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1025,7 +1053,8 @@
             "name": "Rigidbody2D",
             "scenes": [
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1399,7 +1428,8 @@
           {
             "name": "Tilemap",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1407,7 +1437,8 @@
           {
             "name": "TilemapCollider2D",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1415,7 +1446,8 @@
           {
             "name": "TilemapRenderer",
             "scenes": [
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1430,7 +1462,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1446,7 +1479,8 @@
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity"
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null
