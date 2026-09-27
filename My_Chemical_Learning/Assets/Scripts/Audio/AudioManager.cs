@@ -121,23 +121,22 @@ public class AudioManager : MonoBehaviour
 
     public void CambiarVolumenMusica(float volumen)
     {
-        Debug.Log(
-            "ANTES Clip: " + musicaSource.clip +
-            " Reproduciendo: " + musicaSource.isPlaying
-        );
-
         musicaSource.volume = volumen;
-
-        Debug.Log(
-            "DESPUES Clip: " + musicaSource.clip +
-            " Reproduciendo: " + musicaSource.isPlaying +
-            " Volumen: " + musicaSource.volume
-        );
     }
 
     public void CambiarVolumenSFX(float volumen)
     {
         sfxSource.volume = volumen;
+    }
+
+    public float ObtenerVolumenMusica()
+    {
+        return musicaSource.volume;
+    }
+
+    public float ObtenerVolumenSFX()
+    {
+        return sfxSource.volume;
     }
 
     public void ReproducirBoton()
@@ -165,9 +164,5 @@ public class AudioManager : MonoBehaviour
     public void ReproducirMesaTrabajo()
     {
         sfxSource.PlayOneShot(sonidoMesaTrabajo);
-    }
-    public void ProbarVolumen()
-    {
-        musicaSource.volume = 0f;
     }
 }

@@ -1444,6 +1444,7 @@ GameObject:
   - component: {fileID: 7669066356374277287}
   - component: {fileID: 5555341869914282060}
   - component: {fileID: 5731255482798361757}
+  - component: {fileID: 4073512665061643654}
   m_Layer: 5
   m_Name: PanelOpciones
   m_TagString: Untagged
@@ -1542,6 +1543,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4073512665061643654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654767663172638152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d08336ad5b075e43b6e35a8f143b843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorVolumen
 --- !u!1 &6136173586055980972
 GameObject:
   m_ObjectHideFlags: 0
