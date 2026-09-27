@@ -15,6 +15,7 @@ public class BotonOpciones : MonoBehaviour //se encuentra en el boton opciones d
     }
     private void ActivarPanel()
     {
+        AudioManager.Instance.ReproducirBoton();
         menu.AbrirOpciones(); //activa el panel de opciones
     }
 }

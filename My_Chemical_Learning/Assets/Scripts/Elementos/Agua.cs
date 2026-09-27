@@ -21,6 +21,8 @@ public class Agua : MonoBehaviour, IElemento //el script se encuentra en el pref
 
         this.fueraPool = true;
 
+        AudioManager.Instance.ReproducirDisparo(0); //reproduce el sfx en cuanto la bala se mueva
+
         StartCoroutine(InicioTiempoVida()); //una vez inicia su aparicion y no coliciona regresa al pool
     }
 

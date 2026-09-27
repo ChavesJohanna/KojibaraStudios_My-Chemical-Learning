@@ -23,13 +23,12 @@ public class BotonJugar : MonoBehaviour
         GuardarPartida.ResetearDatos(); //reinicia los datos 
 
         boton.interactable = false; //desactiva la interacción del botón
+        AudioManager.Instance.ReproducirBoton();
         StartCoroutine(CargarNivel()); //inicia la espera
     } 
 
     private IEnumerator CargarNivel() 
     { 
-        SonidoBoton.Instancia.ReproducirSonido(); //hace sonar el boton
-
         yield return new WaitForSeconds(delay); //espera el tiempo indicado
 
         SceneManager.LoadScene(nombreNivel); //carga la escena

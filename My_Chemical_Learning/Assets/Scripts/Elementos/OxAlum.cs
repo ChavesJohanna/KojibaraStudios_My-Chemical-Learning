@@ -31,6 +31,8 @@ public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el pr
 
         rb.linearVelocity = new Vector2(direccion * velocidad, 0f); // agrega un pequeño impulso al inicio
 
+        AudioManager.Instance.ReproducirDisparo(5); //reproduce el sfx en cuanto la bala se mueva
+
         spJugador.color = colorAlum; //pintamo al jugador
         spElemento.enabled = false; //desactivamos el sprite del obj
 

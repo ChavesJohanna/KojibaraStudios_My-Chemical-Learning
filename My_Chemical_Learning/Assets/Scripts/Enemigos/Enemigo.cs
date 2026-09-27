@@ -30,6 +30,8 @@ public class Enemigo : MonoBehaviour
 
     protected virtual void Morir()
     {
+        AudioManager.Instance.ReproducirMuerteEnemigo();
+
         StartCoroutine(AnimacionMuerte());
     }
 

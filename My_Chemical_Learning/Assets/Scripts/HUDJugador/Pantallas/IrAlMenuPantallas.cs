@@ -8,6 +8,7 @@ public class IrAlMenuPantallas : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        AudioManager.Instance.ReproducirBoton();
         SceneManager.LoadScene(menuEscena); //carga el menu
     }
 }

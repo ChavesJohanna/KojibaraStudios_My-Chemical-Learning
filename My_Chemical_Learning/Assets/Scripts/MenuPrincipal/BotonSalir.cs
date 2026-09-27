@@ -22,7 +22,7 @@ public class BotonSalir : MonoBehaviour
 
     private IEnumerator CerrarJuego()
     {
-        SonidoBoton.Instancia.ReproducirSonido(); //hace sonar el boton
+        AudioManager.Instance.ReproducirBoton(); ; //hace sonar el boton
 
         yield return new WaitForSeconds(delay); //espera el tiempo indicado
 

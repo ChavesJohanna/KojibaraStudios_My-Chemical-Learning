@@ -13,6 +13,8 @@ public class IrAlMenuPausa : MonoBehaviour, IPointerDownHandler //se encuantra e
 
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
     {
+        AudioManager.Instance.ReproducirBoton();
+
         pausa.ReanudarJuego(); //reactiva el juego
 
         SceneManager.LoadScene("MenuPrincipal");

@@ -25,6 +25,8 @@ public class Helio : MonoBehaviour, IElemento //el script se encuentra en el pre
 
         rb.linearVelocity = new Vector2(direccion * velocidad, 0f); // agrega un pequeño impulso al inicio
 
+        AudioManager.Instance.ReproducirDisparo(2); //reproduce el sfx en cuanto la bala se mueva
+
         StartCoroutine(InicioTiempoVida()); //una vez inicia su aparicion y no coliciona regresa al pool
 
         rbJugador.linearVelocity = new Vector2(rbJugador.linearVelocity.x, rbJugador.linearVelocity.y + fuerzaSalto);
