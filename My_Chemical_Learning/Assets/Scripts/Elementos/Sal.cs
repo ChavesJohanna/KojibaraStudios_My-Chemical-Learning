@@ -20,6 +20,8 @@ public class Sal : MonoBehaviour, IElemento //el script se encuentra en el prefa
 
         rb.linearVelocity = new Vector2(direccion * velocidad, 0f); // agrega un pequeño impulso al inicio
 
+        AudioManager.Instance.ReproducirDisparo(1); //reproduce el sfx en cuanto la bala se mueva
+
         StartCoroutine(InicioTiempoVida()); //una vez inicia su aparicion y no coliciona regresa al pool
     }
 

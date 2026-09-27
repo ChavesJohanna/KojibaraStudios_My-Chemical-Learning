@@ -1,19 +1,28 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BotonReestablecer : MonoBehaviour //se encunetra en el boton reestablecer del menu de opc del menu principal
-{   
+public class BotonReestablecer : MonoBehaviour
+{
     private Button boton;
+
+    private Slider sliderMusica;
+    private Slider sliderSFX;
 
     private void Start()
     {
         boton = GetComponent<Button>();
+
+        sliderMusica = transform.parent.Find("SliderMusica").GetComponent<Slider>();
+        sliderSFX = transform.parent.Find("SliderSFX").GetComponent<Slider>();
+
         boton.onClick.AddListener(Reestablecer);
     }
 
     private void Reestablecer()
     {
-        Debug.Log("El volumen por defecto");
+        AudioManager.Instance.ReproducirBoton();
+
+        sliderMusica.value = 1f;
+        sliderSFX.value = 1f;
     }
 }

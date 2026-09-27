@@ -15,6 +15,7 @@ public class BotonAceptar : MonoBehaviour //se encuentra en el boton aceptar del
     }
     private void ActivarPanel()
     {
+        AudioManager.Instance.ReproducirBoton();
         menu.AbrirMenu(); //activa el menu 
     }
 }

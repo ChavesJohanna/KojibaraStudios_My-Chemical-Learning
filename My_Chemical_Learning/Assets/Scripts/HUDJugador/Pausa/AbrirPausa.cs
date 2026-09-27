@@ -12,6 +12,7 @@ public class AbrirPausa : MonoBehaviour, IPointerDownHandler //el script se encu
 
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al tocar el boton
     {
+        AudioManager.Instance.ReproducirBotonPausa();
         pausa.AbrirPausa(); //mestra el panel de pausa
     }
 

@@ -12,6 +12,7 @@ public class CargarCheckpoint : MonoBehaviour, IPointerDownHandler //el script s
     }
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al tocar el boton
     {
+        AudioManager.Instance.ReproducirBoton();
         SceneManager.LoadScene(nivelActual); //recarga la escena
     }
 

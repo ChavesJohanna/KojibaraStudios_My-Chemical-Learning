@@ -16,6 +16,7 @@ public class OpcionesPausa : MonoBehaviour
 
     private void ActivarPanel()
     {
+        AudioManager.Instance.ReproducirBoton();
         pausa.AbrirOpciones(); //abre el panel de pausa
     }
 }

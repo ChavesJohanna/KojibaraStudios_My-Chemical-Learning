@@ -16,6 +16,7 @@ public class AceptarPausa : MonoBehaviour //se encuentra en el boton aceptar de 
 
     private void ActivarPanel()
     {
+        AudioManager.Instance.ReproducirBoton();
         pausa.VolverAPausa(); //desactiva el panel de opc y muestra el de pausa
         
     }

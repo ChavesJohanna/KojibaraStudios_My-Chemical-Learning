@@ -12,6 +12,7 @@ public class ContinuarPausa : MonoBehaviour, IPointerDownHandler //se encuantra 
 
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
     {
+        AudioManager.Instance.ReproducirBoton();
         pausa.ReanudarJuego(); //rectiva el juego
     }
 

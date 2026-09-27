@@ -21,6 +21,8 @@ public class Acido : MonoBehaviour, IElemento //el script se encuentra en el pre
 
         this.fueraPool = true;
 
+        AudioManager.Instance.ReproducirDisparo(3); //reproduce el sfx en cuanto la bala se mueva
+
         StartCoroutine(InicioTiempoVida()); //una vez inicia su aparicion y no coliciona regresa al pool
     }
 

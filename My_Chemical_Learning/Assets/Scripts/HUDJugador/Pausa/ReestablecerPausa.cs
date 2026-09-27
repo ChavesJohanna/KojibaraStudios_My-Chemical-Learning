@@ -13,6 +13,7 @@ public class ReestablecerPausa : MonoBehaviour //se encuentra en el boton reesta
 
     private void Reestablecer()
     {
+        AudioManager.Instance.ReproducirBoton();
         Debug.Log("El volumen por defecto dentro del menu de pausa");
     }
 }
