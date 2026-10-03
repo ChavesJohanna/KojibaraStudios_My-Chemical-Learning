@@ -13,6 +13,8 @@ public class AbrirInventario : MonoBehaviour, IPointerDownHandler //el script se
         panel.SetActive(false); //desactivado al inicio
 
         inventario = GetComponentInParent<Inventario>();
+
+        ManagerElementos.Instance.ObtenerEspaciosInventario(panel);//le mandamos el panel al manager para guardar los espacios del mismo
     }
 
 
@@ -23,6 +25,5 @@ public class AbrirInventario : MonoBehaviour, IPointerDownHandler //el script se
         panel.SetActive(inveAbierto);
         inventario.PanelAbierto(inveAbierto); //le avisa al inventario que el panel asta abierto o cerado 
     }
-
 
 }
