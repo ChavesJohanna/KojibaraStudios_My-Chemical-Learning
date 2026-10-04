@@ -46,6 +46,9 @@ public class Inventario : MonoBehaviour//se encuentra en el objeto con el mismo 
         if (boton is Atajo atajo2) //igual que el anterios pero si es el segundo botn tocado
             ActualizarAtajo(atajo2);
 
+        //prueba
+        ManagerElementos.Instance.ActualizarElementoInventario(); //actualizamos los sprites guardados cada que hay intercambio
+
         primerBoton = null;
     }
 

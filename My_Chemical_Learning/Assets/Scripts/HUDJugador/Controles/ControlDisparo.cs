@@ -29,6 +29,9 @@ public class ControlDisparo : MonoBehaviour, IPointerDownHandler
 
         proximoDisparo = Time.unscaledTime + tiempoEspera; //inicia la espera para el sig disparo
 
+        //prueba 
+        ManagerElementos.Instance.AsignarElementoInventario("Agua");
+
     }
 
 }
