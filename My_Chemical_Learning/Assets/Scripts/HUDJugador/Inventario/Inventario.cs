@@ -47,7 +47,7 @@ public class Inventario : MonoBehaviour//se encuentra en el objeto con el mismo 
             ActualizarAtajo(atajo2);
 
         //prueba
-        ManagerElementos.Instance.ActualizarElementoInventario(); //actualizamos los sprites guardados cada que hay intercambio
+        DesbloqueoElementos.Instance.ActualizarElementoInventario(); //actualizamos los sprites guardados cada que hay intercambio
 
         primerBoton = null;
     }

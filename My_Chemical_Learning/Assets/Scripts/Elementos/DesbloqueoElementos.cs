@@ -5,9 +5,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ManagerElementos : MonoBehaviour //se encarga de los sprites que estan en el inventario y el atjao y sirve para el desbloqueo de los mismos
+public class DesbloqueoElementos : MonoBehaviour //se encarga de los sprites que estan en el inventario y sirve para el desbloqueo de los mismos
 {
-    public static ManagerElementos Instance { get; private set; }
+    public static DesbloqueoElementos Instance { get; private set; }
 
  
     private void Awake()
@@ -73,7 +73,7 @@ public class ManagerElementos : MonoBehaviour //se encarga de los sprites que es
         }
     }
 
-
+    
     public void AsignarElementoInventario(string tipo) //se utiliza para desbloquear el eleneto segun en nombre quese le pase ej "Agua"
     {
         if (elemento == tipo) //evitamos que se resasigne si son iguales
@@ -123,4 +123,5 @@ public class ManagerElementos : MonoBehaviour //se encarga de los sprites que es
 
         return sprites[map[indice]];
     }
+
 }

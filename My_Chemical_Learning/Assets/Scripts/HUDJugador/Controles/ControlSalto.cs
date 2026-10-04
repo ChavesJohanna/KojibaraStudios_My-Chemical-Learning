@@ -22,6 +22,6 @@ public class ControlSalto : MonoBehaviour, IPointerDownHandler
 
 
         //prueba 
-        ManagerElementos.Instance.AsignarElementoInventario("Acido");
+        DesbloqueoElementos.Instance.AsignarElementoInventario("Acido");
     }
 }
