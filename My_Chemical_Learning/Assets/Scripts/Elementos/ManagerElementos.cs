@@ -58,7 +58,7 @@ public class ManagerElementos : MonoBehaviour //se encarga de los sprites que es
         spriteVacio = Resources.Load<Sprite>("SpritesElementos/item_Vacio");
     }
 
-    public void ObtenerEspaciosInventario(GameObject inve)
+    public void ObtenerEspaciosInventario(GameObject inve) //recibe el panel del inventario
     {
         if (inventario == inve) //evitamos que se reasigne cada que se reinicie la escena
             return;
@@ -74,7 +74,7 @@ public class ManagerElementos : MonoBehaviour //se encarga de los sprites que es
     }
 
 
-    public void AsignarElementoInventario(string tipo)
+    public void AsignarElementoInventario(string tipo) //se utiliza para desbloquear el eleneto segun en nombre quese le pase ej "Agua"
     {
         if (elemento == tipo) //evitamos que se resasigne si son iguales
             return;
@@ -96,7 +96,7 @@ public class ManagerElementos : MonoBehaviour //se encarga de los sprites que es
         ActualizarElementoInventario();
     }
 
-    public void ActualizarElementoInventario()
+    public void ActualizarElementoInventario() //actualiza los sprites que se encuentran en cada uno de los componentes de los espacios del inventario
     {
         map.Clear();
 
@@ -116,7 +116,7 @@ public class ManagerElementos : MonoBehaviour //se encarga de los sprites que es
 
         }
     }
-    public Sprite ObtenerSpriteGuardado(int indice)
+    public Sprite ObtenerSpriteGuardado(int indice) //devuelve es sprite ya guardado cosa de colocarse al momneto de reiniciar el nivel o pasarlo
     {
         if (!map.ContainsKey(indice))
             return spriteVacio;
