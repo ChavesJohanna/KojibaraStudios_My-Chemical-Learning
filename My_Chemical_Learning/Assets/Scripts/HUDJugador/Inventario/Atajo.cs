@@ -12,6 +12,9 @@ public class Atajo : MonoBehaviour, IPointerDownHandler, IBotonInventario //se e
 
     private Inventario inventario;
 
+
+    private int indice; //sirve como id del atajo
+
     private void Start()
     {
         controlador = GetComponentInParent<ControladorAtajos>();
@@ -24,6 +27,9 @@ public class Atajo : MonoBehaviour, IPointerDownHandler, IBotonInventario //se e
         imagenElemento = transform.Find("Elemento")?.GetComponent<Image>();
 
         inventario = transform.parent.GetComponentInParent<Inventario>();
+
+        indice = transform.GetSiblingIndex(); //obtiene el indice de su posiscion
+        imagenElemento.sprite = GuardadoAtajos.Instance.ObtenerSprite(indice); //le asignamos el sprite guardado
     }
 
     public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
@@ -34,6 +40,9 @@ public class Atajo : MonoBehaviour, IPointerDownHandler, IBotonInventario //se e
         controlador.Seleccionar(this);
 
         inventario.IntercambiarSprite(this); //le pasa la imagen al inventario para que haga el intercambio
+
+        
+        GuardadoAtajos.Instance.GuardarSprite(indice, imagenElemento.sprite); //guardamos en el single
     }
 
     public void Activar()
