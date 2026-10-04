@@ -14,7 +14,7 @@ public class AbrirInventario : MonoBehaviour, IPointerDownHandler //el script se
 
         inventario = GetComponentInParent<Inventario>();
 
-        ManagerElementos.Instance.ObtenerEspaciosInventario(panel);//le mandamos el panel al manager para guardar los espacios del mismo
+        DesbloqueoElementos.Instance.ObtenerEspaciosInventario(panel);//le mandamos el panel al manager para guardar los espacios del mismo
     }
 
 

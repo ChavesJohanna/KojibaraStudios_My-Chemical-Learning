@@ -90,6 +90,7 @@
             "name": "AudioClip",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -115,13 +116,25 @@
           },
           {
             "name": "AudioMixer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/MenuPrincipal.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioMixerGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/MenuPrincipal.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioMixerSnapshot",
+            "scenes": [
+              "Assets/Escenas/MenuPrincipal.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -129,6 +142,7 @@
             "name": "AudioResource",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -139,6 +153,7 @@
             "name": "AudioSource",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -319,19 +334,28 @@
           },
           {
             "name": "Mesh",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -434,12 +458,8 @@
           },
           {
             "name": "Renderer",
-            "scenes": [
-              "Assets/Escenas/MesaTrabajo.unity",
-              "Assets/Escenas/Nivel1.unity",
-              "Assets/Escenas/Nivel2.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -975,8 +995,20 @@
           },
           {
             "name": "Collider",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "MeshCollider",
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -1385,7 +1417,9 @@
             "name": "Font",
             "scenes": [
               "Assets/Escenas/MenuPrincipal.unity",
-              "Assets/Escenas/MesaTrabajo.unity"
+              "Assets/Escenas/MesaTrabajo.unity",
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
             "icon": null

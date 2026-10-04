@@ -1391,7 +1391,6 @@ GameObject:
   - component: {fileID: 3579597171609665163}
   - component: {fileID: 6461323826056114025}
   - component: {fileID: 2719879852037526390}
-  - component: {fileID: 5225871875800536061}
   m_Layer: 5
   m_Name: Espacio_9
   m_TagString: Untagged
@@ -1512,18 +1511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &5225871875800536061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492743364127668149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &1577604476444734012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,7 +1749,6 @@ GameObject:
   - component: {fileID: 5092825507666452022}
   - component: {fileID: 7304936043521240255}
   - component: {fileID: 7611436178479214048}
-  - component: {fileID: 1471719534281854132}
   m_Layer: 5
   m_Name: Espacio_10
   m_TagString: Untagged
@@ -1883,18 +1869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &1471719534281854132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117904698570594075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &2186090459432245261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,7 +2090,6 @@ GameObject:
   - component: {fileID: 6727061533112399892}
   - component: {fileID: 3323031722068767920}
   - component: {fileID: 7246503631225073996}
-  - component: {fileID: 7856722961094352819}
   m_Layer: 5
   m_Name: Espacio_5
   m_TagString: Untagged
@@ -2237,18 +2210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &7856722961094352819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3004587249613931323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &3077893260486833342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2327,6 @@ GameObject:
   - component: {fileID: 2119038551022303370}
   - component: {fileID: 5758806134449719874}
   - component: {fileID: 2786905477848388734}
-  - component: {fileID: 5725689966855353431}
   m_Layer: 5
   m_Name: Espacio_4
   m_TagString: Untagged
@@ -2487,18 +2447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &5725689966855353431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3149197705973953062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &3374925541698163133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,7 +2460,6 @@ GameObject:
   - component: {fileID: 7696975899711303254}
   - component: {fileID: 174200970568037407}
   - component: {fileID: 5976070295156616733}
-  - component: {fileID: 3622546412794490835}
   m_Layer: 5
   m_Name: Espacio_14
   m_TagString: Untagged
@@ -2633,18 +2580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &3622546412794490835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3374925541698163133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &3465020531398503551
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,7 +3178,6 @@ GameObject:
   - component: {fileID: 1408596603411870357}
   - component: {fileID: 2745598539225319588}
   - component: {fileID: 8953903644367393214}
-  - component: {fileID: 7520363122251186170}
   m_Layer: 5
   m_Name: Espacio_6
   m_TagString: Untagged
@@ -3364,18 +3298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &7520363122251186170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326108524471560197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &4452513640561030276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,7 +3990,6 @@ GameObject:
   - component: {fileID: 7527496337856565448}
   - component: {fileID: 5118922831702760121}
   - component: {fileID: 7006141398706681594}
-  - component: {fileID: 5147714577321974995}
   m_Layer: 5
   m_Name: Espacio_1
   m_TagString: Untagged
@@ -4189,18 +4110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &5147714577321974995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5212972248806069338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &5256431127382780107
 GameObject:
   m_ObjectHideFlags: 0
@@ -4214,7 +4123,6 @@ GameObject:
   - component: {fileID: 4763133354202369991}
   - component: {fileID: 8908304758232069995}
   - component: {fileID: 5553938398556591346}
-  - component: {fileID: 7280644052778501511}
   m_Layer: 5
   m_Name: Espacio_3
   m_TagString: Untagged
@@ -4335,18 +4243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &7280644052778501511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5256431127382780107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &5275313826701391896
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,7 +5175,6 @@ GameObject:
   - component: {fileID: 3078745442505203694}
   - component: {fileID: 8281967429341355924}
   - component: {fileID: 2166067528617390702}
-  - component: {fileID: 7207974910152541354}
   m_Layer: 5
   m_Name: Espacio_13
   m_TagString: Untagged
@@ -5400,18 +5295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &7207974910152541354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672119827412480627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &6801838722681859995
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,7 +5627,6 @@ GameObject:
   - component: {fileID: 2759693528994621973}
   - component: {fileID: 1152189758375372313}
   - component: {fileID: 4086762182780203964}
-  - component: {fileID: 6846221440663354708}
   m_Layer: 5
   m_Name: Espacio_2
   m_TagString: Untagged
@@ -5865,18 +5747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &6846221440663354708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543785540266315252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &7559726891269059312
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,7 +6140,6 @@ GameObject:
   - component: {fileID: 3862627943523228288}
   - component: {fileID: 3434307933143330883}
   - component: {fileID: 6480420263456799813}
-  - component: {fileID: 7774672601909426114}
   m_Layer: 5
   m_Name: Espacio_7
   m_TagString: Untagged
@@ -6391,18 +6260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &7774672601909426114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7754918961406000457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &7981430660485335257
 GameObject:
   m_ObjectHideFlags: 0
@@ -6664,7 +6521,6 @@ GameObject:
   - component: {fileID: 5640160256635152752}
   - component: {fileID: 7176812533673199659}
   - component: {fileID: 4756108920994666248}
-  - component: {fileID: 655119819177286309}
   m_Layer: 5
   m_Name: Espacio_11
   m_TagString: Untagged
@@ -6785,18 +6641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &655119819177286309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8162859081640529255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &8166966352690448965
 GameObject:
   m_ObjectHideFlags: 0
@@ -7185,7 +7029,6 @@ GameObject:
   - component: {fileID: 2336869361365232928}
   - component: {fileID: 6289494680725535898}
   - component: {fileID: 9187700289139883795}
-  - component: {fileID: 2057820064066691446}
   m_Layer: 5
   m_Name: Espacio_8
   m_TagString: Untagged
@@ -7306,18 +7149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &2057820064066691446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8598632350242474464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &8734967676158275069
 GameObject:
   m_ObjectHideFlags: 0
@@ -7331,7 +7162,6 @@ GameObject:
   - component: {fileID: 6343105596119612506}
   - component: {fileID: 7582648528728258875}
   - component: {fileID: 3652233433819283148}
-  - component: {fileID: 3373749757136802211}
   m_Layer: 5
   m_Name: Espacio_15
   m_TagString: Untagged
@@ -7452,18 +7282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &3373749757136802211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8734967676158275069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &8787103411808661912
 GameObject:
   m_ObjectHideFlags: 0
@@ -7477,7 +7295,6 @@ GameObject:
   - component: {fileID: 2657608763520474620}
   - component: {fileID: 7987506011983847181}
   - component: {fileID: 4589724606528102477}
-  - component: {fileID: 6572320577401528128}
   m_Layer: 5
   m_Name: Espacio_12
   m_TagString: Untagged
@@ -7598,18 +7415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c73e9e3bf3a5488aacb8116049eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Espacio
---- !u!114 &6572320577401528128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8787103411808661912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fa9c2fa5e95e64e8d9e9b20663b9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteElemento
 --- !u!1 &8910283143020190481
 GameObject:
   m_ObjectHideFlags: 0
