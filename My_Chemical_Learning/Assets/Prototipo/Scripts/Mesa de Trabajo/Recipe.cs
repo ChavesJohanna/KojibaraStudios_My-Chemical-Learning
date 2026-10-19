@@ -8,6 +8,10 @@ public class Recipe : ScriptableObject
     public List<ChemElementType> ingredientes;
 
     public string nombreResultado; // ej: "Agua (H2O)"
+
+    [Tooltip("Nombre que espera DesbloqueoElemento Ejem Agua, Sal, Acido")]
+    public string idDesbloqueo;    // NUEVO
+
     public GameObject prefabResultado; // el objeto que aparece si la combinación es correcta
 
     // Compara si una lista de elementos (sin importar el orden) coincide con esta receta
@@ -21,7 +25,7 @@ public class Recipe : ScriptableObject
         {
             if (!copiaIngredientes.Remove(elemento))
             {
-                return false; // sobra un elemento que no pertenece a la receta
+                return false; 
             }
         }
 

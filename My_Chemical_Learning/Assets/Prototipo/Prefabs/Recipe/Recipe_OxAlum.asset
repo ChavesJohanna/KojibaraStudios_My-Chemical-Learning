@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   ingredientes: 0b00000002000000
   nombreResultado: OxAlum
+  idDesbloqueo: OxAlum
   prefabResultado: {fileID: 6762078026056740965, guid: d1aa23c8e15d0554bb8324b8bfcd094f, type: 3}
