@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   ingredientes: 0600000001000000
   nombreResultado: Cal
+  idDesbloqueo: Cal
   prefabResultado: {fileID: 6762078026056740965, guid: 43539ffe3186ea14880b8b6dc67f165f, type: 3}

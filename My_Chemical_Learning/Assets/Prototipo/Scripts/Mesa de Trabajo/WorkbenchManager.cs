@@ -13,15 +13,15 @@ public class WorkbenchManager : MonoBehaviour
     [Tooltip("Segundos de espera antes de confirmar una combinación correcta")]
     public float tiempoEsperaCombinacion = 2f;
 
-    // Se llama una sola vez, cuando el jugador suelta un elemento
+    // Se llama una sola vez cuando el jugador suelta un elemento
     public void EvaluarSoltado(ChemElement soltado, List<ChemElement> superpuestos)
     {
-        if (superpuestos.Count == 0) return; // no quedó sobre nada, no hay nada que evaluar
+        if (superpuestos.Count == 0) return; 
 
         List<ChemElement> involucrados = new List<ChemElement>(superpuestos) { soltado };
         List<ChemElementType> tipos = involucrados.Select(e => e.type).ToList();
 
-        // 1) ¿Coincide exacto con alguna receta? -> cuenta regresiva y combina
+      
         foreach (Recipe receta in recetas)
         {
             if (receta.Coincide(tipos))
@@ -31,13 +31,12 @@ public class WorkbenchManager : MonoBehaviour
             }
         }
 
-        // 2) ¿Todavía podría completarse con más elementos? -> dejarlo superpuesto, no hacer nada
         if (ExisteRecetaCompatible(tipos))
         {
             return;
         }
 
-        // 3) Combinación imposible -> expulsar al que se soltó, fuera de los colliders de los demás
+        //Combinación imposible expulsar al que se soltó fuera de los colliders de los demás
         Debug.LogWarning($"No se puede combinar: [{string.Join(" + ", tipos)}]");
 
         Draggable draggableSoltado = soltado.GetComponent<Draggable>();
@@ -71,6 +70,11 @@ public class WorkbenchManager : MonoBehaviour
         {
             Instantiate(receta.prefabResultado, posicion, Quaternion.identity);
         }
+       //desbloqueo segun el id
+        if (DesbloqueoElementos.Instance != null)
+        {
+            DesbloqueoElementos.Instance.AsignarElementoInventario(receta.idDesbloqueo);
+        }
 
         if (InventoryManager.Instance != null)
         {
@@ -82,7 +86,7 @@ public class WorkbenchManager : MonoBehaviour
         }
     }
 
-    // True si "tipos" es subconjunto (con cantidades) de alguna receta
+    // True si "tipos" es subconjunto de alguna receta
     private bool ExisteRecetaCompatible(List<ChemElementType> tipos)
     {
         foreach (Recipe receta in recetas)
@@ -113,6 +117,6 @@ public class WorkbenchManager : MonoBehaviour
             return circulo.radius * Mathf.Max(elemento.transform.lossyScale.x, elemento.transform.lossyScale.y);
         }
 
-        return 1f; // valor por defecto si no es CircleCollider2D
+        return 1f; 
     }
 }

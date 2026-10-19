@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   ingredientes: 0000000004000000
   nombreResultado: "\xC1cido clorh\xEDdrico"
+  idDesbloqueo: Acido
   prefabResultado: {fileID: 6762078026056740965, guid: 984de45ea0efdaf4f88c86215f7e1339, type: 3}

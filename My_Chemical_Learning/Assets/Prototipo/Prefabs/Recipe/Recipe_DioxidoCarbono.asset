@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   ingredientes: 070000000100000001000000
   nombreResultado: dioxidoCarbono
+  idDesbloqueo: dioxidoCarbono
   prefabResultado: {fileID: 6762078026056740965, guid: a6fcc60aaa2ba2149a97233516b0be79, type: 3}

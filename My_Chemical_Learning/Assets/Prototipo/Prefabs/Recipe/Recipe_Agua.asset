@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   ingredientes: 000000000000000001000000
   nombreResultado: Agua (H2O)
+  idDesbloqueo: Agua
   prefabResultado: {fileID: 6762078026056740965, guid: 0432bbd760ea59d48b1fe0cd4db53f8e, type: 3}

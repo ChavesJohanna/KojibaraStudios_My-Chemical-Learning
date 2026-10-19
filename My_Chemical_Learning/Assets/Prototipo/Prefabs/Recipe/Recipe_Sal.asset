@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   ingredientes: 0300000004000000
   nombreResultado: Sal
+  idDesbloqueo: Sal
   prefabResultado: {fileID: 6762078026056740965, guid: c99b21aadd4f6834595ecee3058316a8, type: 3}
