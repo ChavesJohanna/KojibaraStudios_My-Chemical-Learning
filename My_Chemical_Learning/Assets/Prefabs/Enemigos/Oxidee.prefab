@@ -203,8 +203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56deb0a7c14b06c4fbbb98bff021ed7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Oxidee
-  vida: 10
+  vida: 20
   debilidad: Acido
+  "da\xF1oJugador": 20
   velocidad: 1
   detectorSuelo: {fileID: 6373532968724997810}
   distanciaDetector: 0.5

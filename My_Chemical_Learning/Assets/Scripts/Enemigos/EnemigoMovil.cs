@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class EnemigoMovil : Enemigo
@@ -74,9 +75,7 @@ public class EnemigoMovil : Enemigo
         if (detectorSuelo != null)
         {
             Vector3 nuevaPosicion = posicionDetectorInicial;
-
             nuevaPosicion.x *= direccion;
-
             detectorSuelo.localPosition = nuevaPosicion;
         }
     }

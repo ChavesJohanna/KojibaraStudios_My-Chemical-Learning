@@ -1,24 +1,30 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class IrAlMenuPausa : MonoBehaviour, IPointerDownHandler //se encuantra en el boton con el mismo nombre del panel de pausa
+public class IrAlMenuPausa : MonoBehaviour, IPointerDownHandler
 {
-    private Pausa pausa; //componente del objeto con el msmo nombre
+    private Pausa pausa;
 
     private void Start()
     {
-        pausa = transform.parent.GetComponentInParent<Pausa>(); //obtiene el componente que se encuentra en "Pausa"
+        pausa = transform.parent.GetComponentInParent<Pausa>();
     }
 
-    public void OnPointerDown(PointerEventData eventData) //se ejecuta al presionar el boton
+    public void OnPointerDown(PointerEventData eventData)
     {
         AudioManager.Instance.ReproducirBoton();
 
-        pausa.ReanudarJuego(); //reactiva el juego
+        pausa.ReanudarJuego();
+
+        StartCoroutine(EsperarYCargarMenu());
+    }
+
+    private IEnumerator EsperarYCargarMenu()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
 
         SceneManager.LoadScene("MenuPrincipal");
     }
-
-
 }

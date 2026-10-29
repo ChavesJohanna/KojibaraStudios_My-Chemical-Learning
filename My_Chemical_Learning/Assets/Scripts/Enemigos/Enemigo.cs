@@ -1,10 +1,15 @@
+
 using System.Collections;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
+    [Header("Características")]
     [SerializeField] protected float vida = 10f;
     [SerializeField] protected string debilidad;
+
+    [Header("Daño al jugador")]
+    [SerializeField] protected float dañoJugador = 10f;
 
     protected Animator animator;
 
@@ -28,10 +33,20 @@ public class Enemigo : MonoBehaviour
         }
     }
 
+    // Busca la barra de vida y aplica el daño configurado en este enemigo.
+    protected void DañarJugador()
+    {
+        BarraVida barraVida = GameObject.Find("BarraVida")?.GetComponent<BarraVida>();
+
+        if (barraVida != null)
+        {
+            barraVida.Disminuir(dañoJugador);
+        }
+    }
+
     protected virtual void Morir()
     {
         AudioManager.Instance.ReproducirMuerteEnemigo();
-
         StartCoroutine(AnimacionMuerte());
     }
 

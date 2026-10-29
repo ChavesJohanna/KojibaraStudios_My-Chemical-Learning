@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,7 +7,7 @@ public class ControlDisparo : MonoBehaviour, IPointerDownHandler
     private AnimarJugador jugadorAnimacion;
     private DispararJugador jugadorDisparo;
 
-    private float tiempoEspera = 1f; //para evitar disparos consecutivos
+    private float tiempoEspera = 1f; // Evita disparos consecutivos.
     private float proximoDisparo;
 
     private void Start()
@@ -15,23 +16,17 @@ public class ControlDisparo : MonoBehaviour, IPointerDownHandler
         jugadorDisparo = GameObject.FindWithTag("Jugador")?.GetComponent<DispararJugador>();
     }
 
-    public void OnPointerDown(PointerEventData eventData) //se ejecuta al tocar el boton
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (jugadorAnimacion == null || jugadorDisparo == null)
             return;
 
-        if (Time.unscaledTime < proximoDisparo) //el tiempo de espera sigue avanzando aun estando en pausa
+        if (Time.unscaledTime < proximoDisparo)
             return;
 
-        jugadorAnimacion.AnimarDisparo(); //ejecuta la animacion
+        jugadorAnimacion.AnimarDisparo();
+        jugadorDisparo.Disparar();
 
-        jugadorDisparo.Disparar(); //dispara el elemto correspondiente
-
-        proximoDisparo = Time.unscaledTime + tiempoEspera; //inicia la espera para el sig disparo
-
-        //prueba 
-        DesbloqueoElementos.Instance.AsignarElementoInventario("Agua");
-
+        proximoDisparo = Time.unscaledTime + tiempoEspera;
     }
-
 }

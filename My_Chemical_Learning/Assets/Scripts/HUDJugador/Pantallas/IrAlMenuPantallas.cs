@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,14 @@ public class IrAlMenuPantallas : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         AudioManager.Instance.ReproducirBoton();
-        SceneManager.LoadScene(menuEscena); //carga el menu
+
+        StartCoroutine(EsperarYCargarMenu());
+    }
+
+    private IEnumerator EsperarYCargarMenu()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        SceneManager.LoadScene(menuEscena);
     }
 }

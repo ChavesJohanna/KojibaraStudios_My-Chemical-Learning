@@ -1,8 +1,9 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BotonRegresar : MonoBehaviour //el script se encuntra en el boton del mismo nombre en la escena de la "Mesa de trabajo"
+public class BotonRegresar : MonoBehaviour
 {
     private Button boton;
 
@@ -14,8 +15,21 @@ public class BotonRegresar : MonoBehaviour //el script se encuntra en el boton d
 
     private void Regresar()
     {
-        string nivelAnterior = GuardarNivel.ObtenerNivelAnterior();
+        // Evita pulsaciones repetidas mientras espera.
+        boton.interactable = false;
 
-        SceneManager.LoadScene(nivelAnterior); //carga el nivel en el que se encontrba el jugador
+        // Reproduce el sonido del botón.
+        AudioManager.Instance.ReproducirBoton();
+
+        // Espera a que el sonido se escuche antes de cambiar de escena.
+        StartCoroutine(EsperarYRegresar());
+    }
+
+    private IEnumerator EsperarYRegresar()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        string nivelAnterior = GuardarNivel.ObtenerNivelAnterior();
+        SceneManager.LoadScene(nivelAnterior);
     }
 }

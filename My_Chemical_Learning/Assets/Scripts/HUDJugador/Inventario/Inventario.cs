@@ -1,15 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Inventario : MonoBehaviour//se encuentra en el objeto con el mismo nombre
+public class Inventario : MonoBehaviour
 {
     private IBotonInventario primerBoton;
+    private bool cambioPermitido = false;
 
-    private bool cambioPermitido = false; //servira para que solo se pueda hacer cambios cuando el panel de inventario este activo
-   
     public void IntercambiarSprite(IBotonInventario boton)
     {
-        if (!cambioPermitido) //si el panel se cerro evita que se continue
+        if (!cambioPermitido || boton == null)
             return;
 
         if (primerBoton == null)
@@ -33,51 +32,57 @@ public class Inventario : MonoBehaviour//se encuentra en el objeto con el mismo 
             return;
         }
 
+        // Intercambia los sprites de los dos espacios seleccionados.
         Sprite temporal = primeraImagen.sprite;
-
         primeraImagen.sprite = segundaImagen.sprite;
         segundaImagen.sprite = temporal;
 
-
-        
-        if (primerBoton is Atajo atajo1) //si el primer boton es un atajo le pasa el nuevo nombre del sprite al Pool
+        // Actualiza el estado persistente si alguno de los espacios es un atajo.
+        if (primerBoton is Atajo atajo1)
             ActualizarAtajo(atajo1);
 
-        if (boton is Atajo atajo2) //igual que el anterios pero si es el segundo botn tocado
+        if (boton is Atajo atajo2)
             ActualizarAtajo(atajo2);
 
-        //prueba
-        DesbloqueoElementos.Instance.ActualizarElementoInventario(); //actualizamos los sprites guardados cada que hay intercambio
+        // Guarda la nueva distribución del inventario.
+        if (DesbloqueoElementos.Instance != null)
+        {
+            DesbloqueoElementos.Instance.ActualizarElementoInventario();
+        }
 
         primerBoton = null;
     }
 
-    private bool PuedeIntercambiar(IBotonInventario boton1, IBotonInventario boton2)
+    private bool PuedeIntercambiar(
+        IBotonInventario boton1,
+        IBotonInventario boton2)
     {
-        if (boton1 is Atajo && boton2 is Atajo) //evita que se intercambien los sprites entre atajos
+        // Impide intercambiar directamente dos atajos.
+        if (boton1 is Atajo && boton2 is Atajo)
             return false;
 
         return true;
     }
 
-    private void ActualizarAtajo(Atajo atajo) //actualiza el nombre que le pasa al pool cuando ocurre un intercambio
+    private void ActualizarAtajo(Atajo atajo)
     {
         string nombreElemento = atajo.ObtenerNombreElemento();
 
-        if (nombreElemento == null)
+        if (string.IsNullOrEmpty(nombreElemento))
             return;
 
-        if (nombreElemento == "")
-            return;
-
-        PoolElementos.Instance.ActivarElemento(nombreElemento);
+        if (PoolElementos.Instance != null)
+        {
+            PoolElementos.Instance.ActivarElemento(nombreElemento);
+        }
     }
 
     public void PanelAbierto(bool abierto)
     {
-        this.cambioPermitido = abierto;
+        cambioPermitido = abierto;
 
-        if (!abierto) //una vez esta cerrado se limpa las selecciones del inventario para evitar que se guarden las anetriores
+        // Evita conservar una selección al cerrar el panel.
+        if (!abierto)
             primerBoton = null;
     }
 }

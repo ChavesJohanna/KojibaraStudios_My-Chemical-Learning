@@ -529,6 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 819444860}
   - component: {fileID: 819444861}
+  - component: {fileID: 819444862}
   m_Layer: 0
   m_Name: mesa
   m_TagString: Untagged
@@ -573,6 +574,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff36ef8e41e4d3f43a9d5cbe4b90b26c, type: 2}
   margenSeparacion: 0.2
   tiempoEsperaCombinacion: 2
+--- !u!114 &819444862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819444859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2a7ef2c6055c0418a38d03e4a39543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CuracionMesaTrabajo
 --- !u!1 &933355121
 GameObject:
   m_ObjectHideFlags: 0
