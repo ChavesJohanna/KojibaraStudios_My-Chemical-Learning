@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 public class Oxidee : EnemigoMovil
@@ -11,7 +12,7 @@ public class Oxidee : EnemigoMovil
         velocidad = 0.5f;
     }
 
-    protected override System.Collections.IEnumerator AnimacionMuerte()
+    protected override IEnumerator AnimacionMuerte()
     {
         animator.SetBool("MorirOxidee", true);
 
@@ -23,9 +24,17 @@ public class Oxidee : EnemigoMovil
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.gameObject.CompareTag("Acido"))
+        if (otro.CompareTag("Acido"))
         {
             RecibirDaño(5f, "Acido");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Jugador"))
+        {
+            DañarJugador();
         }
     }
 }

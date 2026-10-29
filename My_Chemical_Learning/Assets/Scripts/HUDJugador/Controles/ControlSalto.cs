@@ -19,9 +19,5 @@ public class ControlSalto : MonoBehaviour, IPointerDownHandler
         { 
             tipoMovimiento.Mover(jugador); //mueve hacia arriba pa saltar
         }
-
-
-        //prueba 
-        DesbloqueoElementos.Instance.AsignarElementoInventario("Acido");
     }
 }

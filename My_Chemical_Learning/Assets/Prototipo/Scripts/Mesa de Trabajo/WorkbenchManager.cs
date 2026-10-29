@@ -13,18 +13,26 @@ public class WorkbenchManager : MonoBehaviour
     [Tooltip("Segundos de espera antes de confirmar una combinación correcta")]
     public float tiempoEsperaCombinacion = 2f;
 
-    // Se llama una sola vez cuando el jugador suelta un elemento
-    public void EvaluarSoltado(ChemElement soltado, List<ChemElement> superpuestos)
+    // Se llama una vez cuando el jugador suelta un elemento.
+    public void EvaluarSoltado(
+        ChemElement soltado,
+        List<ChemElement> superpuestos)
     {
-        if (superpuestos.Count == 0) return; 
+        if (soltado == null || superpuestos == null ||
+            superpuestos.Count == 0)
+            return;
 
-        List<ChemElement> involucrados = new List<ChemElement>(superpuestos) { soltado };
-        List<ChemElementType> tipos = involucrados.Select(e => e.type).ToList();
+        List<ChemElement> involucrados = new List<ChemElement>(superpuestos)
+        {
+            soltado
+        };
 
-      
+        List<ChemElementType> tipos =
+            involucrados.Select(e => e.type).ToList();
+
         foreach (Recipe receta in recetas)
         {
-            if (receta.Coincide(tipos))
+            if (receta != null && receta.Coincide(tipos))
             {
                 StartCoroutine(EsperarYCombinar(receta, involucrados));
                 return;
@@ -32,69 +40,79 @@ public class WorkbenchManager : MonoBehaviour
         }
 
         if (ExisteRecetaCompatible(tipos))
-        {
             return;
-        }
 
-        //Combinación imposible expulsar al que se soltó fuera de los colliders de los demás
-        Debug.LogWarning($"No se puede combinar: [{string.Join(" + ", tipos)}]");
-
+        // Si no hay una combinación posible, separa los ingredientes.
         Draggable draggableSoltado = soltado.GetComponent<Draggable>();
-        if (draggableSoltado == null) return;
 
-        foreach (var otro in superpuestos)
+        if (draggableSoltado == null)
+            return;
+
+        foreach (ChemElement otro in superpuestos)
         {
-            float distancia = ObtenerRadio(soltado) + ObtenerRadio(otro) + margenSeparacion;
-            draggableSoltado.EmpujarFuera(otro.transform.position, distancia);
+            if (otro == null)
+                continue;
+
+            float distancia =
+                ObtenerRadio(soltado) + ObtenerRadio(otro) +
+                margenSeparacion;
+
+            draggableSoltado.EmpujarFuera(
+                otro.transform.position,
+                distancia
+            );
         }
     }
 
-    private IEnumerator EsperarYCombinar(Recipe receta, List<ChemElement> involucrados)
+    private IEnumerator EsperarYCombinar(
+        Recipe receta,
+        List<ChemElement> involucrados)
     {
-        Debug.Log($"Se va a combinar en {tiempoEsperaCombinacion} segundos...");
         yield return new WaitForSeconds(tiempoEsperaCombinacion);
 
-        // Si alguno de los elementos fue destruido o movido/arrastrado de nuevo en el medio tiempo, cancelar
-        if (involucrados.Any(e => e == null)) yield break;
-
-        Debug.Log($"Combinación correcta: {receta.nombreResultado}");
+        // Cancela la combinación si algún ingrediente fue destruido.
+        if (involucrados.Any(e => e == null))
+            yield break;
 
         Vector3 posicion = involucrados[0].transform.position;
 
-        foreach (var elemento in involucrados)
+        foreach (ChemElement elemento in involucrados)
         {
             Destroy(elemento.gameObject);
         }
 
         if (receta.prefabResultado != null)
         {
-            Instantiate(receta.prefabResultado, posicion, Quaternion.identity);
-        }
-       //desbloqueo segun el id
-        if (DesbloqueoElementos.Instance != null)
-        {
-            DesbloqueoElementos.Instance.AsignarElementoInventario(receta.idDesbloqueo);
+            Instantiate(
+                receta.prefabResultado,
+                posicion,
+                Quaternion.identity
+            );
         }
 
-        if (InventoryManager.Instance != null)
+        // Guarda el identificador correcto del elemento fabricado.
+        if (DesbloqueoElementos.Instance != null)
         {
-            InventoryManager.Instance.AgregarElementoConseguido(receta.nombreResultado);
-        }
-        else
-        {
-            Debug.LogWarning("No hay InventoryManager en la escena, no se guardó el resultado.");
+            DesbloqueoElementos.Instance.AsignarElementoInventario(
+                receta.idDesbloqueo
+            );
         }
     }
 
-    // True si "tipos" es subconjunto de alguna receta
+    // Comprueba si los ingredientes todavía pueden formar alguna receta.
     private bool ExisteRecetaCompatible(List<ChemElementType> tipos)
     {
         foreach (Recipe receta in recetas)
         {
-            List<ChemElementType> copia = new List<ChemElementType>(receta.ingredientes);
+            if (receta == null)
+                continue;
+
+            List<ChemElementType> copia =
+                new List<ChemElementType>(receta.ingredientes);
+
             bool esSubconjunto = true;
 
-            foreach (var tipo in tipos)
+            foreach (ChemElementType tipo in tipos)
             {
                 if (!copia.Remove(tipo))
                 {
@@ -103,7 +121,8 @@ public class WorkbenchManager : MonoBehaviour
                 }
             }
 
-            if (esSubconjunto) return true;
+            if (esSubconjunto)
+                return true;
         }
 
         return false;
@@ -111,12 +130,17 @@ public class WorkbenchManager : MonoBehaviour
 
     private float ObtenerRadio(ChemElement elemento)
     {
-        CircleCollider2D circulo = elemento.GetComponent<CircleCollider2D>();
+        CircleCollider2D circulo =
+            elemento.GetComponent<CircleCollider2D>();
+
         if (circulo != null)
         {
-            return circulo.radius * Mathf.Max(elemento.transform.lossyScale.x, elemento.transform.lossyScale.y);
+            return circulo.radius * Mathf.Max(
+                elemento.transform.lossyScale.x,
+                elemento.transform.lossyScale.y
+            );
         }
 
-        return 1f; 
+        return 1f;
     }
 }

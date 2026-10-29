@@ -1,9 +1,13 @@
+
 using UnityEngine;
 
 public class EnemigoEstatico : Enemigo
 {
-    protected override void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        base.Start();
+        if (!collision.gameObject.CompareTag("Jugador"))
+            return;
+
+        DañarJugador();
     }
 }

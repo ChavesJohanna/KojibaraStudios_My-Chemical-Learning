@@ -58,6 +58,11 @@ public class AudioManager : MonoBehaviour
     private void AlCargarEscena(Scene escena, LoadSceneMode modo)
     {
         ReproducirMusicaDeEscena(escena.name);
+
+        if (escena.name == "MesaTrabajo")
+        {
+            ReproducirMesaTrabajo();
+        }
     }
 
     private void ReproducirMusicaDeEscena(string nombreEscena)

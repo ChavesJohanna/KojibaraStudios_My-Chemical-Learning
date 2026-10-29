@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -10,26 +11,33 @@ public class ContinuarPantallas : MonoBehaviour, IPointerDownHandler
         "Nivel2",
     };
 
-    private string nivelActual; //permitira q el boton conozta el nivel actual  
+    private string nivelActual;
 
     private void Start()
     {
-        nivelActual = SceneManager.GetActiveScene().name; //obtiene el nombre de la escena actual
+        nivelActual = SceneManager.GetActiveScene().name;
     }
 
-    public void OnPointerDown(PointerEventData eventData) //se ejecuta al tocar el boton
+    public void OnPointerDown(PointerEventData eventData)
     {
         AudioManager.Instance.ReproducirBoton();
 
-        GuardarPartida.ResetearDatos(); //reinicia los datos para evitar usar los del nivel anterior
+        GuardarPartida.ResetearDatos();
 
-        int indiceActual = System.Array.IndexOf(niveles, nivelActual); //busca el indice donde se encuentra el nivel actual dentro del array
+        int indiceActual = System.Array.IndexOf(niveles, nivelActual);
 
-        if (indiceActual >= 0 && indiceActual < niveles.Length - 1) //verifica que exita un siguiente nivel antes de cargarlo
+        if (indiceActual >= 0 && indiceActual < niveles.Length - 1)
         {
             string siguienteNivel = niveles[indiceActual + 1];
 
-            SceneManager.LoadScene(siguienteNivel); //carga la escena del siguiente nivel
+            StartCoroutine(EsperarYCargarNivel(siguienteNivel));
         }
+    }
+
+    private IEnumerator EsperarYCargarNivel(string siguienteNivel)
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        SceneManager.LoadScene(siguienteNivel);
     }
 }

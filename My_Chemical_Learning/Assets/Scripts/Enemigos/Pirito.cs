@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class Pirito : EnemigoMovil
@@ -12,9 +13,14 @@ public class Pirito : EnemigoMovil
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.gameObject.CompareTag("Agua"))
+        if (otro.CompareTag("Agua"))
         {
             RecibirDaño(5f, "Agua");
+        }
+
+        if (otro.CompareTag("Jugador"))
+        {
+            DañarJugador();
         }
     }
 }
