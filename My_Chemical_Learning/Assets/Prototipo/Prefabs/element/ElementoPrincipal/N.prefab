@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7bfa32aef18264499610987a1bac8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChemElement
-  type: 8
+  type: 9
 --- !u!114 &-3223408960993389687
 MonoBehaviour:
   m_ObjectHideFlags: 0
