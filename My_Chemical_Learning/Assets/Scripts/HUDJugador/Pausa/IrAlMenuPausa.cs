@@ -16,15 +16,18 @@ public class IrAlMenuPausa : MonoBehaviour, IPointerDownHandler
     {
         AudioManager.Instance.ReproducirBoton();
 
-        pausa.ReanudarJuego();
-
         StartCoroutine(EsperarYCargarMenu());
     }
 
     private IEnumerator EsperarYCargarMenu()
     {
+        // Espera medio segundo incluso si el juego está pausado.
         yield return new WaitForSecondsRealtime(0.5f);
 
+        // Reanuda el juego antes de cambiar de escena.
+        pausa.ReanudarJuego();
+
+        // Carga el menú principal.
         SceneManager.LoadScene("MenuPrincipal");
     }
 }
