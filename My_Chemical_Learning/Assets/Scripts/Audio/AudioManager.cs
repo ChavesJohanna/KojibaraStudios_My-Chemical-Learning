@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
     [Header("SFX de juego")]
     [SerializeField] private AudioClip sonidoMuerteEnemigo;
     [SerializeField] private AudioClip sonidoMesaTrabajo;
+    [SerializeField] private AudioClip sonidoContactoZapper;
 
     private void Awake()
     {
@@ -169,5 +170,10 @@ public class AudioManager : MonoBehaviour
     public void ReproducirMesaTrabajo()
     {
         sfxSource.PlayOneShot(sonidoMesaTrabajo);
+    }
+
+    public void ReproducirContactoZapper()
+    {
+        sfxSource.PlayOneShot(sonidoContactoZapper);
     }
 }

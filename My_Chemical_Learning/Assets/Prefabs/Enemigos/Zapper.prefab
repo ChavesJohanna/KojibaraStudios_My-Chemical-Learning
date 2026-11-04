@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2709586640366410844}
   - component: {fileID: 5221747258854323551}
   - component: {fileID: 8093928605352442349}
+  - component: {fileID: 7342639020213735673}
   m_Layer: 28
   m_Name: Zapper
   m_TagString: Pirito
@@ -129,7 +130,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1.4}
+  m_Offset: {x: 0, y: -0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +140,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 1.4}
+  m_Size: {x: 1, y: 4.5}
   m_EdgeRadius: 0
 --- !u!50 &2709586640366410844
 Rigidbody2D:
@@ -205,3 +206,19 @@ MonoBehaviour:
   vida: 30
   debilidad: 
   "da\xF1oJugador": 45
+--- !u!111 &7342639020213735673
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5789016886847776676}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
