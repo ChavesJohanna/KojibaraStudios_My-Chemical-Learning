@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class Zapper : EnemigoEstatico
@@ -7,6 +6,7 @@ public class Zapper : EnemigoEstatico
     {
         if (otro.CompareTag("Jugador"))
         {
+            AudioManager.Instance.ReproducirContactoZapper();
             DañarJugador();
         }
     }
