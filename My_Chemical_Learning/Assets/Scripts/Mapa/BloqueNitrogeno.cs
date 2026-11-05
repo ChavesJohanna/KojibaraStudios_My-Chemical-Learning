@@ -7,6 +7,7 @@ public class BloqueNitrogeno : MonoBehaviour
     private GameObject sinBloque;
     private GameObject conBloque;
 
+    private BarraVida barraVida;
 
     private void Start()
     {
@@ -15,24 +16,27 @@ public class BloqueNitrogeno : MonoBehaviour
         sinBloque = transform.Find("SinNitro").gameObject;
         conBloque = transform.Find("ConNitro").gameObject;
 
+        barraVida = FindFirstObjectByType<BarraVida>();
+
         conBloque.SetActive(false);
         sinBloque.SetActive(true);
     }
 
-
     private void OnTriggerEnter2D(Collider2D otro)
     {
-        Debug.Log("Algo entró al trigger: " + otro.gameObject.name);
-
-        if (otro.gameObject.CompareTag("Nitrogeno"))
+        if (otro.CompareTag("Nitrogeno"))
         {
             sinBloque.SetActive(false);
             conBloque.SetActive(true);
-            Debug.Log("colicion de la zona detectado");
 
             col.isTrigger = false;
 
-            gameObject.layer = LayerMask.NameToLayer("Piso"); //se autoagigna al layer para q el jugador los pise
+            gameObject.layer = LayerMask.NameToLayer("Piso"); //se autoasigna al layer para q el jugador los pise
+        }
+
+        if (otro.CompareTag("Jugador") && sinBloque.activeSelf)
+        {
+            barraVida?.Disminuir(10f);
         }
     }
 }
