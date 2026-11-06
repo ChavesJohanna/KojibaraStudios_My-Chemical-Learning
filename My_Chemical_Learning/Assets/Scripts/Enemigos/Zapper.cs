@@ -6,8 +6,11 @@ public class Zapper : EnemigoEstatico
     {
         if (otro.CompareTag("Jugador"))
         {
-            AudioManager.Instance.ReproducirContactoZapper();
-            DañarJugador();
+            if (!OxAlum.JugadorProtegido)
+            {
+                AudioManager.Instance.ReproducirContactoZapper();
+                DañarJugador();
+            }
         }
     }
 }
