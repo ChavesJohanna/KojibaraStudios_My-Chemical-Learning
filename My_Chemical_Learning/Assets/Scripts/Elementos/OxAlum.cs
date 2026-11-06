@@ -3,13 +3,14 @@ using System.Collections;
 
 public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el prefab del mismo nombre y es el que dispara el jugador
 {
+    public static bool JugadorProtegido { get; private set; } //indica si el jugador esta protegido mientras usa el elemento
 
     private Rigidbody2D rb;
     private SpriteRenderer spElemento;
     private SpriteRenderer spJugador;//obtendra el spriterendere del jugador para cambiarle el color
 
     private float velocidad = 5f;
-    private float tiempoVida = 1f;//una vez se termine se regrese al pool
+    private float tiempoVida = 3f;//una vez se termine se regrese al pool
 
     private bool fueraPool = false; //una vez salga del pool se pondra en true y iniciara su regreso
 
@@ -28,6 +29,7 @@ public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el pr
     public void MovimientoElemento(float direccion)
     {
         this.fueraPool = true;
+        JugadorProtegido = true; //activa la proteccion del jugador
 
         rb.linearVelocity = new Vector2(direccion * velocidad, 0f); // agrega un pequeño impulso al inicio
 
@@ -53,11 +55,11 @@ public class OxAlum : MonoBehaviour, IElemento //el script se encuentra en el pr
     private void VolverAlPool() //reestableze algunas variables y regresa el obj al pool
     {
         this.fueraPool = false;
+        JugadorProtegido = false; //desactiva la proteccion del jugador
 
         spJugador.color = colorJugador; //recoloreaamo al jugador
         spElemento.enabled = true; //lo activamo
 
         PoolElementos.Instance.DevolverElemento(this.gameObject); //se envia el obj
     }
-
 }

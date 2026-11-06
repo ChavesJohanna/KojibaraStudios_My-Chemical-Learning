@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class BarraVida : MonoBehaviour
 {
+    public static bool DebeCurar { get; private set; }
+
     private Image barraLlena;
 
     private float vidaMaxima = 100f;
@@ -27,11 +29,16 @@ public class BarraVida : MonoBehaviour
         }
 
         // Cura al jugador si acaba de regresar de la mesa.
-        if (CuracionMesaTrabajo.DebeCurar)
+        if (DebeCurar)
         {
             Curar(45f);
-            CuracionMesaTrabajo.DebeCurar = false;
+            DebeCurar = false;
         }
+    }
+
+    public static void ActivarCuracion()
+    {
+        DebeCurar = true;
     }
 
     public void Disminuir(float daño = 10f)

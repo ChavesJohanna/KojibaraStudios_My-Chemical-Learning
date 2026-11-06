@@ -14,7 +14,7 @@ public class Oxidee : EnemigoMovil
 
     protected override IEnumerator AnimacionMuerte()
     {
-        animator.SetBool("MorirOxidee", true);
+        animator.SetBool("MurioPirito", true);
 
         // Espera a que termine la animación de muerte.
         yield return new WaitForSeconds(1f);

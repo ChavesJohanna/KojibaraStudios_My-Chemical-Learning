@@ -22,6 +22,7 @@ TagManager:
   - Oxidee
   - Nitrogeno
   - BloqueNitrogeno
+  - Zapper
   layers:
   - Default
   - TransparentFX
