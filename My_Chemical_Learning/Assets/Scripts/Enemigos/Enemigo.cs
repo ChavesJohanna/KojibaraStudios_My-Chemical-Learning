@@ -40,7 +40,8 @@ public class Enemigo : MonoBehaviour
 
         if (barraVida != null)
         {
-            barraVida.Disminuir(dañoJugador);
+            //barraVida.Disminuir(dañoJugador);
+            barraVida.Disminuir();
         }
     }
 

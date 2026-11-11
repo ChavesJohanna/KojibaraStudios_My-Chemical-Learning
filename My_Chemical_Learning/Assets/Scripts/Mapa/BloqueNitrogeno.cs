@@ -36,7 +36,7 @@ public class BloqueNitrogeno : MonoBehaviour
 
         if (otro.CompareTag("Jugador") && sinBloque.activeSelf)
         {
-            barraVida?.Disminuir(10f);
+            barraVida?.Disminuir();
         }
     }
 }

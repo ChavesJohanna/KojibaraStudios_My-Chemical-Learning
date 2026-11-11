@@ -19,7 +19,7 @@ public class ControlUsar : MonoBehaviour, IPointerDownHandler //se encuentra en 
 
         if (GuardarPartida.HayDatosGuardados()) //revisa si hay datos guardado para recargarlos
         {
-            GuardarPartida.RecuperarDatos(out Vector3 posicion, out float vida);
+            GuardarPartida.RecuperarDatos(out Vector3 posicion);//, out float vida);
 
             jugador.position = posicion; //carga la posicion guardad del jugador
         }
@@ -36,7 +36,7 @@ public class ControlUsar : MonoBehaviour, IPointerDownHandler //se encuentra en 
 
         float vida = barraVida.VidaActual();
 
-        GuardarPartida.GuardarDatos(posicionJugador, vida); //guardamos los datos
+        GuardarPartida.GuardarDatos(posicionJugador);//, vida); //guardamos los datos
 
         string nivel = SceneManager.GetActiveScene().name;
 
