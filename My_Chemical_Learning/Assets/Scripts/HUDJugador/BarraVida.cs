@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class BarraVida : MonoBehaviour
 {
-    public static bool DebeCurar { get; private set; }
-
     private Image barraLlena;
 
     private float vidaMaxima = 100f;
@@ -20,30 +18,21 @@ public class BarraVida : MonoBehaviour
 
         if (GuardarPartida.HayDatosGuardados())
         {
-            GuardarPartida.RecuperarDatos(out Vector3 posicion, out float vida);
-            CargarVidaGuardada(vida);
+            GuardarPartida.RecuperarDatos(out Vector3 posicion);//, out float vida);
+            //CargarVidaGuardada(vida);
         }
         else
         {
             barraLlena.fillAmount = vidaActual / vidaMaxima;
         }
 
-        // Cura al jugador si acaba de regresar de la mesa.
-        if (DebeCurar)
-        {
-            Curar(45f);
-            DebeCurar = false;
-        }
     }
 
-    public static void ActivarCuracion()
+    public void Disminuir()
     {
-        DebeCurar = true;
-    }
+        float danio = 10f;
 
-    public void Disminuir(float daño = 10f)
-    {
-        vidaActual = Mathf.Clamp(vidaActual - daño, vidaMinima, vidaMaxima);
+        vidaActual = Mathf.Clamp(vidaActual - danio, vidaMinima, vidaMaxima);
         barraLlena.fillAmount = vidaActual / vidaMaxima;
 
         if (vidaActual <= vidaMinima)
@@ -52,20 +41,15 @@ public class BarraVida : MonoBehaviour
         }
     }
 
-    public void Curar(float cantidad)
-    {
-        vidaActual = Mathf.Clamp(vidaActual + cantidad, vidaMinima, vidaMaxima);
-        barraLlena.fillAmount = vidaActual / vidaMaxima;
-    }
 
     public float VidaActual()
     {
         return vidaActual;
     }
 
-    public void CargarVidaGuardada(float nuevaVida)
+    /*public void CargarVidaGuardada(float nuevaVida)
     {
         vidaActual = Mathf.Clamp(nuevaVida, vidaMinima, vidaMaxima);
         barraLlena.fillAmount = vidaActual / vidaMaxima;
-    }
+    }*/
 }
