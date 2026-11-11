@@ -75,6 +75,9 @@ TagManager:
   - name: vacio
     uniqueID: 787609735
     locked: 0
+  - name: Jefe
+    uniqueID: 1982715361
+    locked: 0
   - name: Mapa
     uniqueID: 4206887309
     locked: 0
