@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class CuracionMesaTrabajo : MonoBehaviour
 {
-    public static bool DebeCurar { get; set; }
+    public static bool DebeCurar { get; private set; }
 
-    private void Start()
+    public static void ActivarCuracion()
     {
         DebeCurar = true;
+    }
+
+    public static void ReiniciarCuracion()
+    {
+        DebeCurar = false;
     }
 }

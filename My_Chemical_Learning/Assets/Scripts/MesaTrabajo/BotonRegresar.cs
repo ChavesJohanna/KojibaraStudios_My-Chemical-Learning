@@ -29,6 +29,9 @@ public class BotonRegresar : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.5f);
 
+        // Activa la curación antes de regresar al nivel.
+        BarraVida.ActivarCuracion();
+
         string nivelAnterior = GuardarNivel.ObtenerNivelAnterior();
         SceneManager.LoadScene(nivelAnterior);
     }
