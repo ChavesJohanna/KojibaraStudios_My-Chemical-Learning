@@ -9,6 +9,7 @@ public class ContinuarPantallas : MonoBehaviour, IPointerDownHandler
     {
         "Nivel1",
         "Nivel2",
+        "Boss",
         "Creditos"
     };
 
