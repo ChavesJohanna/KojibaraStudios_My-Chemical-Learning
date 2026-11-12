@@ -6,7 +6,7 @@ public class BarraVida : MonoBehaviour
     private Image barraLlena;
 
     private float vidaMaxima = 100f;
-    private float vidaMinima = 0f;
+    private float vidaMinima = 25f;
     private float vidaActual = 100f;
 
     private Pantallas pantalla;
@@ -16,7 +16,9 @@ public class BarraVida : MonoBehaviour
         barraLlena = transform.Find("Completa").GetComponent<Image>();
         pantalla = GameObject.Find("Pantallas")?.GetComponent<Pantallas>();
 
-        if (GuardarPartida.HayDatosGuardados())
+        barraLlena.fillAmount = vidaActual / vidaMaxima;
+
+        /*if (GuardarPartida.HayDatosGuardados())
         {
             GuardarPartida.RecuperarDatos(out Vector3 posicion);//, out float vida);
             //CargarVidaGuardada(vida);
@@ -24,7 +26,8 @@ public class BarraVida : MonoBehaviour
         else
         {
             barraLlena.fillAmount = vidaActual / vidaMaxima;
-        }
+            
+        }*/
 
     }
 
