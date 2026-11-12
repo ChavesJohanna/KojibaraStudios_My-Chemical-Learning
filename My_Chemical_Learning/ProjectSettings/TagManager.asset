@@ -23,6 +23,7 @@ TagManager:
   - Nitrogeno
   - BloqueNitrogeno
   - Zapper
+  - AtaqueJefe
   layers:
   - Default
   - TransparentFX

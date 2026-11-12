@@ -16,6 +16,11 @@ public class DañarJugador : MonoBehaviour
             barraVida.Disminuir();
             Debug.Log("Colisión con Pirito detectada");
         }
+        else if (otro.CompareTag("AtaqueJefe"))
+        {
+            barraVida.Disminuir();
+            Debug.Log("Colisión con Ataque del jefe detectada");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D otro)
