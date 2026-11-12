@@ -6,7 +6,7 @@ public class BarraVida : MonoBehaviour
     private Image barraLlena;
 
     private float vidaMaxima = 100f;
-    private float vidaMinima = 0f;
+    private float vidaMinima = 25f;
     private float vidaActual = 100f;
 
     private Pantallas pantalla;

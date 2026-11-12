@@ -5,7 +5,7 @@ public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe 
     private Rigidbody2D rb;
 
     private Vector2 posInicial;
-    private Vector2 dir;
+    private Vector2 objetivo;
 
     private bool regresando = false;
     private bool moviendo = false;
@@ -24,7 +24,7 @@ public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe 
     {
         if (moviendo) return; // si se sta moviendo no puede cambiar de direccion
 
-        dir = direccion;
+        objetivo = direccion;
         moviendo = true;
     }
 
@@ -32,7 +32,7 @@ public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe 
     {
         if (!moviendo) return;
 
-        Vector2 destino = regresando ? posInicial : dir; //el destino osila entre la pos inicial y el objetivo
+        Vector2 destino = regresando ? posInicial : objetivo; //el destino osila entre la pos inicial y el objetivo
 
         Vector2 nuevaPos = Vector2.MoveTowards(
             rb.position,

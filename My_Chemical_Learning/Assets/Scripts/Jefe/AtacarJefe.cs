@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class AtaqueGolpe : MonoBehaviour //se encuentra en ol objeto con el mismo nombre en el hijo Jefe
+public class AtacarJefe : MonoBehaviour //el script se encuentra en el objeto "Jefe"
 {
-    private Transform jugador;
-
+    private Transform jugador;  
+    
     private MoverManoJefe manoDer;
     private MoverManoJefe manoIzq;
 
@@ -16,18 +16,21 @@ public class AtaqueGolpe : MonoBehaviour //se encuentra en ol objeto con el mism
 
     private void Start()
     {
+
         jugador = GameObject.FindWithTag("Jugador")?.GetComponent<Transform>();
 
-        manoDer = transform.Find("ManoDer").gameObject.GetComponent<MoverManoJefe>();
-        manoIzq = transform.Find("ManoIzq").gameObject.GetComponent<MoverManoJefe>();
-    }
+        manoDer = transform.Find("ManoDer").GetComponent<MoverManoJefe>();
+        manoIzq = transform.Find("ManoIzq").GetComponent<MoverManoJefe>();
 
+
+        InvokeRepeating(nameof(Atacar), 3f, 2f);
+
+    }
     public void Atacar()
     {
-        objetivo = jugador.position;
+        //objetivo = jugador.position;
         intercalando = true;
     }
-
 
     private void Update()
     {
@@ -39,7 +42,7 @@ public class AtaqueGolpe : MonoBehaviour //se encuentra en ol objeto con el mism
 
         temporizador = 0f;
 
-        (turnoDerecha ? manoDer : manoIzq).MoverHacia(objetivo);//se encarga de osilar entre la mano dereche e izquierda
+        (turnoDerecha ? manoDer : manoIzq).MoverHacia(jugador.position);//se encarga de osilar entre la mano dereche e izquierda
 
         turnoDerecha = !turnoDerecha;
     }
