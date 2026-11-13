@@ -9,8 +9,18 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "Animation",
+            "scenes": [
+              "Assets/Escenas/Nivel2.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "AnimationClip",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -20,6 +30,8 @@
           {
             "name": "Animator",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -29,6 +41,8 @@
           {
             "name": "AnimatorController",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -78,6 +92,8 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -89,6 +105,7 @@
           {
             "name": "AudioClip",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -100,6 +117,8 @@
           {
             "name": "AudioListener",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -141,6 +160,7 @@
           {
             "name": "AudioResource",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -152,6 +172,7 @@
           {
             "name": "AudioSource",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -186,6 +207,8 @@
           {
             "name": "Camera",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -209,6 +232,8 @@
           {
             "name": "Cubemap",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -232,6 +257,8 @@
           {
             "name": "EditorExtension",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -249,6 +276,8 @@
           {
             "name": "GameObject",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -278,6 +307,8 @@
           {
             "name": "LevelGameManager",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -307,6 +338,8 @@
           {
             "name": "LightmapSettings",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -324,6 +357,8 @@
           {
             "name": "Material",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -362,6 +397,8 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -379,6 +416,8 @@
           {
             "name": "MonoScript",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -390,6 +429,8 @@
           {
             "name": "NamedObject",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -425,6 +466,8 @@
           {
             "name": "RectTransform",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -442,6 +485,8 @@
           {
             "name": "RenderSettings",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -477,6 +522,8 @@
           {
             "name": "Shader",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -500,6 +547,8 @@
           {
             "name": "Sprite",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -517,6 +566,8 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
@@ -806,6 +857,7 @@
           {
             "name": "Grid",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -989,17 +1041,16 @@
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Boss.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Collider",
-            "scenes": [
-              "Assets/Escenas/Nivel1.unity",
-              "Assets/Escenas/Nivel2.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -1037,6 +1088,7 @@
           {
             "name": "BoxCollider2D",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1046,6 +1098,7 @@
           {
             "name": "CircleCollider2D",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/MesaTrabajo.unity"
             ],
             "dependencyType": 0,
@@ -1060,6 +1113,7 @@
           {
             "name": "CompositeCollider2D",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1075,6 +1129,7 @@
           {
             "name": "PhysicsMaterial2D",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1084,6 +1139,7 @@
           {
             "name": "Rigidbody2D",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
@@ -1416,6 +1472,8 @@
           {
             "name": "Font",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -1462,6 +1520,7 @@
           {
             "name": "Tilemap",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1471,6 +1530,7 @@
           {
             "name": "TilemapCollider2D",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1480,6 +1540,7 @@
           {
             "name": "TilemapRenderer",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1494,6 +1555,8 @@
           {
             "name": "Canvas",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -1504,13 +1567,17 @@
           },
           {
             "name": "CanvasGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Escenas/Creditos.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "CanvasRenderer",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
