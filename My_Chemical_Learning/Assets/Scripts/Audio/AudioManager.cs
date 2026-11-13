@@ -26,6 +26,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip sonidoMesaTrabajo;
     [SerializeField] private AudioClip sonidoContactoZapper;
 
+    [Header("SFX de diálogos")]
+    [SerializeField] private AudioClip[] sonidosDialogos;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -175,5 +178,13 @@ public class AudioManager : MonoBehaviour
     public void ReproducirContactoZapper()
     {
         sfxSource.PlayOneShot(sonidoContactoZapper);
+    }
+
+    public void ReproducirDialogo(AudioClip sonido)
+    {
+        if (sonido != null)
+        {
+            sfxSource.PlayOneShot(sonido);
+        }
     }
 }
