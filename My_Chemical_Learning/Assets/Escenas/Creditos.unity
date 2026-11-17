@@ -660,6 +660,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1826619202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.97259
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23257
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478343460852621204, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884443959954773956, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac2ffe332cd951744b8b99c5807f5d91, type: 3}
 --- !u!1 &2006680225
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1055,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICreditos
       objectReference: {fileID: 0}
+    - target: {fileID: 5763847866330904476, guid: c9c9171c741011f4b8162e627f7ac233, type: 3}
+      propertyPath: m_text
+      value: "MY CHEMICAL LEARNING\n\nDESARROLLADO POR\n\nKOJIBARA STUDIOS\n\nPROYECTO
+        ACAD\xC9MICO\n\nEQUIPO DE DESARROLLO\n\nDirecci\xF3n de proyecto\n\nJohanna
+        Chaves \xB7 Mateo Tarifa\n\nDise\xF1o de juego\n\nMateo Tarifa\n\nDise\xF1o
+        de niveles\n\nMateo Tarifa\n\nArte y Dise\xF1o gr\xE1fico\n\nMateo Goitea\n\nAnimaci\xF3n\n\nMateo
+        Goitea\n\nDise\xF1o de interfaces (UI)\n\nMateo Goitea\n\nProgramaci\xF3n\n\nJohanna
+        Chaves \xB7 Mart\xEDn Acosta \xB7 Ruben Flores\n\nDise\xF1o de sonido\n\nMart\xEDn
+        Acosta\n\nDise\xF1o narrativo y guion\n\nMart\xEDn Acosta\n\nMarketing\n\nRuben
+        Flores\n\nProducci\xF3n\n\nTodo el equipo\n\nControl de calidad (QA)\n\nTodo
+        el equipo\n\n\nHERRAMIENTAS Y SOFTWARE\nUnity \xB7 Clip Studio Paint \xB7
+        FL Studio  \xB7 Visual Studio Community \xB7 GitHub\n\nINFORMACI\xD3N ACAD\xC9MICA\n\nTecnicatura
+        Universitaria en Dise\xF1o Integral de Videojuegos\nMateria:Pr\xE1ctica en
+        Direcci\xF3n y Gesti\xF3n de Proyectos de Videojuegos II\nDocente Adjunto:
+        Ing.Fernando Cabana\nInstituci\xF3n: Facultad de Ingenier\xEDa - U.N.Ju.\nCiclo
+        lectivo: 2026\n\nAGRADECIMIENTOS\nA nuestros docentes, compa\xF1eros y a
+        todas las personas que colaboraron y aportaron ideas durante el desarrollo
+        de este proyecto.\n\xA9 2026 KOJIBARA STUDIOS\nTodos los derechos reservados."
+      objectReference: {fileID: 0}
     - target: {fileID: 8896039819357330306, guid: c9c9171c741011f4b8162e627f7ac233, type: 3}
       propertyPath: m_Color.a
       value: 0.019607844
@@ -1015,3 +1091,4 @@ SceneRoots:
   - {fileID: 2097567200}
   - {fileID: 15421716}
   - {fileID: 1812769416524894501}
+  - {fileID: 1826619202}

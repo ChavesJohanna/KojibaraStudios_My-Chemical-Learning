@@ -151,6 +151,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ee548938e747d294a9146ab2fba0a4ce, type: 3}
   musicaVictoria: {fileID: 8300000, guid: 6cd15052c223da740b4381d1cd3aa7a0, type: 3}
   musicaDerrota: {fileID: 8300000, guid: 12ae4d631d6c7b4468c075f576566d69, type: 3}
+  musicaCreditos: {fileID: 8300000, guid: 11bca4bd822fb244684d4929a1b40dd1, type: 3}
   sonidoBoton: {fileID: 8300000, guid: 136b331a91385c74586b2ff7959b4f9b, type: 3}
   sonidoBotonPausa: {fileID: 8300000, guid: 380136290aa8eaa4cb81e3ef017802c2, type: 3}
   sonidosDisparo:
@@ -163,6 +164,10 @@ MonoBehaviour:
   sonidoMuerteEnemigo: {fileID: 8300000, guid: 551d6fe847bc3424ca0b31338626f54a, type: 3}
   sonidoMesaTrabajo: {fileID: 8300000, guid: 0ffafc57e13e6284285b708972dde31f, type: 3}
   sonidoContactoZapper: {fileID: 8300000, guid: 65f1b0000445c0747b2a602631b4ce6a, type: 3}
+  sonidosDialogos: []
+  multiplicadorVolumenDuranteDialogo: 0.108
+  velocidadTransicionMusica: 2
+  volumenDialogos: 2
 --- !u!82 &4302428388102378450
 AudioSource:
   m_ObjectHideFlags: 0
