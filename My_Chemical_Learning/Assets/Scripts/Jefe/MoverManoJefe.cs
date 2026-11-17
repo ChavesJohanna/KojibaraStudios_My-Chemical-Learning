@@ -34,13 +34,13 @@ public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe 
 
         Vector2 destino = regresando ? posInicial : objetivo; //el destino osila entre la pos inicial y el objetivo
 
-        Vector2 nuevaPos = Vector2.MoveTowards(
+        Vector2 nuevaPos = Vector2.MoveTowards( 
             rb.position,
             destino,
             velocidad * Time.fixedDeltaTime
         );
 
-        rb.MovePosition(nuevaPos);
+        rb.MovePosition(nuevaPos); //mueve las manos a la pos de destino
 
         if (nuevaPos != destino) return;
 

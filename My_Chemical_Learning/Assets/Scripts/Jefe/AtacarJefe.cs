@@ -23,13 +23,15 @@ public class AtacarJefe : MonoBehaviour //el script se encuentra en el objeto "J
         manoIzq = transform.Find("ManoIzq").GetComponent<MoverManoJefe>();
 
 
-        InvokeRepeating(nameof(Atacar), 3f, 2f);
+        //InvokeRepeating(nameof(Atacar), 3f, 2f);
 
     }
     public void Atacar()
     {
         //objetivo = jugador.position;
         intercalando = true;
+
+        InvokeRepeating(nameof(Atacar), 1f, 2f); //el primer float es el tiempo antes de ejecutar el metodo y el segundo es cada cuantos segundos se ejecutara
     }
 
     private void Update()
