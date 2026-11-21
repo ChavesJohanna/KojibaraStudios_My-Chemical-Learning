@@ -3,7 +3,7 @@ using UnityEngine;
 public class SubirCreditos : MonoBehaviour
 {
     private Vector2 posInicial = new Vector2(450f, -800f);
-    private Vector2 posFinal = new Vector2(450f, 5000f);
+    private Vector2 posFinal = new Vector2(450f, 4000f);
 
     private float velocidad = 100f;
 
