@@ -19,6 +19,7 @@ public class DañarJefe : MonoBehaviour
     private SpriteRenderer mDer;
     private SpriteRenderer mIzq;
 
+
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -26,8 +27,8 @@ public class DañarJefe : MonoBehaviour
 
         vidaActual = vidaMaxima;
 
-        mDer = transform.Find("ManoDer").GetComponent<SpriteRenderer>();
-        mIzq = transform.Find("ManoIzq").GetComponent<SpriteRenderer>();
+        mDer = transform.Find("ManoDer")?.GetComponent<SpriteRenderer>();
+        mIzq = transform.Find("ManoIzq")?.GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D otro)
