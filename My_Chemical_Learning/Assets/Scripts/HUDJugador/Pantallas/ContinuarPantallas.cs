@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class ContinuarPantallas : MonoBehaviour, IPointerDownHandler
+public class ContinuarPantallas : MonoBehaviour, IPointerDownHandler //se encuentra en el boton contuniar de la pantalla de victoria
 {
     private string[] niveles = new string[]
     {

@@ -9,10 +9,10 @@ public class AtacarJefe : MonoBehaviour //el script se encuentra en el objeto "J
 
     private float tiempoEspera = 2f;
     private float temporizador;
+
     private bool turnoDerecha = true;
     private bool intercalando;
 
-    private Vector2 objetivo;
 
     private void Start()
     {
@@ -21,17 +21,10 @@ public class AtacarJefe : MonoBehaviour //el script se encuentra en el objeto "J
 
         manoDer = transform.Find("ManoDer").GetComponent<MoverManoJefe>();
         manoIzq = transform.Find("ManoIzq").GetComponent<MoverManoJefe>();
-
-
-        //InvokeRepeating(nameof(Atacar), 3f, 2f);
-
     }
     public void Atacar()
     {
-        //objetivo = jugador.position;
         intercalando = true;
-
-        InvokeRepeating(nameof(Atacar), 1f, 2f); //el primer float es el tiempo antes de ejecutar el metodo y el segundo es cada cuantos segundos se ejecutara
     }
 
     private void Update()

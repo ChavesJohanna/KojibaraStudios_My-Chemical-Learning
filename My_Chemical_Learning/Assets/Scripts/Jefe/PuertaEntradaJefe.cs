@@ -1,34 +1,24 @@
 using System.Collections;
 using UnityEngine;
 
-public class PuertaJefe : MonoBehaviour//el script se encuentra en la puesta de entradad
+public class PuertaEntradaJefe : MonoBehaviour//el script se encuentra en la puesta de entradad
 {
     private AtacarJefe jefeAtaque;
-    private DañarJefe jefeDaño;
 
-    private Collider2D puertaSalida;
+    private bool atacando = false;
 
     private void Start()
     {
         jefeAtaque = GameObject.FindWithTag("Jefe")?.GetComponent<AtacarJefe>();
-        jefeDaño = GameObject.FindWithTag("Jefe")?.GetComponent<DañarJefe>();
-
-        puertaSalida = transform.parent.Find("Salida").GetComponent<Collider2D>();
-    }
-
-    private void OnTriggerExit2D(Collider2D otro)
-    {
-        if (otro.gameObject.CompareTag("Jugador"))
-        {
-            StartCoroutine(ReiniciarCol());
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.gameObject.CompareTag("Jugador") && jefeDaño.Derrotado())
+        if (atacando) return; //evitamos que se reejecute la corrutina
+
+        if (otro.gameObject.CompareTag("Jugador"))
         {
-            puertaSalida.isTrigger = true; //hacemos triger el col de la puerta de salida pa q el jugador pase
+            StartCoroutine(ReiniciarCol());
         }
     }
 
@@ -39,6 +29,8 @@ public class PuertaJefe : MonoBehaviour//el script se encuentra en la puesta de 
         yield return null;
 
         gameObject.AddComponent<BoxCollider2D>();
+
+        atacando = true;
 
         jefeAtaque.Atacar(); //una vez se ciera la puerta el jefe ataca
     }
