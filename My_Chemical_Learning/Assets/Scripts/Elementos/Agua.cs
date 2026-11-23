@@ -39,8 +39,9 @@ public class Agua : MonoBehaviour, IElemento //el script se encuentra en el pref
         bool esPiso = otro.gameObject.layer == LayerMask.NameToLayer("Piso"); //si coliciona con el mapa da true
         bool esEnemigo = otro.CompareTag("Pirito") || otro.CompareTag("Fuego"); //si choca con pirito o el fuego da true
         bool esNucleoJefe = otro.CompareTag("Jefe");
+        bool esPuertasJefe = otro.CompareTag("PuertasJefe");
 
-        if (esPiso || esEnemigo || esNucleoJefe) //regresa al pool
+        if (esPiso || esEnemigo || esNucleoJefe || esPuertasJefe) //regresa al pool
             VolverAlPool();
     }
 
