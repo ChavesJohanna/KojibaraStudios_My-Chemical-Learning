@@ -32,6 +32,8 @@ public class PuertaEntradaJefe : MonoBehaviour//el script se encuentra en la pue
 
         atacando = true;
 
+        AudioManager.Instance.IniciarMusicaJefe();
+
         jefeAtaque.Atacar(); //una vez se ciera la puerta el jefe ataca
     }
 }
