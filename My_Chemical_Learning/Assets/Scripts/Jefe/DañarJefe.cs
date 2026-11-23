@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 
@@ -33,6 +34,8 @@ public class DañarJefe : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
+        if (derrotado) return;
+
         if (otro.gameObject.CompareTag("Agua")) //coloco al jugador como prueba
         {
             vidaActual -= 5f;
@@ -45,6 +48,8 @@ public class DañarJefe : MonoBehaviour
             CambiarColor(mDer);
             CambiarColor(mIzq);
 
+            AudioManager.Instance.ReproducirDanioJefe();
+
             Debug.Log("Vida del jefe: " + vidaActual);
 
             if (vidaActual <= 0f) //una vez se queda sin vida inicia la animacion y luego se desactiva
@@ -56,18 +61,19 @@ public class DañarJefe : MonoBehaviour
 
     private IEnumerator Delay()
     {
+        derrotado = true;
+
         sprite.color = Color.white;
 
         anim.SetBool("FueDerrotado", true);
 
-        derrotado = true;
+        AudioManager.Instance.RestaurarMusicaNivel3();
 
         yield return new WaitForSeconds(0.2f);
 
         gameObject.SetActive(false);
-
-
     }
+
     private void CambiarColor(SpriteRenderer sprite)
     {
         sprite.color = Color.Lerp(Color.white, colorDaño, porcentajeDanio);

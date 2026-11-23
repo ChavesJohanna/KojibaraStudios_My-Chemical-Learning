@@ -64695,8 +64695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5466638393059109152, guid: ee41cdc09b8796f48b729dc1f43208ee, type: 3}
       propertyPath: mensaje
-      value: "\xA1Bien hecho! Avanza a la siguiente zona. Ten en cuenta que necesitar\xE1s
-        fabricar tus compuestos otra vez. Nos ver\xE9mos all\xE1. "
+      value: "\xA1Bien hecho! Avanza a la siguiente zona."
       objectReference: {fileID: 0}
     - target: {fileID: 5466638393059109152, guid: ee41cdc09b8796f48b729dc1f43208ee, type: 3}
       propertyPath: idDialogo
@@ -64705,7 +64704,7 @@ PrefabInstance:
     - target: {fileID: 5466638393059109152, guid: ee41cdc09b8796f48b729dc1f43208ee, type: 3}
       propertyPath: audioDialogo
       value: 
-      objectReference: {fileID: 8300000, guid: ddfb69daa91e9ce40a12a57cb4fbd396, type: 3}
+      objectReference: {fileID: 8300000, guid: 7e9aff3520d5098488310c0c0cf539e9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

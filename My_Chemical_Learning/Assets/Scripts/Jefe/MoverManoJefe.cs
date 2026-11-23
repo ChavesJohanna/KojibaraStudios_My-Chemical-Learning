@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe que golpean al jugador
@@ -26,6 +27,8 @@ public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe 
 
         objetivo = direccion;
         moviendo = true;
+
+        AudioManager.Instance.ReproducirMovimientoBrazos();
     }
 
     private void FixedUpdate()
@@ -34,7 +37,7 @@ public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe 
 
         Vector2 destino = regresando ? posInicial : objetivo; //el destino osila entre la pos inicial y el objetivo
 
-        Vector2 nuevaPos = Vector2.MoveTowards( 
+        Vector2 nuevaPos = Vector2.MoveTowards(
             rb.position,
             destino,
             velocidad * Time.fixedDeltaTime
@@ -52,5 +55,12 @@ public class MoverManoJefe : MonoBehaviour //se encuentra en las manos del jefe 
         }
 
         regresando = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D otro)
+    {
+        if (!otro.CompareTag("Jugador")) return;
+
+        AudioManager.Instance.ReproducirGolpeJugadorJefe();
     }
 }
