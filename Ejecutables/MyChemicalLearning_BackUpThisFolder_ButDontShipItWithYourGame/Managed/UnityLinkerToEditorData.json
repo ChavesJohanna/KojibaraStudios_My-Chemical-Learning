@@ -11,6 +11,7 @@
           {
             "name": "Animation",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
             "dependencyType": 0,
@@ -106,6 +107,7 @@
             "name": "AudioClip",
             "scenes": [
               "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -161,6 +163,7 @@
             "name": "AudioResource",
             "scenes": [
               "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -173,6 +176,7 @@
             "name": "AudioSource",
             "scenes": [
               "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MenuPrincipal.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
@@ -567,7 +571,6 @@
             "name": "SpriteRenderer",
             "scenes": [
               "Assets/Escenas/Boss.unity",
-              "Assets/Escenas/Creditos.unity",
               "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
@@ -1041,16 +1044,17 @@
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [
-              "Assets/Escenas/Boss.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Collider",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Escenas/Nivel1.unity",
+              "Assets/Escenas/Nivel2.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -1567,9 +1571,7 @@
           },
           {
             "name": "CanvasGroup",
-            "scenes": [
-              "Assets/Escenas/Creditos.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },

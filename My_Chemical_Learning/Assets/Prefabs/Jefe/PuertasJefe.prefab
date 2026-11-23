@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2689278675535704997}
   m_Layer: 28
   m_Name: Salida
-  m_TagString: Untagged
+  m_TagString: PuertasJefe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 5026239928950132342}
   m_Layer: 28
   m_Name: Entrada
-  m_TagString: Untagged
+  m_TagString: PuertasJefe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

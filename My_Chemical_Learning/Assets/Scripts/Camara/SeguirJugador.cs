@@ -15,7 +15,7 @@ public class SeguirJugador : MonoBehaviour
     {
         if (jugador == null) //busca al jugador si no lo encontro al iniciar
         {
-            GameObject obj = GameObject.FindGameObjectWithTag("Player");
+            GameObject obj = GameObject.FindGameObjectWithTag("Jugador");
 
             if (obj != null)
                 jugador = obj.transform;

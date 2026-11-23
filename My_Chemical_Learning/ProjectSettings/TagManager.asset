@@ -25,6 +25,7 @@ TagManager:
   - Zapper
   - AtaqueJefe
   - Jefe
+  - PuertasJefe
   layers:
   - Default
   - TransparentFX
