@@ -418,6 +418,7 @@ UnityEngine.Camera::get_targetTexture_Injected
 UnityEngine.Camera::get_aspect_Injected
 UnityEngine.Camera::get_depth_Injected
 UnityEngine.Camera::get_farClipPlane_Injected
+UnityEngine.Camera::get_fieldOfView_Injected
 UnityEngine.Camera::get_nearClipPlane_Injected
 UnityEngine.Camera::get_orthographicSize_Injected
 UnityEngine.Camera::ScreenPointToRay_Injected
