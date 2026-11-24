@@ -281,6 +281,7 @@ extern void WorkTable_IsUsed_mCBB10A4982B919264AE826AF975DF70F7B1533B5 (void);
 extern void WorkTable__ctor_mEC6A83838D3C4C583843AA88729F8275244795FE (void);
 extern void ParallaxMovement_Start_mE546A400B4E3081582EE8F763905710DDCCF9147 (void);
 extern void ParallaxMovement_BackSpeedCalculate_m8665BDB6D729EA49415F26A94E72B9B446AB58C8 (void);
+extern void ParallaxMovement_AjustarAnchoAPantalla_m47142E19C8BF5E2502D0BA70105E583C0A1B6FEA (void);
 extern void ParallaxMovement_LateUpdate_mFB062EC6F93D92AD1AA8CEAA14D7F1236C78E244 (void);
 extern void ParallaxMovement__ctor_m48C5B23E8A0AC08A1936F567B75AA49D1C388673 (void);
 extern void AudioManager_get_Instance_mE470515848AEDD204D9C8CF0F50D6A9785890211 (void);
@@ -771,7 +772,7 @@ extern void U3CEsperarYRegresarU3Ed__3_System_Collections_IEnumerator_Reset_m41B
 extern void U3CEsperarYRegresarU3Ed__3_System_Collections_IEnumerator_get_Current_mBB2EAB188AD0836F7A79C22DBB3874DC2161F6F8 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[770] = 
+static Il2CppMethodPointer s_methodPointers[771] = 
 {
 	UIButtonSound_PlayClick_m64EB1384346050696C6CAA174FEA86058601FB57,
 	UIButtonSound__ctor_m36BD96AE51A66D84733546C2E8C0AB7925823858,
@@ -1050,6 +1051,7 @@ static Il2CppMethodPointer s_methodPointers[770] =
 	WorkTable__ctor_mEC6A83838D3C4C583843AA88729F8275244795FE,
 	ParallaxMovement_Start_mE546A400B4E3081582EE8F763905710DDCCF9147,
 	ParallaxMovement_BackSpeedCalculate_m8665BDB6D729EA49415F26A94E72B9B446AB58C8,
+	ParallaxMovement_AjustarAnchoAPantalla_m47142E19C8BF5E2502D0BA70105E583C0A1B6FEA,
 	ParallaxMovement_LateUpdate_mFB062EC6F93D92AD1AA8CEAA14D7F1236C78E244,
 	ParallaxMovement__ctor_m48C5B23E8A0AC08A1936F567B75AA49D1C388673,
 	AudioManager_get_Instance_mE470515848AEDD204D9C8CF0F50D6A9785890211,
@@ -1549,7 +1551,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] =
 {
 	{ 0x060000D9, DamageInfo__ctor_m0D01C276C527E31DABD36A4A7C7BBD48288733DC_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[770] = 
+static const int32_t s_InvokerIndices[771] = 
 {
 	9537,
 	9537,
@@ -1828,6 +1830,7 @@ static const int32_t s_InvokerIndices[770] =
 	9537,
 	9537,
 	7474,
+	9537,
 	9537,
 	9537,
 	14100,
@@ -2326,7 +2329,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	770,
+	771,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

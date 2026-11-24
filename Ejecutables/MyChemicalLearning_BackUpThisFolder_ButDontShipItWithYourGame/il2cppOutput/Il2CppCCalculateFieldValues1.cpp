@@ -25078,13 +25078,18 @@ struct Pantallas_t266DB15FCA7D28C75EAD38DBD53E7C4D490AA56D  : public MonoBehavio
 struct ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___cam;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___camComp;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___camStartPos;
 	float ___distance;
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___backgrounds;
 	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___mat;
 	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___backSpeed;
+	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___baseTiling;
+	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___baseScaleX;
 	float ___farthestBack;
+	float ___ultimoAspect;
 	float ___parallaxSpeed;
+	float ___margin;
 };
 struct Pausa_t95F9A3EC7EB40781937D7A1585D0FCD7CC166E99  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -34883,9 +34888,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5647[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5648[3] = 
 {
 	static_cast<int32_t>(offsetof(WorkTable_t34EA1F9E9D46A6ADB33D0B7CF18193F8FB9081B1, ___isUsed)),static_cast<int32_t>(offsetof(WorkTable_t34EA1F9E9D46A6ADB33D0B7CF18193F8FB9081B1, ___sign)),static_cast<int32_t>(offsetof(WorkTable_t34EA1F9E9D46A6ADB33D0B7CF18193F8FB9081B1_StaticFields, ___tableInUse)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5649[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5649[13] = 
 {
-	static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___cam)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___camStartPos)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___distance)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___backgrounds)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___mat)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___backSpeed)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___farthestBack)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___parallaxSpeed)),};
+	static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___cam)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___camComp)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___camStartPos)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___distance)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___backgrounds)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___mat)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___backSpeed)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___baseTiling)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___baseScaleX)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___farthestBack)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___ultimoAspect)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___parallaxSpeed)),static_cast<int32_t>(offsetof(ParallaxMovement_t9C60789C94B351E622C92EC57315208324CE1EAC, ___margin)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5650[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CControlarVolumenMusicaU3Ed__67_tEB7BE9E9CC2529928F155776E90AD5FD2CF70B33, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CControlarVolumenMusicaU3Ed__67_tEB7BE9E9CC2529928F155776E90AD5FD2CF70B33, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CControlarVolumenMusicaU3Ed__67_tEB7BE9E9CC2529928F155776E90AD5FD2CF70B33, ___U3CU3E4__this)),};
