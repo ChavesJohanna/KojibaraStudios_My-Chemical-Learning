@@ -374,6 +374,7 @@
           {
             "name": "Mesh",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -383,6 +384,7 @@
           {
             "name": "MeshFilter",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -392,6 +394,8 @@
           {
             "name": "MeshRenderer",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
+              "Assets/Escenas/MesaTrabajo.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1051,6 +1055,7 @@
           {
             "name": "Collider",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
@@ -1060,6 +1065,7 @@
           {
             "name": "MeshCollider",
             "scenes": [
+              "Assets/Escenas/Boss.unity",
               "Assets/Escenas/Nivel1.unity",
               "Assets/Escenas/Nivel2.unity"
             ],
