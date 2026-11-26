@@ -8,7 +8,7 @@ public class ElementInfoDisplay : MonoBehaviour
     public static ElementInfoDisplay Instance { get; private set; }
 
     [Tooltip("Arrastra aqui el TextMeshProUGUI que mostrara la informacion")]
-    [SerializeField] private TextMeshProUGUI infoText;
+    [SerializeField] private TextMeshPro infoText;
 
     private Dictionary<ChemElementType, string> info =
         new Dictionary<ChemElementType, string>()
