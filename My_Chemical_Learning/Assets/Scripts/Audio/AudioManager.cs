@@ -528,4 +528,17 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+
+    ///////// j estuvo aqui
+    public string ObtenerPorcentajeMusica()
+    {
+        return Mathf.RoundToInt(volumenMusicaConfigurado * 100) + "%";
+    }
+
+    public string ObtenerPorcentajeEfectos()
+    {
+        return Mathf.RoundToInt(volumenSFXConfigurado * 100) + "%";
+    }
+
+
 }

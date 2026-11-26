@@ -275,6 +275,7 @@ UnityEngine.Application::Quit
 UnityEngine.Application::get_persistentDataPath_Injected
 UnityEngine.Application::get_streamingAssetsPath_Injected
 UnityEngine.Application::get_temporaryCachePath_Injected
+UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_platform
 UnityEngine.AssetBundle::LoadAssetAsync_Internal_Injected
 UnityEngine.AssetBundle::LoadAssetWithSubAssetsAsync_Internal_Injected
@@ -1265,6 +1266,7 @@ UnityEngine.Screen::get_fullScreen
 UnityEngine.Screen::get_height
 UnityEngine.Screen::get_width
 UnityEngine.Screen::get_dpi
+UnityEngine.Screen::set_fullScreen
 UnityEngine.Screen::GetScreenOrientation
 UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromType_Injected
 UnityEngine.ScriptableObject::CreateScriptableObject

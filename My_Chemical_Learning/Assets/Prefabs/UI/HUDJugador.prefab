@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 1050696818001311357}
   - component: {fileID: 8246848590225153894}
   - component: {fileID: 5217504952790179954}
+  - component: {fileID: 7484998825903651479}
   m_Layer: 5
   m_Name: TextoVolumenE
   m_TagString: Untagged
@@ -243,6 +244,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7484998825903651479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248612977555602860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e08733fda6aeb74b8da95a51b99b2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextoVolEfectos
 --- !u!1 &353859072347130516
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +463,7 @@ GameObject:
   - component: {fileID: 1726055928519356662}
   - component: {fileID: 1653045082961883253}
   - component: {fileID: 1265876357390193875}
+  - component: {fileID: 8872357673399936779}
   m_Layer: 5
   m_Name: TextoVolumenM
   m_TagString: Untagged
@@ -576,6 +590,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8872357673399936779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488698557395850907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cff009741e782c498256ad52b4419d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextoVolMusica
 --- !u!1 &507517107772796718
 GameObject:
   m_ObjectHideFlags: 0
