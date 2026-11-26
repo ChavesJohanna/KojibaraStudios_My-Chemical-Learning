@@ -18,11 +18,20 @@ public class MenuPrincipal : MonoBehaviour //se encuentra en el objeto con el mi
     {
         panelOpciones.SetActive(false);
         panelMenu.SetActive(true);
+
+        ModificarTextoVolumen.VolumenDeterminado();//evita que se actualizen si en panel esta desactivado
+
+        Debug.Log(ModificarTextoVolumen.ValorDeVar()); //para revisar que se este setiando corrctamente
     }
 
     public void AbrirOpciones()
     {
         panelMenu.SetActive(false);
         panelOpciones.SetActive(true);
+
+        ModificarTextoVolumen.CambiandoVolMusica(); //hara que los textos del volumen se vayan actualizando
+        ModificarTextoVolumen.CambiandoVolEfectos();
+
+        Debug.Log(ModificarTextoVolumen.ValorDeVar()); //para revisar que se este setiando corrctamente
     }
 }
