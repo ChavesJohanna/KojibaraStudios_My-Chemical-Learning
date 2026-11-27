@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 using TMPro;
@@ -82,13 +81,18 @@ public class GloboTexto : MonoBehaviour
 
         jugadorDentro = false;
 
-        // Comienza la cuenta regresiva al salir.
+        // Cancela cualquier cuenta regresiva anterior.
         if (corrutinaDesaparicion != null)
         {
             StopCoroutine(corrutinaDesaparicion);
+            corrutinaDesaparicion = null;
         }
 
-        corrutinaDesaparicion = StartCoroutine(EsperarParaOcultar());
+        // inicia la corrutina si el objeto está activo.
+        if (gameObject.activeInHierarchy)
+        {
+            corrutinaDesaparicion = StartCoroutine(EsperarParaOcultar());
+        }
     }
 
     private IEnumerator EsperarParaOcultar()
@@ -113,5 +117,11 @@ public class GloboTexto : MonoBehaviour
     {
         spriteRenderer.enabled = false;
         canvas.gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        corrutinaDesaparicion = null;
+        jugadorDentro = false;
     }
 }
